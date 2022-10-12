@@ -5,9 +5,7 @@ using UnityEngine;
 
 public static class PlayerStats
 {
-    //Base Stats
-    public static int Health = 10;
-    public static int Gold = 150;
+    
 
     //Bonus Stats
     public static int BonusHealth = 0;

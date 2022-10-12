@@ -5,6 +5,7 @@ using Enemies;
 using Towers;
 using UI.Pause;
 using UnityEngine;
+using Utilities;
 
 [RequireComponent(typeof(TowerPause))]
 public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
@@ -23,7 +24,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public GameObject BulletSpawn;
     
     protected Animator _animator;
-    private Enemy _target;
+    private BaseEnemy _target;
     private float _bulletTime = 0;
     private bool _cd = false;
 
@@ -50,23 +51,23 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         float tempDist = float.MaxValue;
         foreach (Collider col in enemies)
         {
-            if (col.CompareTag("Enemy") && (int)ShootType == (int)col.GetComponent<Enemy>().Type || ShootType == ShootType.Both)
+            if (col.CompareTag("Enemy") && (int)ShootType == (int)col.GetComponent<BaseEnemy>().Type || ShootType == ShootType.Both)
             {
                 if(Vector3.Distance(transform.position, col.transform.position) < minDist)
                     continue;
-                _target = col.GetComponent<Enemy>();
+                _target = col.GetComponent<BaseEnemy>();
                 return;
             }
         }
         SetTarget(null);
     }
 
-    public void SetTarget(Enemy target)
+    public void SetTarget(BaseEnemy target)
     {
         _target = target;
     }
 
-    public Enemy GetTarget()
+    public BaseEnemy GetTarget()
     {
         return _target;
     }
@@ -108,7 +109,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
 
     public void OnDrawGizmosSelected()
     {
-        Extensions.DrawWireDisk(transform.position, attackRange, new Color(1,1,1,0.3f));
+        DrawRadius.DrawWireDisk(transform.position, attackRange, new Color(1,1,1,0.3f));
     }
 
 }

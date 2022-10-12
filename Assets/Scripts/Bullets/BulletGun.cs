@@ -5,11 +5,11 @@ using UnityEngine;
 
 namespace Towers.TowerGuns
 {
-    public class ProjectileGun: Projectile
+    public class BulletGun: Bullet
     {
         public override IEnumerator Move()
         {
-            Enemy target = _parent.GetTarget();
+            BaseEnemy target = _parent.GetTarget();
             while (true)
             {
                 if (target == null)
@@ -32,8 +32,8 @@ namespace Towers.TowerGuns
             if (other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
-                Enemy enemy = other.GetComponent<Enemy>();
-                enemy.TakeDamage(GetDmg(), this);
+                BaseEnemy baseEnemy = other.GetComponent<BaseEnemy>();
+                baseEnemy.TakeDamage(GetDmg(), this);
             }
         }
     }

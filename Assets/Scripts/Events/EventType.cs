@@ -1,6 +1,6 @@
 ﻿namespace Events
 {
-    public enum AppEventType
+    public enum EventType
     {
         START, PAUSE, EXIT, DEFEAT, WIN, HPCHANGE, MONEYCHANGE
     }

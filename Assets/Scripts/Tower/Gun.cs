@@ -1,17 +1,19 @@
 ﻿using System.Collections;
+using Towers.TowerGuns;
 using UI.Pause;
+using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Towers
 {
-    public class TowerArtillery: Tower
+    public class Gun:Tower
     {
         public GameObject Head;
         
-        
-        
         public override void Shoot()
         {
+            
             if (GetTarget() == null)
                 return;
             _animator.SetTrigger("Shoot");
@@ -23,7 +25,7 @@ namespace Towers
         {
             
         }
-        
+
         public override IEnumerator RotateHead()
         {
             while (true)
@@ -37,13 +39,6 @@ namespace Towers
                 {
                     yield return null;
                 }
-                if (Vector3.Distance(transform.position, GetTarget().transform.position) < minDist)
-                {
-                    FindTarget();
-                    yield return null;
-                    continue;
-                }
-
                 Head.transform.LookAt(GetTarget().transform.position);
                 Head.transform.eulerAngles = new Vector3(0, Head.transform.eulerAngles.y + 90f, 0);
                 yield return null;

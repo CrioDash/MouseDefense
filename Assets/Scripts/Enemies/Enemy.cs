@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using Bullets;
 using Events;
 using UI.Pause;
 using UnityEngine;
@@ -9,7 +10,7 @@ namespace Enemies
 {
     
     [RequireComponent(typeof(EnemyPause))]
-    public abstract class Enemy : MonoBehaviour, ITakeDamage
+    public abstract class BaseEnemy : MonoBehaviour, ITakeDamage
     {
         [Header("Enemy stats")] 
         public EnemyType Type;
@@ -39,7 +40,7 @@ namespace Enemies
             _material = GetComponent<Renderer>().sharedMaterial;
         }
 
-        public virtual void TakeDamage(int dmg, Projectile proj)
+        public virtual void TakeDamage(int dmg, Bullet proj)
         {
             CurrentHealth-=dmg;
             StartCoroutine(VisualTakeDamage(dmg));

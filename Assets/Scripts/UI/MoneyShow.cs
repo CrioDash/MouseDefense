@@ -2,9 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Events;
+using Game;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.UI;
+using EventType = Events.EventType;
 
 public class MoneyShow : MonoBehaviour
 {
@@ -14,17 +16,17 @@ public class MoneyShow : MonoBehaviour
     
     private void OnEnable()
     {
-        GameEventBus.Subscribe(AppEventType.MONEYCHANGE, ChangeMoneyText);
+        GameEventBus.Subscribe(EventType.MONEYCHANGE, ChangeMoneyText);
     }
 
     private void OnDisable()
     {
-        GameEventBus.Unsubscribe(AppEventType.MONEYCHANGE, ChangeMoneyText);
+        GameEventBus.Unsubscribe(EventType.MONEYCHANGE, ChangeMoneyText);
     }
 
     private void Start()
     {
-        _gold = PlayerStats.Gold;
+        _gold = Variables.Gold;
     }
 
     public void ChangeMoneyText()

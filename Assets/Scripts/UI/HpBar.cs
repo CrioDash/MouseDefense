@@ -5,6 +5,7 @@ using Events;
 using UI;
 using UI.Pause;
 using UnityEngine;
+using EventType = Events.EventType;
 
 public class HPBar : MonoBehaviour
 {
@@ -20,12 +21,12 @@ public class HPBar : MonoBehaviour
 
     private void OnEnable()
     {
-        GameEventBus.Subscribe(AppEventType.HPCHANGE, ChangeHP);
+        GameEventBus.Subscribe(EventType.HPCHANGE, ChangeHP);
     }
     
     private void OnDisable()
     {
-        GameEventBus.Unsubscribe(AppEventType.HPCHANGE, ChangeHP);
+        GameEventBus.Unsubscribe(EventType.HPCHANGE, ChangeHP);
     }
 
     public void ChangeHP()
@@ -33,7 +34,7 @@ public class HPBar : MonoBehaviour
         if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
         {
             EndGame.SetActive(true);
-            GameEventBus.Publish(AppEventType.PAUSE);
+            GameEventBus.Publish(EventType.PAUSE);
             return;
         }
         StartCoroutine(VisualHpChange());

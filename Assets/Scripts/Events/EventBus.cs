@@ -6,9 +6,9 @@ namespace Events
 {
     public class GameEventBus
     {
-        public static Dictionary<AppEventType, UnityEvent> Events = new Dictionary<AppEventType, UnityEvent>();
+        public static Dictionary<EventType, UnityEvent> Events = new Dictionary<EventType, UnityEvent>();
 
-        public static void Subscribe(AppEventType type, UnityAction listener)
+        public static void Subscribe(EventType type, UnityAction listener)
         {
             UnityEvent thisEvent;
             if (Events.TryGetValue(type, out thisEvent))
@@ -24,7 +24,7 @@ namespace Events
         }
     
 
-        public static void Unsubscribe(AppEventType type, UnityAction listener)
+        public static void Unsubscribe(EventType type, UnityAction listener)
         {
             UnityEvent thisEvent;
             if (Events.TryGetValue(type, out thisEvent))
@@ -33,7 +33,7 @@ namespace Events
             }
         }
 
-        public static void Publish(AppEventType type)
+        public static void Publish(EventType type)
         {
             UnityEvent thisEvent;
             if (Events.TryGetValue(type, out thisEvent))

@@ -8,7 +8,7 @@ using Towers;
 using Towers.TowerGuns;
 using UnityEngine;
 
-public class Projectile : MonoBehaviour, IProjectileMove
+public class Bullet : MonoBehaviour, IBulletMove
 {
     protected Tower _parent;
     protected float bulletSpeed;
@@ -27,8 +27,8 @@ public class Projectile : MonoBehaviour, IProjectileMove
 
     public void SetStats()
     {
-        bulletDamage = _parent.BulletDamage;
-        bulletSpeed = _parent.BulletSpeed;
+        bulletDamage = _parent.bulletDamage;
+        bulletSpeed = _parent.bulletSpeed;
     }
 
     public virtual IEnumerator Move()

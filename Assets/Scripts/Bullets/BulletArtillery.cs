@@ -6,7 +6,7 @@ using Utilities;
 
 namespace Towers.TowerGuns
 {
-    public class ProjectileArtillery: Projectile
+    public class BulletArtillery: Bullet
     {
         public override IEnumerator Move()
         {
