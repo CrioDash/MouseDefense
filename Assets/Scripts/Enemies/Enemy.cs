@@ -75,9 +75,10 @@ namespace Enemies
                     {
                         yield return null;
                     }
-                    CurrentHealthGM.transform.localScale = new Vector3(Mathf.Lerp(scale.x,
-                        scale.x * (CurrentHealth / MaxHealth), t), scale.y, scale.z);
+                   scale = new Vector3(Mathf.Lerp(CurrentHealthGM.transform.localScale.x,
+                        CurrentHealth / MaxHealth, t), scale.y, scale.z);
                     t += Time.deltaTime * 8;
+                    CurrentHealthGM.transform.localScale = scale;
                     yield return null;
                 }
             }

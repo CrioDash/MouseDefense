@@ -15,13 +15,14 @@ namespace UI
     
         private Level _level;
 
-        private void Start()
+        private void Awake()
         {
             _level = FindObjectOfType<Level>();
         }
 
         private void OnEnable()
         {
+           
             EventBus.Subscribe(EventType.HPCHANGE, ChangeHP);
         }
     

@@ -11,7 +11,7 @@ namespace UI.Pause
 
         private List<IPausable> _exceptionPauses = new List<IPausable>();
         public static List<IPausable> _pauses = new List<IPausable>();
-        public static bool IsPaused = false;
+        public static bool IsPaused;
         
         private void OnEnable()
         {
@@ -21,6 +21,11 @@ namespace UI.Pause
         private void OnDisable()
         {
             EventBus.Unsubscribe(EventType.PAUSE, Pause);
+        }
+
+        private void Start()
+        {
+            IsPaused = false;
         }
 
         public void Pause()
