@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Tiles;
 using Towers;
 using UI.Pause;
 using UnityEngine;
@@ -10,9 +11,11 @@ namespace UI
 {
     public class TowerBuilder : MonoBehaviour
     {
-        public List<GameObject> towerTypes;
-        public Dictionary<TowerType, GameObject> Towers = new Dictionary<TowerType, GameObject>();
+        public List<GameObject> towerPrefabs;
+
+        [HideInInspector]
         public Vector3 towerPos;
+        [HideInInspector]
         public TowerTile towerTile;
     
         private List<TowerBuildButton> TowerButtons;
@@ -22,18 +25,11 @@ namespace UI
         {
             foreach (Button gm in GetComponentsInChildren<Button>())
             {
-                gm.gameObject.AddComponent<IButtonPause>();
-            }
-        }
-
-        private void Start()
-        {
-            foreach (GameObject gm in towerTypes)
-            {
-                Towers.Add(gm.GetComponent<Tower>().Type, gm);
+                gm.gameObject.AddComponent<ButtonPause>();
             }
             TowerButtons = gameObject.GetComponentsInChildren<TowerBuildButton>().ToList();
         }
+        
 
         public void Show(Vector3 pos, TowerTile tile)
         {

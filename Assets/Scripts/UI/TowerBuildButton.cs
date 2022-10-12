@@ -1,4 +1,6 @@
 using System.Linq;
+using Game;
+using Tiles;
 using Towers;
 using UI.Pause;
 using UnityEngine;
@@ -9,8 +11,8 @@ namespace UI
     public class TowerBuildButton : MonoBehaviour
     {
         public TowerType Type;
-    
-        private int _cost;
+        public int cost;
+        
         private Level _level;
         private TowerBuilder _builder;
         private Button _button;
@@ -18,18 +20,18 @@ namespace UI
 
         private void Awake()
         {
-            if (!PlayerStats.Towers.Contains(Type))
-            {
-                gameObject.SetActive(false);
-            }
-
+            _builder = GetComponentInParent<TowerBuilder>();
             _button = GetComponent<Button>();
         }
 
         private void Start()
         {
-            GetComponentInChildren<Text>().text = _cost.ToString();
-            _builder = GetComponentInParent<TowerBuilder>();
+            GetComponentInChildren<Text>().text = cost.ToString();
+            
+            if (!PlayerStats.Towers.Contains(Type))
+            {
+                gameObject.SetActive(false);
+            }
         }
 
         private void OnEnable()
@@ -41,17 +43,17 @@ namespace UI
         {
             if(PauseScript.IsPaused)
                 return;
-            _button.interactable = _level.Gold > _cost;
+            _button.interactable = _level.Gold >= cost;
         }
 
         public void CreateTower()
         {
-            GameObject tower = Instantiate(_builder.Towers[Type]);
+            GameObject tower = Instantiate(_builder.towerPrefabs[(int)Type]);
             Vector3 pos = _builder.towerPos;
             pos.y += 1;
             tower.transform.position = pos;
-            _builder.towerTile.Type = TowerTile.TileType.Towered;
-            _level.ChangeMoney(-_cost);
+            _builder.towerTile.type = TowerTile.TileType.Towered;
+            _level.ChangeMoney(-cost);
             _builder.StartCoroutine(_builder.CloseAnimation());
         }
 

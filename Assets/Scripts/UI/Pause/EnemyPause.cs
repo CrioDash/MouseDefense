@@ -8,11 +8,11 @@ namespace UI.Pause
     public class EnemyPause: MonoBehaviour, IPausable
     {
         private NavMeshAgent _agent;
-        private BaseEnemy _baseEnemy;
+        private Enemy _enemy;
 
         private void Awake()
         {
-            _baseEnemy = GetComponent<BaseEnemy>();
+            _enemy = GetComponent<Enemy>();
             _agent = GetComponent<NavMeshAgent>();
         }
 
@@ -30,7 +30,7 @@ namespace UI.Pause
             if (PauseScript.IsPaused)
                 _agent.speed = 0;
             else
-                _agent.speed = _baseEnemy.Speed;
+                _agent.speed = _enemy.Speed;
             
         }
     }

@@ -1,7 +1,4 @@
-﻿namespace Towers
+﻿public enum TowerType
 {
-    public enum TowerType
-    {
-        Gun, Artillery
-    }
+    Gun, Artillery
 }

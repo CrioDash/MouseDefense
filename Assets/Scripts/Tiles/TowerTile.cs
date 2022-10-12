@@ -1,13 +1,14 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerTile : MonoBehaviour
+namespace Tiles
 {
-    public enum TileType
+    public class TowerTile : MonoBehaviour
     {
-        Free, Towered
-    }
+        public enum TileType
+        {
+            Free, Towered
+        }
 
-    public TileType Type;
+        public TileType type;
+    }
 }

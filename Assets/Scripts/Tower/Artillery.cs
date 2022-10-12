@@ -6,17 +6,15 @@ namespace Towers
 {
     public class Artillery: Tower
     {
-        public GameObject Head;
-        
-        
+        public GameObject head;
         
         public override void Shoot()
         {
             if (GetTarget() == null)
                 return;
             _animator.SetTrigger("Shoot");
-            GameObject bullet = Instantiate(BulletPrefab, transform);
-            bullet.transform.position = BulletSpawn.transform.position;
+            GameObject bullet = Instantiate(bulletPrefab, transform);
+            bullet.transform.position = bulletSpawn.transform.position;
         }
 
         public override void LevelUp()
@@ -37,15 +35,9 @@ namespace Towers
                 {
                     yield return null;
                 }
-                if (Vector3.Distance(transform.position, GetTarget().transform.position) < minDist)
-                {
-                    FindTarget();
-                    yield return null;
-                    continue;
-                }
 
-                Head.transform.LookAt(GetTarget().transform.position);
-                Head.transform.eulerAngles = new Vector3(0, Head.transform.eulerAngles.y + 90f, 0);
+                head.transform.LookAt(GetTarget().transform.position);
+                head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
                 yield return null;
             }
         }

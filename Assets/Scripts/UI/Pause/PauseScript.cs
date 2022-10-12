@@ -15,12 +15,12 @@ namespace UI.Pause
         
         private void OnEnable()
         {
-            GameEventBus.Subscribe(EventType.PAUSE, Pause);
+            EventBus.Subscribe(EventType.PAUSE, Pause);
         }
 
         private void OnDisable()
         {
-            GameEventBus.Unsubscribe(EventType.PAUSE, Pause);
+            EventBus.Unsubscribe(EventType.PAUSE, Pause);
         }
 
         public void Pause()

@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Events
 {
-    public class GameEventBus
+    public class EventBus
     {
         public static Dictionary<EventType, UnityEvent> Events = new Dictionary<EventType, UnityEvent>();
 

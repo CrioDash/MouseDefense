@@ -22,12 +22,9 @@ public class TowerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Enemy"))
+        if(!other.CompareTag("Enemy") || _parent.GetTarget() != null)
             return;
-        if (_parent.GetTarget() == null)
-        {
-            _parent.FindTarget();
-        }
+        _parent.FindTarget();
     }
 
     private void OnTriggerExit(Collider other)

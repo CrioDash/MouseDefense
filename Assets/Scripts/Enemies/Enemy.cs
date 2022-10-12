@@ -10,7 +10,7 @@ namespace Enemies
 {
     
     [RequireComponent(typeof(EnemyPause))]
-    public abstract class BaseEnemy : MonoBehaviour, ITakeDamage
+    public class Enemy : MonoBehaviour, ITakeDamage
     {
         [Header("Enemy stats")] 
         public EnemyType Type;
@@ -21,7 +21,7 @@ namespace Enemies
         public GameObject CurrentHealthGM;
         public GameObject HPBar;
 
-        public float CurrentHealth;
+        protected float CurrentHealth;
         protected Material _material;
         protected NavMeshAgent _agent;
         protected GameObject[] _waypoints;
@@ -67,17 +67,17 @@ namespace Enemies
             while (true)
             {
                 yield return new WaitUntil(() => CurrentHealth != MaxHealth);
-                float time = 0;
+                float t = 0;
                 Vector3 scale = CurrentHealthGM.transform.localScale;
-                while (CurrentHealth != MaxHealth)
+                while (t<1)
                 {
                     while (PauseScript.IsPaused)
                     {
                         yield return null;
                     }
                     CurrentHealthGM.transform.localScale = new Vector3(Mathf.Lerp(scale.x,
-                        scale.x * (CurrentHealth / MaxHealth), time), scale.y, scale.z);
-                    time += Time.deltaTime * 8;
+                        scale.x * (CurrentHealth / MaxHealth), t), scale.y, scale.z);
+                    t += Time.deltaTime * 8;
                     yield return null;
                 }
             }

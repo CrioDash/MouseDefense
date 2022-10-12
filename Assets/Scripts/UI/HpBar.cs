@@ -1,63 +1,65 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Events;
-using UI;
 using UI.Pause;
+using Unity.VisualScripting;
 using UnityEngine;
+using EventBus = Events.EventBus;
 using EventType = Events.EventType;
 
-public class HPBar : MonoBehaviour
+namespace UI
 {
-    public GameObject CurrHP;
-    public GameObject EndGame;
+    public class HpBar : MonoBehaviour
+    {
+        public GameObject CurrHP;
+        public GameObject EndGame;
     
-    private Level _level;
+        private Level _level;
 
-    private void Start()
-    {
-        _level = FindObjectOfType<Level>();
-    }
-
-    private void OnEnable()
-    {
-        GameEventBus.Subscribe(EventType.HPCHANGE, ChangeHP);
-    }
-    
-    private void OnDisable()
-    {
-        GameEventBus.Unsubscribe(EventType.HPCHANGE, ChangeHP);
-    }
-
-    public void ChangeHP()
-    {
-        if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
+        private void Start()
         {
-            EndGame.SetActive(true);
-            GameEventBus.Publish(EventType.PAUSE);
-            return;
+            _level = FindObjectOfType<Level>();
         }
-        StartCoroutine(VisualHpChange());
-    }
-    
-    public IEnumerator VisualHpChange()
-    {
-        yield return null;
-        float time = 0;
-        var scale = CurrHP.transform.localScale;
-        while (scale.x != _level.CurrentHealth/_level.MaxHealth)
+
+        private void OnEnable()
         {
-            while (PauseScript.IsPaused)
+            EventBus.Subscribe(EventType.HPCHANGE, ChangeHP);
+        }
+    
+        private void OnDisable()
+        {
+            EventBus.Unsubscribe(EventType.HPCHANGE, ChangeHP);
+        }
+
+        public void ChangeHP()
+        {
+            if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
             {
+                EndGame.SetActive(true);
+                EventBus.Publish(EventType.PAUSE);
+                return;
+            }
+            StartCoroutine(VisualHpChange());
+        }
+        
+
+        public IEnumerator VisualHpChange()
+        {
+            yield return null;
+            float t = 0;
+            var scale = CurrHP.transform.localScale;
+            while (t<1)
+            {
+                while (PauseScript.IsPaused)
+                {
+                    yield return null;
+                }
+                CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, _level.CurrentHealth/ _level.MaxHealth, t), 
+                    scale.y,scale.z);
+                t += Time.deltaTime*8;
                 yield return null;
             }
-            scale = new Vector3(Mathf.Lerp(scale.x, _level.CurrentHealth/ _level.MaxHealth, time), 
-                scale.y,scale.z);
-            CurrHP.transform.localScale = scale;
-            time += Time.deltaTime*8;
-            yield return null;
         }
-    }
 
     
+    }
 }

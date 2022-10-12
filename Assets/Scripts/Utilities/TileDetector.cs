@@ -1,4 +1,5 @@
 using System.Collections;
+using Tiles;
 using UI;
 using UI.Pause;
 using UnityEngine;
@@ -80,7 +81,7 @@ namespace Utilities
             if(!_raycastHit.collider.gameObject.CompareTag("TowerPlaceTile"))
                 return true;
             TowerTile tile = _raycastHit.collider.GetComponent<TowerTile>();
-            if(tile.Type == TowerTile.TileType.Towered)
+            if(tile.type == TowerTile.TileType.Towered)
                 return true;
             if(builder.gameObject.activeSelf) 
                 return true;

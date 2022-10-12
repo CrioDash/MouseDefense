@@ -1,9 +1,10 @@
 ﻿using System.Collections;
+using Bullets;
 
 namespace Enemies
 {
     public interface ITakeDamage
     {
-        public void TakeDamage(int dmg, Projectile proj);
+        public void TakeDamage(int dmg, Bullet proj);
     }
 }

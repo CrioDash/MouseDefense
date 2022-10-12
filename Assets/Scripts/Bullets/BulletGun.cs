@@ -3,13 +3,13 @@ using Enemies;
 using UI.Pause;
 using UnityEngine;
 
-namespace Towers.TowerGuns
+namespace Bullets
 {
     public class BulletGun: Bullet
     {
         public override IEnumerator Move()
         {
-            BaseEnemy target = _parent.GetTarget();
+            Enemy target = _parent.GetTarget();
             while (true)
             {
                 if (target == null)
@@ -32,8 +32,8 @@ namespace Towers.TowerGuns
             if (other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
-                BaseEnemy baseEnemy = other.GetComponent<BaseEnemy>();
-                baseEnemy.TakeDamage(GetDmg(), this);
+                Enemy enemy = other.GetComponent<Enemy>();
+                enemy.TakeDamage(GetDmg(), this);
             }
         }
     }

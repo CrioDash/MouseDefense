@@ -131,7 +131,6 @@ Library: lib_burst_generated
 --compilation-defines=MODULE_PHYSICS_2D_EXISTS
 --compilation-defines=MODULE_PARTICLE_SYSTEM_EXISTS
 --compilation-defines=ENABLE_ANIMATION_BURST
---compilation-defines=NMC_CAN_ACCESS_TERRAIN
 --compilation-defines=ENABLE_SPRITESHAPE_BURST
 --compilation-defines=USING_PARTICLE_SYSTEM
 --compilation-defines=TIMELINE_FRAMEACCURATE
@@ -147,7 +146,6 @@ Library: lib_burst_generated
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.Services.Core.Environments.Internal.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.2D.Animation.Runtime.dll
---root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.AI.Navigation.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll

@@ -1,10 +1,9 @@
 ﻿using System.Collections;
-using Enemies;
 using UI.Pause;
 using UnityEngine;
 using Utilities;
 
-namespace Towers.TowerGuns
+namespace Bullets
 {
     public class BulletArtillery: Bullet
     {

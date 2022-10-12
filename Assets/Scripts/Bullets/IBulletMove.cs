@@ -1,9 +1,8 @@
 ﻿using System.Collections;
-using Unity.VisualScripting.Dependencies.NCalc;
 
-namespace Towers.TowerGuns
+namespace Bullets
 {
-    public interface IProjectileMove
+    public interface IBulletMove
     {
         public IEnumerator Move()
         {

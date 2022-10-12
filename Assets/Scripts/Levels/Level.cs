@@ -3,8 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Enemies;
 using Events;
+using Game;
 using Levels;
 using UnityEngine;
+using EventType = Events.EventType;
 
 public abstract class Level : MonoBehaviour, ILevel
 {
@@ -13,46 +15,49 @@ public abstract class Level : MonoBehaviour, ILevel
     public List<GameObject> Waypoints;
     public List<GameObject> Enemies;
     
+    [HideInInspector]
     public float MaxHealth;
+    [HideInInspector]
     public float CurrentHealth;
+    [HideInInspector]
     public float Gold;
     
     protected List<GameObject> enemies = new List<GameObject>();
 
     private void Start()
     {
-        GameEventBus.Publish(AppEventType.START);
+        EventBus.Publish(EventType.START);
     }
 
     private void OnEnable()
     {
-        GameEventBus.Subscribe(AppEventType.START, SetStats);
-        GameEventBus.Subscribe(AppEventType.START, StartLevel);
+        EventBus.Subscribe(EventType.START, SetStats);
+        EventBus.Subscribe(EventType.START, StartLevel);
     }
 
     private void OnDisable()
     {
-        GameEventBus.Unsubscribe(AppEventType.START, SetStats);
-        GameEventBus.Unsubscribe(AppEventType.START, StartLevel);
+        EventBus.Unsubscribe(EventType.START, SetStats);
+        EventBus.Unsubscribe(EventType.START, StartLevel);
     }
 
     void SetStats()
     {
-        MaxHealth = PlayerStats.Health + PlayerStats.BonusHealth;
+        MaxHealth = Variables.Health + PlayerStats.BonusHealth;
         TakeDamage(-MaxHealth);
-        ChangeMoney(PlayerStats.Gold + PlayerStats.BonusGold);
+        ChangeMoney(Variables.Gold + PlayerStats.BonusGold);
     }
 
     public void TakeDamage(float hp)
     {
         CurrentHealth-=hp;
-        GameEventBus.Publish(AppEventType.HPCHANGE);
+        EventBus.Publish(EventType.HPCHANGE);
     }
 
     public void ChangeMoney(int money)
     {
         Gold += money;
-        GameEventBus.Publish(AppEventType.MONEYCHANGE);
+        EventBus.Publish(EventType.MONEYCHANGE);
     }
 
     public virtual void StartLevel()
