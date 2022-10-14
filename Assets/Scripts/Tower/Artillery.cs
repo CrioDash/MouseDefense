@@ -7,7 +7,7 @@ namespace Towers
     public class Artillery: Tower
     {
         public GameObject head;
-        
+
         public override void Shoot()
         {
             if (GetTarget() == null)

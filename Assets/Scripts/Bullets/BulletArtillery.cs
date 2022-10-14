@@ -24,10 +24,7 @@ namespace Bullets
                 transform.rotation = Quaternion.LookRotation(Bezier.BezierRotation(startPos, middlePos1, middlePos2, endPos, time));
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f, transform.eulerAngles.y, 0);
                 while (PauseScript.IsPaused)
-                {
-                    Debug.Log(time);
                     yield return null;
-                }
                 time += Time.fixedDeltaTime*6/Vector3.Distance(startPos, endPos);
                 yield return null;
             }
@@ -38,6 +35,8 @@ namespace Bullets
             if (other.CompareTag("Enemy") || other.CompareTag("Road"))
             {
                 StopCoroutine(Move());
+                Collider[] targets = Physics.OverlapSphere(transform.position, 3);
+                
                 Destroy(gameObject);
             }
         }

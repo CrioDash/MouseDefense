@@ -9,6 +9,7 @@ using EventType = Events.EventType;
 
 public class OpenMenuScript : MonoBehaviour
 {
+    public GameObject MenuButton;
     public GameObject MenuWindow;
     public GameObject startPoint;
     public GameObject endPoint;
@@ -49,8 +50,10 @@ public class OpenMenuScript : MonoBehaviour
     public IEnumerator CloseAnimation()
     {
         float t = 0;
+        
         while (t<1f)
         {
+            MenuButton.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, -180),Vector3.zero,  t * 2);
             MenuWindow.transform.position = Vector3.Lerp(endPoint.transform.position,startPoint.transform.position, t);
             t += Time.deltaTime*4;
             yield return null;
@@ -62,6 +65,7 @@ public class OpenMenuScript : MonoBehaviour
         float t = 0;
         while (t<1f)
         {
+            MenuButton.transform.localEulerAngles = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, -180), t * 2);
             MenuWindow.transform.position = Vector3.Lerp(startPoint.transform.position, endPoint.transform.position, t);
             t += Time.deltaTime*4;
             yield return null;

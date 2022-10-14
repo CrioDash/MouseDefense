@@ -32,8 +32,7 @@ namespace Bullets
             if (other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
-                Enemy enemy = other.GetComponent<Enemy>();
-                enemy.TakeDamage(GetDmg(), this);
+                other.GetComponent<Enemy>().TakeDamage(GetDmg(), this);
             }
         }
     }

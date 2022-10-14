@@ -33,12 +33,6 @@ namespace UI
 
         public void ChangeHP()
         {
-            if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
-            {
-                EndGame.SetActive(true);
-                EventBus.Publish(EventType.PAUSE);
-                return;
-            }
             StartCoroutine(VisualHpChange());
         }
         
@@ -58,6 +52,11 @@ namespace UI
                     scale.y,scale.z);
                 t += Time.deltaTime*8;
                 yield return null;
+            }
+            if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
+            {
+                EndGame.SetActive(true);
+                EventBus.Publish(EventType.PAUSE);
             }
         }
 
