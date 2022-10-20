@@ -24,12 +24,12 @@ public class TowerDetector : MonoBehaviour
     {
         if(!other.CompareTag("Enemy") || _parent.GetTarget() != null)
             return;
-        _parent.FindTarget();
+        _parent.SetTarget(other.GetComponent<Enemy>());
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Enemy") || _parent.GetTarget()==null) 
+        if (!other.CompareTag("Enemy")) 
             return; 
         if (_parent.GetTarget().Equals(other.GetComponent<Enemy>()))
         {

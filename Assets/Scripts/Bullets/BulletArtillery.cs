@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Enemies;
 using UI.Pause;
 using UnityEngine;
 using Utilities;
@@ -25,9 +26,10 @@ namespace Bullets
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f, transform.eulerAngles.y, 0);
                 while (PauseScript.IsPaused)
                     yield return null;
-                time += Time.fixedDeltaTime*6/Vector3.Distance(startPos, endPos);
+                time += Time.deltaTime;
                 yield return null;
             }
+            yield break;
         }
         
         private void OnTriggerEnter(Collider other)
@@ -36,7 +38,11 @@ namespace Bullets
             {
                 StopCoroutine(Move());
                 Collider[] targets = Physics.OverlapSphere(transform.position, 3);
-                
+                foreach (Collider col in targets)
+                {
+                    if (col.CompareTag("Enemy"))
+                        col.GetComponent<Enemy>().TakeDamage(_parent.bulletDamage, this);
+                }
                 Destroy(gameObject);
             }
         }
