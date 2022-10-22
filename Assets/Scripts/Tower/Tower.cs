@@ -52,9 +52,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         {
             if (col.CompareTag("Enemy") && (int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
             {
-                //if(Vector3.Distance(transform.position, col.transform.position) < minDist)
-                 //   continue;
-                 _target = col.GetComponent<Enemy>();
+                _target = col.GetComponent<Enemy>();
                 return;
             }
         }

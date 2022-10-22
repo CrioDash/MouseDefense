@@ -10,7 +10,7 @@ namespace Levels
     
         void Start()
         {
-            Application.targetFrameRate = 60;
+            Application.targetFrameRate = 120;
             DontDestroyOnLoad(gameObject);
         }
 

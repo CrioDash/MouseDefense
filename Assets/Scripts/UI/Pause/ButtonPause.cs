@@ -11,7 +11,6 @@ namespace UI.Pause
         private void Awake()
         {
             _button = GetComponent<Button>();
-            Debug.Log(name);
         }
 
         private void OnEnable()

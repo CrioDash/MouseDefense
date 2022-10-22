@@ -50,13 +50,14 @@ namespace UI
                 }
                 CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, _level.CurrentHealth/ _level.MaxHealth, t), 
                     scale.y,scale.z);
-                t += Time.deltaTime*8;
+                t += Time.fixedDeltaTime*8;
                 yield return null;
             }
             if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
             {
-                EndGame.SetActive(true);
                 EventBus.Publish(EventType.PAUSE);
+                EndGame.SetActive(true);
+                
             }
         }
 

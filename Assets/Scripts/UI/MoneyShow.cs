@@ -48,7 +48,7 @@ namespace UI
                 }
                 _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, curLevel.Gold, time));
                 Text.text = _gold.ToString();
-                time += Time.deltaTime*8;
+                time += Time.fixedDeltaTime*8;
                 yield return null;
             }
             if (_gold != curLevel.Gold)

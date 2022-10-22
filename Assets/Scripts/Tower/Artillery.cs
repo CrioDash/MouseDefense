@@ -8,6 +8,8 @@ namespace Towers
     {
         public GameObject head;
 
+        
+
         public override void Shoot()
         {
             if (GetTarget() == null)
@@ -15,6 +17,7 @@ namespace Towers
             _animator.SetTrigger("Shoot");
             GameObject bullet = Instantiate(bulletPrefab, transform);
             bullet.transform.position = bulletSpawn.transform.position;
+            
         }
 
         public override void LevelUp()

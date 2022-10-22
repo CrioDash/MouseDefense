@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Events;
 using UI.Pause;
 using UnityEngine;
+using UnityEngine.UI;
 using EventType = Events.EventType;
 
 
@@ -35,6 +36,7 @@ public class OpenMenuScript : MonoBehaviour
     {
         EventBus.Publish(EventType.PAUSE);
         _opened = true;
+        MenuButton.GetComponent<Button>().interactable = true;
         StopCoroutine(CloseAnimation());
         StartCoroutine(OpenAnimation());
     }
@@ -55,7 +57,7 @@ public class OpenMenuScript : MonoBehaviour
         {
             MenuButton.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, -180),Vector3.zero,  t * 2);
             MenuWindow.transform.position = Vector3.Lerp(endPoint.transform.position,startPoint.transform.position, t);
-            t += Time.deltaTime*4;
+            t += Time.fixedDeltaTime*4;
             yield return null;
         }
     }
@@ -67,7 +69,7 @@ public class OpenMenuScript : MonoBehaviour
         {
             MenuButton.transform.localEulerAngles = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, -180), t * 2);
             MenuWindow.transform.position = Vector3.Lerp(startPoint.transform.position, endPoint.transform.position, t);
-            t += Time.deltaTime*4;
+            t += Time.fixedDeltaTime*4;
             yield return null;
         }
     }
