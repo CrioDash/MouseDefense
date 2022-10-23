@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4326373097865456734}
   - component: {fileID: 4326373097865456735}
   - component: {fileID: 4326373097865456732}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 4326373097963616526}
   - component: {fileID: 4326373097963616527}
   - component: {fileID: 4326373097963616524}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 4326373098305085463}
   - component: {fileID: 4326373098305085460}
   - component: {fileID: 4326373098305085461}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Leg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 4326373098656243048}
   - component: {fileID: 4326373098656243050}
   - component: {fileID: 6339229308516368014}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: tower_Artillery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 4326373099111555094}
   - component: {fileID: 4326373099111555095}
   - component: {fileID: 4326373099111555092}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -548,7 +548,7 @@ GameObject:
   - component: {fileID: 4326373099500215980}
   - component: {fileID: 4326373099500215981}
   - component: {fileID: 4326373099500215970}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +645,7 @@ GameObject:
   - component: {fileID: 4326373099566718502}
   - component: {fileID: 4326373099566718503}
   - component: {fileID: 4326373099566718500}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 4326373099618551755}
   - component: {fileID: 4326373099618551752}
   - component: {fileID: 4326373099618551753}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -836,7 +836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4326373099721120272}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -878,7 +878,7 @@ GameObject:
   - component: {fileID: 4326373099738327029}
   - component: {fileID: 4326373099738327018}
   - component: {fileID: 4326373099738327019}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -972,7 +972,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2948924381279607702}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: BulletSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -24,6 +24,7 @@ public class TowerDetector : MonoBehaviour
     {
         if(!other.CompareTag("Enemy") || _parent.GetTarget() != null)
             return;
+        Debug.Log("Jopa");
         _parent.SetTarget(other.GetComponent<Enemy>());
     }
 

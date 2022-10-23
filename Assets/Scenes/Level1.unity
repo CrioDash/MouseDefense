@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 1, g: 1, b: 0.49019608, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.015
@@ -113767,7 +113767,7 @@ MonoBehaviour:
   - {fileID: 988295990}
   - {fileID: 1436888526}
   Enemies:
-  - {fileID: 4667825729129609177, guid: 36c656121fabdd2418245130d1d89e59, type: 3}
+  - {fileID: 4667825729129609177, guid: 9f7e8ba8b791f514fb9fbcf0a4075c42, type: 3}
   MaxHealth: 0
   CurrentHealth: 0
   Gold: 0
