@@ -15,7 +15,7 @@ namespace Bullets
         public override IEnumerator Move()
         {
             Vector3 startPos = transform.position;
-            endPos = _parent.GetTarget().transform.position;
+            endPos = parent.GetTarget().transform.position;
             endPos.y -= 1;
             Vector3 middlePos1 = Vector3.Lerp(startPos, endPos, 1/3f);
             Vector3 middlePos2 = Vector3.Lerp(startPos, endPos, 2/3f);
@@ -57,7 +57,7 @@ namespace Bullets
                     if (col.CompareTag("Enemy"))
                     {
                         Debug.Log("dealed dmg");
-                        col.GetComponent<Enemy>().TakeDamage(_parent.bulletDamage, this);
+                        col.GetComponent<Enemy>().TakeDamage(parent.bulletDamage, this);
                     }
                 }
                 Destroy(gameObject);

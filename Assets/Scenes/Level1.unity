@@ -1297,7 +1297,7 @@ MonoBehaviour:
   Hour: 0
   Minute: 0
   Second: 0
-  Multiplier: 2500
+  Multiplier: 1000
   NightColor: {r: 0.039215688, g: 0.05882353, b: 0.1764706, a: 0}
   DawnColor: {r: 1, g: 0, b: 0.39215687, a: 0}
   DayColor: {r: 1, g: 1, b: 0.49019608, a: 0}

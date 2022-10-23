@@ -489,7 +489,7 @@ GameObject:
   - component: {fileID: 4326373099363101564}
   - component: {fileID: 4326373099363101566}
   - component: {fileID: 4326373099363101567}
-  m_Layer: 9
+  m_Layer: 2
   m_Name: Detector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

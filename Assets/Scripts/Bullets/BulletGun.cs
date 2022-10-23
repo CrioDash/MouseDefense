@@ -9,7 +9,7 @@ namespace Bullets
     {
         public override IEnumerator Move()
         {
-            Enemy target = _parent.GetTarget();
+            Enemy target = parent.GetTarget();
             while (true)
             {
                 if (target == null)

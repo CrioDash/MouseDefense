@@ -13,7 +13,7 @@ namespace Levels
 
         public override IEnumerator LevelScenario()
         {
-            while (enemies.Count < 50)
+            while (enemies.Count < 200)
             {
                 while (PauseScript.IsPaused)
                 {

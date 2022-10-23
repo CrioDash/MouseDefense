@@ -5,7 +5,7 @@ namespace Bullets
 {
     public class Bullet : MonoBehaviour, IBulletMove
     {
-        protected Tower _parent;
+        public Tower parent;
         protected float bulletSpeed;
         protected int bulletDamage;
 
@@ -17,13 +17,13 @@ namespace Bullets
 
         private void Awake()
         {
-            _parent = GetComponentInParent<Tower>();
+            parent = GetComponentInParent<Tower>();
         }
 
         public void SetStats()
         {
-            bulletDamage = _parent.bulletDamage;
-            bulletSpeed = _parent.bulletSpeed;
+            bulletDamage = parent.bulletDamage;
+            bulletSpeed = parent.bulletSpeed;
         }
 
         public virtual IEnumerator Move()
@@ -34,7 +34,7 @@ namespace Bullets
 
         public Tower GetParent()
         {
-            return _parent;
+            return parent;
         }
     
         public int GetDmg()

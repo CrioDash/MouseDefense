@@ -43,6 +43,7 @@ namespace Enemies
             if (CurrentHealth <= 0)
             {
                 _level.ChangeMoney(Reward);
+                proj.parent.FindTarget();
                 Destroy(gameObject);
             }
             StartCoroutine(VisualTakeDamage(dmg));
