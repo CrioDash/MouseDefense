@@ -48,7 +48,6 @@ namespace Game
             {
                 Hour = 0;
             }
-            Debug.Log($"{Hour}:{Minute}:{Mathf.Round(Second)}");
         }
 
         public IEnumerator TimeChange()
