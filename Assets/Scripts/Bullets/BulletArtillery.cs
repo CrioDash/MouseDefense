@@ -41,22 +41,17 @@ namespace Bullets
         
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("trigger enter");
             if (other.CompareTag("Road") || other.CompareTag("Enemy"))
             {
-                Debug.Log("entered road");
                 StopCoroutine(Move());
                 GameObject rad = Instantiate(radius);
                 rad.transform.position = endPos;
                 Destroy(rad, 0.4f);
-                
                 Collider[] targets = Physics.OverlapSphere(transform.position, 3, 1<<7);
-                Debug.Log(targets.Length);
                 foreach (Collider col in targets)
                 {
                     if (col.CompareTag("Enemy"))
                     {
-                        Debug.Log("dealed dmg");
                         col.GetComponent<Enemy>().TakeDamage(parent.bulletDamage, this);
                     }
                 }

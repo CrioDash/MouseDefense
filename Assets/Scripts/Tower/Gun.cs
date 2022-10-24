@@ -8,8 +8,7 @@ namespace Towers
 {
     public class Gun:Tower
     {
-        public GameObject head;
-        
+
         public override void Shoot()
         {
             
@@ -24,25 +23,7 @@ namespace Towers
         {
             
         }
-
-        public override IEnumerator RotateHead()
-        {
-            while (true)
-            {
-                if (GetTarget() == null)
-                {
-                    yield return null;
-                    continue;
-                }
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
-                head.transform.LookAt(GetTarget().transform.position);
-                head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
-                yield return null;
-            }
-        }
+        
         
     }
 }

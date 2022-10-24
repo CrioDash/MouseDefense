@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -41,9 +42,11 @@ namespace Bullets
         {
             return bulletDamage;
         }
-    
-    
 
-   
+        private void OnDestroy()
+        {
+            if(parent.GetTarget() == null)
+                parent.FindTarget();
+        }
     }
 }

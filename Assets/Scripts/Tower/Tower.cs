@@ -15,6 +15,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public float attackRange;
 
     [Header("Bullet Settings")] 
+    public GameObject head;
     public ShootType shootType;
     public GameObject bulletPrefab;
     public float bulletSpeed;
@@ -40,19 +41,17 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
 
     public void OnDisable()
     {
-        StopCoroutine(StartShooting());
-        StopCoroutine(RotateHead());
+        
     }
 
     public void FindTarget()
     {
         Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange);
-        float tempDist = float.MaxValue;
         foreach (Collider col in enemies)
         {
             if (col.CompareTag("Enemy") && (int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
             {
-                _target = col.GetComponent<Enemy>();
+                SetTarget(col.GetComponent<Enemy>());
                 return;
             }
         }
@@ -73,7 +72,10 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     {
         while (true)
         {
-            yield return new WaitUntil(() => GetTarget() != null);
+            while (GetTarget() == null || PauseScript.IsPaused)
+            {
+                yield return null;
+            }
             Shoot();
             _cd = true;
             StartCoroutine(WaitCooldown(bulletCooldown));
@@ -97,8 +99,22 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
 
         _cd = false;
     }
+    
 
-    public abstract IEnumerator RotateHead();
+    public IEnumerator RotateHead()
+    {
+        while (true)
+        {
+            while (GetTarget() == null || PauseScript.IsPaused)
+            {
+                yield return null;
+            }
+            head.transform.LookAt(GetTarget().transform.position);
+            head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
+            yield return null;
+        }
+    }
+
 
     public abstract void LevelUp();
     

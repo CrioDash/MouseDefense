@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using Enemies;
+using TMPro;
 using UI.Pause;
 using UnityEngine;
 
@@ -33,6 +34,7 @@ namespace Bullets
             {
                 StopCoroutine(Move());
                 other.GetComponent<Enemy>().TakeDamage(GetDmg(), this);
+                Destroy(gameObject);
             }
         }
     }
