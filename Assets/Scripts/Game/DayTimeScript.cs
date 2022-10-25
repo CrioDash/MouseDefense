@@ -56,7 +56,7 @@ namespace Game
             {
                 yield return new WaitUntil(() => Hour >= 0);
 
-                RenderSettings.fogDensity = 0.02f;
+                RenderSettings.fogDensity = 0.015f;
                 RenderSettings.fogColor = NightColor;
                 transform.eulerAngles = new Vector3(265, 40, 0);
                 
@@ -78,7 +78,7 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 3*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(175, 40, 0), new Vector3(160, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(NightColor, DawnColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0.02f, 0.01f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(0.015f, 0.005f, t);
                     yield return null;
                 }
                 
@@ -92,7 +92,7 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 5*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(160, 40, 0), new Vector3(140, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(DawnColor, DayColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0.01f, 0.015f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(0.005f, 0.01f, t);
                     yield return null;
                 }
                 
@@ -100,7 +100,7 @@ namespace Game
                 
                 //День
                 
-                RenderSettings.fogDensity = 0.015f;
+                RenderSettings.fogDensity = 0.01f;
                 RenderSettings.fogColor = DayColor;
                 transform.eulerAngles = new Vector3(140, 40, 0);
 
@@ -116,7 +116,7 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 15*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(40, 40, 0), new Vector3(20, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(DayColor, DuskColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0.015f, 0.015f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(0.01f, 0.01f, t);
                     yield return null;
                 }
                 
@@ -130,7 +130,7 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 17*3600)  / (4 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(20, 40, 0), new Vector3(5, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(DuskColor, NightColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0.015f, 0.02f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(0.01f, 0.015f, t);
                     yield return null;
                 }
                 
@@ -138,7 +138,7 @@ namespace Game
                 
                 //Ночь
                 
-                RenderSettings.fogDensity = 0.02f;
+                RenderSettings.fogDensity = 0.015f;
                 RenderSettings.fogColor = NightColor;
                 transform.eulerAngles = new Vector3(5, 40, 0);
 

@@ -5,6 +5,6 @@ namespace Enemies
 {
     public interface ITakeDamage
     {
-        public void TakeDamage(int dmg, Bullet proj);
+        public void TakeDamage(int dmg);
     }
 }

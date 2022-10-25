@@ -9,7 +9,6 @@ namespace Bullets
 {
     public class BulletArtillery: Bullet
     {
-        public GameObject radius;
 
         private Vector3 endPos;
         public override IEnumerator Move()
@@ -44,15 +43,12 @@ namespace Bullets
             if (other.CompareTag("Road") || other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
-                GameObject rad = Instantiate(radius);
-                rad.transform.position = endPos;
-                Destroy(rad, 0.4f);
                 Collider[] targets = Physics.OverlapSphere(transform.position, 3, 1<<7);
                 foreach (Collider col in targets)
                 {
                     if (col.CompareTag("Enemy"))
                     {
-                        col.GetComponent<Enemy>().TakeDamage(parent.bulletDamage, this);
+                        col.GetComponent<Enemy>().TakeDamage(GetDmg());
                     }
                 }
                 Destroy(gameObject);

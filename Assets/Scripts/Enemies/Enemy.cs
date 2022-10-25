@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using Bullets;
 using Events;
 using UI.Pause;
@@ -10,7 +12,7 @@ namespace Enemies
 {
     
     [RequireComponent(typeof(EnemyPause))]
-    public class Enemy : MonoBehaviour, ITakeDamage
+    public abstract class Enemy : MonoBehaviour, ITakeDamage
     {
         [Header("Enemy stats")] 
         public EnemyType Type;
@@ -19,16 +21,36 @@ namespace Enemies
         public int Damage;
         public float Speed;
 
+        public List<GameObject> Waypoints
+        {
+            set;
+            get;
+        }
+        
+        public Level Level
+        {
+            set;
+            get;
+        }
+
+        public Vector3 Destination
+        {
+            set => _agent.SetDestination(value);
+            get => _agent.destination;
+        }
+        
         protected float CurrentHealth;
         protected Rigidbody _body;
         protected NavMeshAgent _agent;
-        protected GameObject[] _waypoints;
-        protected Level _level;
+        protected IEnemyMove _move;
 
         private void Start()
         {
-            _level = FindObjectOfType<Level>();
+            Level = FindObjectOfType<Level>();
             CurrentHealth = MaxHealth;
+            _agent.speed = Speed;
+            SetStats();
+            StartCoroutine(_move.Move(this));
         }
 
         private void Awake()
@@ -37,56 +59,26 @@ namespace Enemies
             _agent = GetComponent<NavMeshAgent>();
         }
 
-        public virtual void TakeDamage(int dmg, Bullet proj)
+        public abstract void SetStats();
+
+        public virtual void TakeDamage(int dmg)
         {
             CurrentHealth-=dmg;
             if (CurrentHealth <= 0)
             {
-                _level.ChangeMoney(Reward);
                 Destroy(gameObject);
             }
 
         }
 
-        
-
-        public IEnumerator VisualTakeDamage(int dmg)
+        private void OnDestroy()
         {
-            yield return new WaitUntil(() => CurrentHealth != MaxHealth);
-            float t = 0;
-            while (t<1)
-            {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
-                t += Time.deltaTime * 8;
-                yield return null;
-            }
+            Level.ChangeMoney(Reward);
         }
-        
+
         public void SetWaypoints(GameObject[] waypoints)
         {
-            _agent.speed = Speed;
-            _waypoints = waypoints;
-            _agent.SetDestination(_waypoints[1].transform.position);
-            StartCoroutine(MoveDestination());
+            Waypoints = waypoints.ToList();
         }
-
-        public virtual IEnumerator MoveDestination()
-        {
-            GameObject currentWaypoint = _waypoints[1];
-
-            yield return new WaitUntil(
-                () => Vector3.Distance(transform.position, currentWaypoint.transform.position) <= 0.7f);
-            if(currentWaypoint.name == _waypoints[_waypoints.Length-1].name)
-            {
-                _level.TakeDamage(Damage);
-                Destroy(gameObject);
-            }
-        }
-        
-        
-        
     }
 }
