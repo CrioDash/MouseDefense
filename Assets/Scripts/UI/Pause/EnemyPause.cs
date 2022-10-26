@@ -28,10 +28,13 @@ namespace UI.Pause
         public void Pause()
         {
             if (PauseScript.IsPaused)
+            {
                 _agent.speed = 0;
+            }
             else
+            {
                 _agent.speed = _enemy.Speed;
-            
+            }
         }
     }
 }

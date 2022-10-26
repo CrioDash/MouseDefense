@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
+using Towers;
 using UnityEngine;
 
 namespace Bullets
 {
     public class Bullet : MonoBehaviour, IBulletMove
     {
-        public Tower parent;
-        protected float bulletSpeed;
-        protected int bulletDamage;
+        protected Tower Parent;
+        protected float BulletSpeed;
+        protected int BulletDamage;
 
         private void Start()
         {
@@ -18,35 +19,29 @@ namespace Bullets
 
         private void Awake()
         {
-            parent = GetComponentInParent<Tower>();
+            Parent = GetComponentInParent<Tower>();
         }
 
         public void SetStats()
         {
-            bulletDamage = parent.bulletDamage;
-            bulletSpeed = parent.bulletSpeed;
+            BulletDamage = Parent.bulletDamage;
+            BulletSpeed = Parent.bulletSpeed;
         }
 
         public virtual IEnumerator Move()
         {
             yield break;
         }
-    
 
-        public Tower GetParent()
-        {
-            return parent;
-        }
-    
         public int GetDmg()
         {
-            return bulletDamage;
+            return BulletDamage;
         }
 
         private void OnDestroy()
         {
-            if(parent.GetTarget() == null)
-                parent.FindTarget();
+            if(Parent.GetTarget() == null ||Parent.shootType!= ShootType.Both && (int)Parent.GetTarget().Type != (int)Parent.shootType)
+                Parent.FindTarget();
         }
     }
 }

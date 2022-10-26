@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using Enemies;
-using TMPro;
 using UI.Pause;
 using UnityEngine;
 
 namespace Bullets
 {
-    public class BulletGun: Bullet
+    public class BulletAA:Bullet
     {
         public override IEnumerator Move()
         {
@@ -24,6 +23,8 @@ namespace Bullets
                 }
                 transform.position = Vector3.MoveTowards(transform.position, target.transform.position,
                     BulletSpeed * Time.fixedDeltaTime);
+                transform.LookAt(Parent.GetTarget().transform.position);
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f, transform.eulerAngles.y, 0);
                 yield return null;
             }
         }

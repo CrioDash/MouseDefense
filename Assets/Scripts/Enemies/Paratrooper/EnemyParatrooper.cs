@@ -5,10 +5,13 @@ namespace Enemies
 {
     public class EnemyParatrooper : Enemy
     {
+        [Header("Настройки парашютиста")] public int ParashootHP;
+        
         private GameObject _parashoot;
         public override void SetStats()
         {
-            _move = gameObject.AddComponent<IParatroopMove>();
+            Move = gameObject.AddComponent<IParatroopMove>();
+            TakeDamage = gameObject.AddComponent<IParatrooperTakeDamage>();
             _parashoot = transform.Find("Parashoot").gameObject;
         }
 

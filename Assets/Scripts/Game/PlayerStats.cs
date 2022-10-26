@@ -9,7 +9,7 @@ namespace Game
         public static int BonusGold = 0;
 
         //Towers
-        public static TowerType[] Towers = {TowerType.Gun, TowerType.Artillery};
+        public static TowerType[] Towers = {TowerType.Gun, TowerType.Artillery, TowerType.AntiAir};
 
     }
 }

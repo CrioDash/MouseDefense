@@ -1,4 +1,4 @@
 ﻿public enum TowerType
 {
-    Gun, Artillery
+    Gun, Artillery, AntiAir
 }

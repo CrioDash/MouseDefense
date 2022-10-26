@@ -4,6 +4,6 @@ namespace Enemies
 {
     public interface IEnemyMove
     {
-        public IEnumerator Move(Enemy enemy);
+        public IEnumerator Move();
     }
 }

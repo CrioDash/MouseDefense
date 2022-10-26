@@ -46,7 +46,13 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
 
     public void FindTarget()
     {
-        Collider[] enemies = Physics.OverlapSphere(transform.position, attackRange);
+        Collider[] enemies = Array.Empty<Collider>();
+        if(shootType== ShootType.Ground)
+           enemies = Physics.OverlapSphere(transform.position, attackRange);
+        if (shootType == ShootType.Air)
+            enemies = Physics.OverlapBox(
+                new Vector3(transform.position.x, transform.position.y + 9f, transform.position.z),
+                new Vector3(attackRange, 18, attackRange)/2);
         foreach (Collider col in enemies)
         {
             if (col.CompareTag("Enemy") && (int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
@@ -76,6 +82,8 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
             {
                 yield return null;
             }
+            if(shootType!= ShootType.Both && (int)GetTarget().Type != (int)shootType)
+                FindTarget();
             Shoot();
             _cd = true;
             StartCoroutine(WaitCooldown(bulletCooldown));
@@ -122,7 +130,11 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
 
     public void OnDrawGizmosSelected()
     {
-        DrawRadius.DrawWireDisk(transform.position, attackRange, new Color(1,1,1,0.3f));
+        if(shootType == ShootType.Air)
+            Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+9f, transform.position.z), 
+                new Vector3(attackRange, 18, attackRange));
+        if(shootType == ShootType.Ground) 
+            DrawRadius.DrawWireDisk(transform.position, attackRange, new Color(1,1,1,0.3f));
     }
 
 }

@@ -10,7 +10,6 @@ namespace UI.Pause
         private void Awake()
         {
             _animator = GetComponent<Animator>();
-            Debug.Log(name);
         }
         
         private void OnEnable()

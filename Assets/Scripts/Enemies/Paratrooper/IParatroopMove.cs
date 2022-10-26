@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Linq;
 using Bullets;
+using UI.Pause;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -8,21 +9,27 @@ namespace Enemies
 {
     public class IParatroopMove: MonoBehaviour, IEnemyMove
     {
-        public IEnumerator Move(Enemy enemy)
+        public IEnumerator Move()
         {
+            EnemyParatrooper enemy = GetComponent<EnemyParatrooper>();
             GameObject parashoot = enemy.transform.Find("Parashoot").gameObject;
             enemy.SetWaypoints(enemy.Level.Waypoints.ToArray());
             yield return new WaitForSeconds(2);
             while (enemy.transform.position.y > 0.5)
             {
-                enemy.transform.position += Physics.gravity * Time.deltaTime;
+                while (PauseScript.IsPaused)
+                {
+                    yield return null;
+                }
+                enemy.transform.position += Physics.gravity * Time.deltaTime/4;
                 yield return null;
             }
 
             if (parashoot == null)
-                enemy.TakeDamage(100);
+                enemy.TakeDamage.TakeDamage(100, DamageType.Normal);
             enemy.Type = EnemyType.Ground;
             Destroy(parashoot);
+            enemy.ParashootHP = 0;
             enemy.GetComponent<NavMeshAgent>().enabled = true;
             enemy.GetComponent<CapsuleCollider>().enabled = false;
             enemy.GetComponent<CapsuleCollider>().enabled = true;

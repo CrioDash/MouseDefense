@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.VisualScripting;
+using UnityEngine;
 
 namespace Enemies
 {
@@ -6,7 +7,8 @@ namespace Enemies
     {
         public override void SetStats()
         {
-            _move = gameObject.AddComponent<IDefaultMove>();
+            Move = gameObject.AddComponent<IDefaultMove>();
+            TakeDamage = gameObject.AddComponent<IDefaultTakeDamage>();
         }
         
     }

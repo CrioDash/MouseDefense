@@ -7,9 +7,9 @@ namespace Enemies
     public class IDefaultMove:MonoBehaviour,IEnemyMove
     {
 
-        public IEnumerator Move(Enemy enemy)
+        public IEnumerator Move()
         {
-            
+            Enemy enemy = GetComponent<Enemy>();
             for(int i =1;i<enemy.Waypoints.Count; i++)
             {
                 enemy.Destination = enemy.Waypoints[i].transform.position;

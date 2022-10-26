@@ -341,7 +341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  attackRange: 10
+  attackRange: 12
   head: {fileID: 4326373099721120273}
   shootType: 0
   bulletPrefab: {fileID: 811739097488997448, guid: 456d8dfc8805afd43a1cddb9d9ddb79a, type: 3}
@@ -536,6 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f18a3dff9e00c149b9602ebd9f46bf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
 --- !u!1 &4326373099500215968
 GameObject:
   m_ObjectHideFlags: 0

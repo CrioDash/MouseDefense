@@ -12,7 +12,7 @@ namespace Enemies
 {
     
     [RequireComponent(typeof(EnemyPause))]
-    public abstract class Enemy : MonoBehaviour, ITakeDamage
+    public abstract class Enemy : MonoBehaviour
     {
         [Header("Enemy stats")] 
         public EnemyType Type;
@@ -35,41 +35,49 @@ namespace Enemies
 
         public Vector3 Destination
         {
-            set => _agent.SetDestination(value);
-            get => _agent.destination;
+            set => Agent.SetDestination(value);
+            get => Agent.destination;
+        }
+
+        public float CurrentHealth
+        {
+            set;
+            get;
         }
         
-        protected float CurrentHealth;
-        protected Rigidbody _body;
-        protected NavMeshAgent _agent;
-        protected IEnemyMove _move;
+        public IEnemyMove Move
+        {
+            set;
+            get;
+        }
+
+        public ITakeDamage TakeDamage
+        {
+            set;
+            get;
+        }
+        
+        protected Rigidbody Body;
+        protected NavMeshAgent Agent;
+       
 
         private void Start()
         {
             Level = FindObjectOfType<Level>();
             CurrentHealth = MaxHealth;
-            _agent.speed = Speed;
+            Agent.speed = Speed;
             SetStats();
-            StartCoroutine(_move.Move(this));
+            StartCoroutine(Move.Move());
         }
 
         private void Awake()
         {
-            _body = GetComponent<Rigidbody>();
-            _agent = GetComponent<NavMeshAgent>();
+            Body = GetComponent<Rigidbody>();
+            Agent = GetComponent<NavMeshAgent>();
         }
 
         public abstract void SetStats();
-
-        public virtual void TakeDamage(int dmg)
-        {
-            CurrentHealth-=dmg;
-            if (CurrentHealth <= 0)
-            {
-                Destroy(gameObject);
-            }
-
-        }
+        
 
         private void OnDestroy()
         {
