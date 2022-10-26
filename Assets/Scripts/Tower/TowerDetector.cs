@@ -32,6 +32,7 @@ public class TowerDetector : MonoBehaviour
             _colliderSphere.radius = _parent.attackRange;
         else
             _colliderBox.size = new Vector3(_parent.attackRange, 18, _parent.attackRange);
+        _parent.FindTarget();
     }
 
     private void OnTriggerEnter(Collider other)

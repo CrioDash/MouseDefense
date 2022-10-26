@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -5,12 +6,12 @@ namespace Utilities
 {
     public class FpsShow : MonoBehaviour
     {
-        private Text _text;
+        private TextMeshProUGUI _text;
 
         private float _currentFps;
         private void Awake()
         {
-            _text = GetComponent<Text>();
+            _text = GetComponent<TextMeshProUGUI>();
         }
 
         void Start()

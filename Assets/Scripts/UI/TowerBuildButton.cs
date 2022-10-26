@@ -1,6 +1,7 @@
 using System.Linq;
 using Game;
 using Tiles;
+using TMPro;
 using Towers;
 using UI.Pause;
 using UnityEngine;
@@ -22,11 +23,12 @@ namespace UI
         {
             _builder = GetComponentInParent<TowerBuilder>();
             _button = GetComponent<Button>();
+            GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();
         }
 
         private void Start()
         {
-            GetComponentInChildren<Text>().text = cost.ToString();
+            
             
             if (!PlayerStats.Towers.Contains(Type))
             {

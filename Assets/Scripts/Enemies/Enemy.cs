@@ -81,7 +81,8 @@ namespace Enemies
 
         private void OnDestroy()
         {
-            Level.ChangeMoney(Reward);
+            if(CurrentHealth<=0)
+                Level.ChangeMoney(Reward);
         }
 
         public void SetWaypoints(GameObject[] waypoints)

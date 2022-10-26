@@ -10,7 +10,7 @@ namespace Levels
     
         void Start()
         {
-            Application.targetFrameRate = 120;
+            Application.targetFrameRate = 60;
             DontDestroyOnLoad(gameObject);
         }
 
@@ -21,9 +21,15 @@ namespace Levels
 
         public IEnumerator LoadLevel(int num)
         {
-            SceneManager.LoadScene(num);
-            yield return new WaitUntil(() => SceneManager.GetActiveScene().buildIndex == num);
-            yield return new WaitForSeconds(1f);
+            AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(num);
+            sceneLoad.allowSceneActivation = false;
+            while (sceneLoad.progress<0.9f)
+            {
+                Debug.Log(sceneLoad.progress * 100 + "%");
+                yield return null;
+            }
+            sceneLoad.allowSceneActivation = true;
+
         }
     }
 }

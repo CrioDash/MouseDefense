@@ -24,7 +24,7 @@ namespace Levels
                 enemyGameObject.transform.position = enemyContainer.transform.position;
                 Enemy enemy = enemyGameObject.GetComponentInChildren<Enemy>();
                 enemy.SetWaypoints(Waypoints.ToArray());
-                yield return new WaitForSeconds(0.75f);
+                yield return new WaitForSeconds(0.5f);
             }
         }
     }

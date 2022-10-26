@@ -17,7 +17,7 @@ namespace Enemies
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 0.96f);
             }
             enemy.Level.TakeDamage(enemy.Damage);
-            Destroy(enemy);
+            Destroy(enemy.gameObject);
         }
     }
 }

@@ -9,11 +9,13 @@ namespace UI.Pause
     {
         private NavMeshAgent _agent;
         private Enemy _enemy;
+        private Rigidbody _body;
 
         private void Awake()
         {
             _enemy = GetComponent<Enemy>();
             _agent = GetComponent<NavMeshAgent>();
+            _body = GetComponent<Rigidbody>();
         }
 
         private void OnEnable()
@@ -29,10 +31,12 @@ namespace UI.Pause
         {
             if (PauseScript.IsPaused)
             {
+                _body.isKinematic = true;
                 _agent.speed = 0;
             }
             else
             {
+                _body.isKinematic = false;
                 _agent.speed = _enemy.Speed;
             }
         }

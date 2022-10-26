@@ -26,6 +26,7 @@ public abstract class Level : MonoBehaviour, ILevel
 
     private void Start()
     {
+        Camera.main.clearFlags = CameraClearFlags.Nothing;
         EventBus.Publish(EventType.START);
     }
 

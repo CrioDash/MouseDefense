@@ -21,7 +21,7 @@ namespace Enemies
                 {
                     yield return null;
                 }
-                enemy.transform.position += Physics.gravity * Time.deltaTime/4;
+                enemy.transform.position += Physics.gravity * Time.fixedDeltaTime/4;
                 yield return null;
             }
 
@@ -40,7 +40,7 @@ namespace Enemies
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 0.96f);
             }
             enemy.Level.TakeDamage(enemy.Damage);
-            Destroy(enemy);
+            Destroy(enemy.gameObject);
         }
     }
 }
