@@ -16,7 +16,7 @@ namespace Bullets
         {
             Vector3 startPos = transform.position;
             endPos = Parent.GetTarget().transform.position;
-            endPos.y -= 1;
+            endPos.y = -0.5f;
             Vector3 middlePos1 = Vector3.Lerp(startPos, endPos, 1/3f);
             Vector3 middlePos2 = Vector3.Lerp(startPos, endPos, 2/3f);
 

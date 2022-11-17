@@ -1,7 +1,10 @@
 using System.Collections;
+using Events;
 using UI;
+using UI.Pause;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using EventType = Events.EventType;
 
 namespace Levels
 {
@@ -22,14 +25,13 @@ namespace Levels
         public IEnumerator LoadLevel(int num)
         {
             AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(num);
-            sceneLoad.allowSceneActivation = false;
+            Debug.Log(Time.time);
             while (sceneLoad.progress<0.9f)
             {
                 Debug.Log(sceneLoad.progress * 100 + "%");
                 yield return null;
             }
-            sceneLoad.allowSceneActivation = true;
-
+            yield return new WaitUntil(() => sceneLoad.isDone);
         }
     }
 }

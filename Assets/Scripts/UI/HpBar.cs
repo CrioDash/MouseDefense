@@ -12,13 +12,7 @@ namespace UI
     {
         public GameObject CurrHP;
         public GameObject EndGame;
-    
-        private Level _level;
-
-        private void Awake()
-        {
-            _level = FindObjectOfType<Level>();
-        }
+        
 
         private void OnEnable()
         {
@@ -48,12 +42,12 @@ namespace UI
                 {
                     yield return null;
                 }
-                CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, _level.CurrentHealth/ _level.MaxHealth, t), 
+                CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, Level.currentLevel.CurrentHealth/ Level.currentLevel.MaxHealth, t), 
                     scale.y,scale.z);
                 t += Time.fixedDeltaTime*8;
                 yield return null;
             }
-            if (_level.CurrentHealth <= 0 && !PauseScript.IsPaused)
+            if (Level.currentLevel.CurrentHealth <= 0 && !PauseScript.IsPaused)
             {
                 EventBus.Publish(EventType.PAUSE);
                 EndGame.SetActive(true);

@@ -1,8 +1,10 @@
 using System.Collections;
 using Events;
 using Game;
+using TMPro;
 using UI.Pause;
 using UnityEngine;
+using UnityEngine.ProBuilder;
 using UnityEngine.UI;
 using EventType = Events.EventType;
 
@@ -10,9 +12,10 @@ namespace UI
 {
     public class MoneyShow : MonoBehaviour
     {
-        public Text Text;
+        public TextMeshProUGUI Text;
+        public GameObject TextPrefab;
 
-        private int _gold;
+        private int _gold = 0;
     
         private void OnEnable()
         {
@@ -33,12 +36,12 @@ namespace UI
         public void ChangeMoneyText()
         {
             StartCoroutine(MoneyCoroutine());
+            StartCoroutine(FlowText());
         }
 
         private IEnumerator MoneyCoroutine()
         {
             yield return null;
-            Level curLevel = FindObjectOfType<Level>();
             float time = 0;
             while (time<1)
             {
@@ -46,16 +49,54 @@ namespace UI
                 {
                     yield return null;
                 }
-                _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, curLevel.Gold, time));
+                _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, Level.currentLevel.Gold, time));
                 Text.text = _gold.ToString();
-                time += Time.fixedDeltaTime*8;
+                time += Time.fixedDeltaTime*4;
                 yield return null;
             }
-            if (_gold != curLevel.Gold)
+            if (_gold != Level.currentLevel.Gold)
             {
-                _gold = (int)curLevel.Gold;
+                _gold = (int)Level.currentLevel.Gold;
                 Text.text = _gold.ToString();
             }
+            
+        }
+
+        private IEnumerator FlowText()
+        {
+            TextMeshProUGUI prefab = Instantiate(TextPrefab, transform).GetComponent<TextMeshProUGUI>();
+            prefab.text = Mathf.Abs(_gold - Level.currentLevel.Gold).ToString();
+            if(_gold<Level.currentLevel.Gold)
+            {
+                prefab.text = "+" + prefab.text;
+                prefab.color = Color.green;
+            }
+            else if (_gold>Level.currentLevel.Gold)
+            {
+                prefab.text = "-" + prefab.text;
+                prefab.color = Color.red;
+            }
+            else
+            {
+                Destroy(prefab.gameObject);
+                yield break;
+            }
+            Color color = prefab.color;
+            color.a = 0;
+            float time = 0;
+            while (time<1)
+            {
+                while (PauseScript.IsPaused)
+                {
+                    yield return null;
+                }
+                prefab.color = Color.Lerp(prefab.color, color, time);
+                Text.text = _gold.ToString();
+                time += Time.fixedDeltaTime;
+                yield return null;
+            }
+
+            Destroy(prefab.gameObject);
         }
     }
 }

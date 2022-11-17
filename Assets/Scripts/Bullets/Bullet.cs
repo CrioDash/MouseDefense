@@ -40,7 +40,7 @@ namespace Bullets
 
         private void OnDestroy()
         {
-            if(Parent.GetTarget() == null ||Parent.shootType!= ShootType.Both && (int)Parent.GetTarget().Type != (int)Parent.shootType)
+            if(Parent.GetTarget()==null)
                 Parent.FindTarget();
         }
     }

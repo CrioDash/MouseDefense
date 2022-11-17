@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using UI.Pause;
 using Unity.Mathematics;
 using UnityEngine;
@@ -21,7 +22,11 @@ namespace Towers
 
         public override void LevelUp()
         {
-            
+            transform.localScale += Vector3.one * 0.15f;
+            bulletDamage++;
+            bulletCooldown *= 0.8f;
+            bulletSpeed *= 1.2f;
+            attackRange += 0.5f;
         }
         
         

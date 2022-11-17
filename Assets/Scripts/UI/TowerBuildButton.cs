@@ -6,57 +6,52 @@ using Towers;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.UI;
+using Utilities;
 
 namespace UI
 {
     public class TowerBuildButton : MonoBehaviour
     {
         public TowerType Type;
-        public int cost;
-        
-        private Level _level;
-        private TowerBuilder _builder;
+
+        private int _cost;
         private Button _button;
     
 
         private void Awake()
         {
-            _builder = GetComponentInParent<TowerBuilder>();
             _button = GetComponent<Button>();
-            GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();
         }
+        
 
         private void Start()
         {
-            
-            
+            _cost = TowerInfo.Info.towerPrefabs.Find(x => x.GetComponent<Tower>().type == Type).GetComponent<Tower>().cost;
+            GetComponentInChildren<TextMeshProUGUI>().text = _cost.ToString();
             if (!PlayerStats.Towers.Contains(Type))
             {
                 gameObject.SetActive(false);
             }
         }
 
-        private void OnEnable()
-        {
-            _level = FindObjectOfType<Level>();
-        }
-
         private void Update()
         {
-            if(PauseScript.IsPaused)
+            if (PauseScript.IsPaused)
                 return;
-            _button.interactable = _level.Gold >= cost;
+            _button.interactable = Level.currentLevel.Gold >= _cost;
+            
         }
 
         public void CreateTower()
         {
-            GameObject tower = Instantiate(_builder.towerPrefabs[(int)Type]);
-            Vector3 pos = _builder.towerPos;
+            GameObject tower = Instantiate(TowerInfo.Info.towerPrefabs[(int)Type]);
+            Vector3 pos = TowerInfo.Info.towerPos;
             pos.y += 1;
             tower.transform.position = pos;
-            _builder.towerTile.type = TowerTile.TileType.Towered;
-            _level.ChangeMoney(-cost);
-            _builder.StartCoroutine(_builder.CloseAnimation());
+            TowerInfo.Info.towerTile.type = TowerTile.TileType.Towered;
+            tower.GetComponent<Tower>().tile = TowerInfo.Info.towerTile;
+            Level.currentLevel.ChangeMoney(-_cost);
+            TowerInfo.Info.StartCoroutine("CloseAnimation");
         }
 
     

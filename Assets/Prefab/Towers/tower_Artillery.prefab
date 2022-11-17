@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 4326373097865456733}
   - component: {fileID: 4326373097865456734}
   - component: {fileID: 4326373097865456735}
-  - component: {fileID: 4326373097865456732}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube (5)
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373097865456732
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373097865456722}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373097963616514
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,10 +94,9 @@ GameObject:
   - component: {fileID: 4326373097963616525}
   - component: {fileID: 4326373097963616526}
   - component: {fileID: 4326373097963616527}
-  - component: {fileID: 4326373097963616524}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,19 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373097963616524
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373097963616514}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373098305085451
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,10 +177,9 @@ GameObject:
   - component: {fileID: 4326373098305085450}
   - component: {fileID: 4326373098305085463}
   - component: {fileID: 4326373098305085460}
-  - component: {fileID: 4326373098305085461}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Leg
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -278,19 +249,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373098305085461
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373098305085451}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373098656243049
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,9 +261,10 @@ GameObject:
   - component: {fileID: 4326373098656243048}
   - component: {fileID: 4326373098656243050}
   - component: {fileID: 6339229308516368014}
-  m_Layer: 2
+  - component: {fileID: 5709578171447247226}
+  m_Layer: 9
   m_Name: tower_Artillery
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -340,8 +299,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06eab8afc5fe4d63b3fad81778509d7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 1
   attackRange: 12
+  cost: 100
   head: {fileID: 4326373099721120273}
   shootType: 0
   bulletPrefab: {fileID: 811739097488997448, guid: 456d8dfc8805afd43a1cddb9d9ddb79a, type: 3}
@@ -349,6 +309,8 @@ MonoBehaviour:
   bulletCooldown: 2
   bulletDamage: 3
   bulletSpawn: {fileID: 6540218564338494419}
+  tile: {fileID: 0}
+  level: 1
 --- !u!95 &4326373098656243050
 Animator:
   serializedVersion: 4
@@ -381,6 +343,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6971ae73d49d46aaa39e8dde52c44ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5709578171447247226
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4326373098656243049}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.42, z: 2}
+  m_Center: {x: 0, y: 0.72, z: 0}
 --- !u!1 &4326373099111555082
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,10 +367,9 @@ GameObject:
   - component: {fileID: 4326373099111555093}
   - component: {fileID: 4326373099111555094}
   - component: {fileID: 4326373099111555095}
-  - component: {fileID: 4326373099111555092}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube (3)
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -465,19 +439,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373099111555092
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373099111555082}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373099363101565
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +452,7 @@ GameObject:
   - component: {fileID: 4326373099363101567}
   m_Layer: 2
   m_Name: Detector
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,10 +509,9 @@ GameObject:
   - component: {fileID: 4326373099500215971}
   - component: {fileID: 4326373099500215980}
   - component: {fileID: 4326373099500215981}
-  - component: {fileID: 4326373099500215970}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -621,19 +581,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373099500215970
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373099500215968}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373099566718554
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,10 +592,9 @@ GameObject:
   - component: {fileID: 4326373099566718501}
   - component: {fileID: 4326373099566718502}
   - component: {fileID: 4326373099566718503}
-  - component: {fileID: 4326373099566718500}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -718,19 +664,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373099566718500
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373099566718554}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373099618551759
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,10 +675,9 @@ GameObject:
   - component: {fileID: 4326373099618551758}
   - component: {fileID: 4326373099618551755}
   - component: {fileID: 4326373099618551752}
-  - component: {fileID: 4326373099618551753}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube (4)
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -815,19 +747,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373099618551753
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373099618551759}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4326373099721120273
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,9 +756,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4326373099721120272}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: GameObject
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -878,10 +797,9 @@ GameObject:
   - component: {fileID: 4326373099738327016}
   - component: {fileID: 4326373099738327029}
   - component: {fileID: 4326373099738327018}
-  - component: {fileID: 4326373099738327019}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Cube (2)
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -951,19 +869,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &4326373099738327019
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4326373099738327017}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6540218564338494419
 GameObject:
   m_ObjectHideFlags: 0
@@ -973,9 +878,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2948924381279607702}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: BulletSpawn
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

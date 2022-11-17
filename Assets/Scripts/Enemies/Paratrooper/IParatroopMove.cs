@@ -13,7 +13,7 @@ namespace Enemies
         {
             EnemyParatrooper enemy = GetComponent<EnemyParatrooper>();
             GameObject parashoot = enemy.transform.Find("Parashoot").gameObject;
-            enemy.SetWaypoints(enemy.Level.Waypoints.ToArray());
+            enemy.SetWaypoints(Level.currentLevel.Waypoints.ToArray());
             yield return new WaitForSeconds(2);
             while (enemy.transform.position.y > 0.5)
             {
@@ -39,7 +39,7 @@ namespace Enemies
                 yield return new WaitUntil(
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 0.96f);
             }
-            enemy.Level.TakeDamage(enemy.Damage);
+            Level.currentLevel.TakeDamage(enemy.Damage);
             Destroy(enemy.gameObject);
         }
     }

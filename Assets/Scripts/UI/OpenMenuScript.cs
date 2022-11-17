@@ -36,7 +36,6 @@ public class OpenMenuScript : MonoBehaviour
     {
         EventBus.Publish(EventType.PAUSE);
         _opened = true;
-        MenuButton.GetComponent<Button>().interactable = true;
         StopCoroutine(CloseAnimation());
         StartCoroutine(OpenAnimation());
     }

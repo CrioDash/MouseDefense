@@ -6,6 +6,7 @@ using Events;
 using Game;
 using Levels;
 using UnityEngine;
+using UnityEngine.UI;
 using EventType = Events.EventType;
 
 public abstract class Level : MonoBehaviour, ILevel
@@ -14,15 +15,23 @@ public abstract class Level : MonoBehaviour, ILevel
     public GameObject enemyContainer;
     public List<GameObject> Waypoints;
     public List<GameObject> Enemies;
+
+    public static Level currentLevel;
     
     [HideInInspector]
     public float MaxHealth;
     [HideInInspector]
     public float CurrentHealth;
     [HideInInspector]
-    public float Gold;
+    public int Gold;
     
     protected List<GameObject> enemies = new List<GameObject>();
+
+
+    private void Awake()
+    {
+        currentLevel = this;
+    }
 
     private void Start()
     {
@@ -32,8 +41,10 @@ public abstract class Level : MonoBehaviour, ILevel
 
     private void OnEnable()
     {
+        
         EventBus.Subscribe(EventType.START, SetStats);
         EventBus.Subscribe(EventType.START, StartLevel);
+        
     }
 
     private void OnDisable()
@@ -58,12 +69,26 @@ public abstract class Level : MonoBehaviour, ILevel
     public void ChangeMoney(int money)
     {
         Gold += money;
-        EventBus.Publish(EventType.MONEYCHANGE);
+    }
+
+    public IEnumerator MoneyCount()
+    {
+        int money = Gold;
+        while (true)
+        {
+            if (Gold != money)
+            {
+                yield return new WaitForSeconds(0.25f);
+                EventBus.Publish(EventType.MONEYCHANGE);
+                money = Gold;
+            }
+            yield return null;
+        }
     }
 
     public virtual void StartLevel()
     {
-        
+        StartCoroutine(MoneyCount());
         StartCoroutine(LevelScenario());
     }
 

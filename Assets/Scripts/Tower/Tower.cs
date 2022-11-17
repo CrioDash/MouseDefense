@@ -3,7 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemies;
+using Tiles;
 using Towers;
+using UI;
 using UI.Pause;
 using UnityEngine;
 using Utilities;
@@ -14,6 +16,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     [Header("Tower Settings")] 
     public TowerType type;
     public float attackRange;
+    public int cost;
 
     [Header("Bullet Settings")] 
     public GameObject head;
@@ -23,6 +26,10 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public float bulletCooldown;
     public int bulletDamage;
     public GameObject bulletSpawn;
+
+
+    [HideInInspector] public TowerTile tile;
+    [HideInInspector] public int level = 1;
     
     protected Animator _animator;
     private Enemy _target;
@@ -38,22 +45,18 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     {
         StartCoroutine(StartShooting());
         StartCoroutine(RotateHead());
-    }
-
-    public void OnDisable()
-    {
-        
+        StartCoroutine(LookingForTarget());
     }
 
     public void FindTarget()
     {
         List<Collider> enemies = new List<Collider>();
         if(shootType== ShootType.Ground)
-           enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
+           enemies = Physics.OverlapSphere(transform.position, attackRange).ToList();
         if (shootType == ShootType.Air)
             enemies = Physics.OverlapBox(
                 new Vector3(transform.position.x, transform.position.y + 9f, transform.position.z),
-                new Vector3(attackRange, 18, attackRange) / 2, Quaternion.identity, 1<<7).ToList();
+                new Vector3(attackRange, 18, attackRange) / 2, Quaternion.identity).ToList();
         foreach (Collider col in enemies)
         {
             if (col.CompareTag("Enemy") && (int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
@@ -65,7 +68,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         SetTarget(null);
     }
 
-    public void SetTarget(Enemy target)
+    private void SetTarget(Enemy target)
     {
         _target = target;
     }
@@ -75,7 +78,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         return _target;
     }
 
-    public IEnumerator StartShooting()
+    private IEnumerator StartShooting()
     {
         while (true)
         {
@@ -83,15 +86,27 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
             {
                 yield return null;
             }
-            //if(shootType!= ShootType.Both && (int)GetTarget().Type != (int)shootType)
-             //   FindTarget();
             Shoot();
             _cd = true;
             StartCoroutine(WaitCooldown(bulletCooldown));
             yield return new WaitUntil(() => !_cd);
         }
     }
-    
+
+    private IEnumerator LookingForTarget()
+    {
+        while (true)
+        {
+            if (GetTarget() != null)
+            {
+                yield return null;
+                continue;
+            }
+
+            FindTarget();
+            yield return new WaitForSeconds(0.5f);
+        }
+    }
 
     private IEnumerator WaitCooldown(float cd)
     {
@@ -128,6 +143,14 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public abstract void LevelUp();
     
     public abstract void Shoot();
+
+    private void OnMouseUpAsButton()
+    {
+        if(PauseScript.IsPaused)
+            return;
+        if (!TowerInfo.Info.opened)
+            TowerInfo.Info.ShowSellWindow(this);
+    }
 
     public void OnDrawGizmosSelected()
     {

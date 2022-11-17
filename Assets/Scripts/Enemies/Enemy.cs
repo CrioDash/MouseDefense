@@ -26,12 +26,6 @@ namespace Enemies
             set;
             get;
         }
-        
-        public Level Level
-        {
-            set;
-            get;
-        }
 
         public Vector3 Destination
         {
@@ -63,7 +57,6 @@ namespace Enemies
 
         private void Start()
         {
-            Level = FindObjectOfType<Level>();
             CurrentHealth = MaxHealth;
             Agent.speed = Speed;
             SetStats();
@@ -81,8 +74,10 @@ namespace Enemies
 
         private void OnDestroy()
         {
-            if(CurrentHealth<=0)
-                Level.ChangeMoney(Reward);
+            if (CurrentHealth <= 0)
+            {
+                Level.currentLevel.ChangeMoney(Reward);
+            }
         }
 
         public void SetWaypoints(GameObject[] waypoints)

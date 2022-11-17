@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 2189462343252330818}
   - component: {fileID: 2189462343252330847}
   - component: {fileID: 2189462343252330816}
-  - component: {fileID: 2189462343252330817}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Neck
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -84,19 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2189462343252330817
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189462343252330819}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2189462343544321955
 GameObject:
   m_ObjectHideFlags: 0
@@ -108,10 +94,9 @@ GameObject:
   - component: {fileID: 2189462343544321954}
   - component: {fileID: 2189462343544321983}
   - component: {fileID: 2189462343544321952}
-  - component: {fileID: 2189462343544321953}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Gun
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,19 +166,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2189462343544321953
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189462343544321955}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2189462343881450174
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,9 +175,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2189462343881450173}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -238,10 +210,9 @@ GameObject:
   - component: {fileID: 2189462343938741824}
   - component: {fileID: 2189462343938741853}
   - component: {fileID: 2189462343938741854}
-  - component: {fileID: 2189462343938741855}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Platform
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -311,19 +282,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2189462343938741855
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189462343938741825}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2189462344168405187
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,9 +294,10 @@ GameObject:
   - component: {fileID: 2189462344168405184}
   - component: {fileID: 3553140702435566967}
   - component: {fileID: 2082613260373091813}
-  m_Layer: 2
+  - component: {fileID: 5966750091410183608}
+  m_Layer: 9
   m_Name: tower_Gun
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -376,6 +335,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   attackRange: 7.5
+  cost: 50
   head: {fileID: 2189462343881450174}
   shootType: 0
   bulletPrefab: {fileID: 776161753979357573, guid: ec59bc37f7c5e6b44a94151ea82d8ce3, type: 3}
@@ -383,6 +343,8 @@ MonoBehaviour:
   bulletCooldown: 1
   bulletDamage: 1
   bulletSpawn: {fileID: 2189462343544321955}
+  tile: {fileID: 0}
+  level: 1
 --- !u!95 &3553140702435566967
 Animator:
   serializedVersion: 4
@@ -415,6 +377,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6971ae73d49d46aaa39e8dde52c44ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!65 &5966750091410183608
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2189462344168405187}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.5, z: 2}
+  m_Center: {x: 0, y: 0.63, z: 0}
 --- !u!1 &2189462344544367725
 GameObject:
   m_ObjectHideFlags: 0
@@ -426,10 +401,9 @@ GameObject:
   - component: {fileID: 2189462344544367724}
   - component: {fileID: 2189462344544367721}
   - component: {fileID: 2189462344544367722}
-  - component: {fileID: 2189462344544367723}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -499,19 +473,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &2189462344544367723
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2189462344544367725}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4536994195191425684
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +486,7 @@ GameObject:
   - component: {fileID: 4536994195191425691}
   m_Layer: 2
   m_Name: Detector
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
