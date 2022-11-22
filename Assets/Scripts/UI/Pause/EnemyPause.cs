@@ -32,12 +32,14 @@ namespace UI.Pause
             if (PauseScript.IsPaused)
             {
                 _body.isKinematic = true;
-                _agent.speed = 0;
+                if(_agent!=null)
+                    _agent.speed = 0;
             }
             else
             {
                 _body.isKinematic = false;
-                _agent.speed = _enemy.Speed;
+                if(_agent!=null)
+                    _agent.speed = _enemy.Speed;
             }
         }
     }

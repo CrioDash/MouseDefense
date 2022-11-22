@@ -7,7 +7,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using EventType = Events.EventType;
 
-
 public class OpenMenuScript : MonoBehaviour
 {
     public GameObject MenuButton;

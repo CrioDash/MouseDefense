@@ -58,6 +58,7 @@ namespace Enemies
         private void Start()
         {
             CurrentHealth = MaxHealth;
+            if(Agent!=null)
             Agent.speed = Speed;
             SetStats();
             if(Move!=null)
@@ -70,6 +71,15 @@ namespace Enemies
             Agent = GetComponent<NavMeshAgent>();
         }
 
+        private void Update()
+        {
+            if (transform.position.y <= -20)
+            {
+                CurrentHealth = 0;
+                Destroy(gameObject);
+            }
+        }
+
         public abstract void SetStats();
         
 
@@ -80,6 +90,7 @@ namespace Enemies
                 Level.currentLevel.ChangeMoney(Reward);
             }
         }
+        
 
         public void SetWaypoints(GameObject[] waypoints)
         {

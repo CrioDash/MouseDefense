@@ -11,6 +11,8 @@ namespace UI.Pause
         private void Awake()
         {
             _button = GetComponent<Button>();
+            if (_button == null)
+                _button = GetComponentInChildren<Button>();
         }
 
         private void OnEnable()

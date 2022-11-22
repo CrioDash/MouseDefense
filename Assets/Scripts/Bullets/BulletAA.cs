@@ -34,7 +34,7 @@ namespace Bullets
             if (other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
-                other.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Normal);
+                other.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Pierce);
                 Destroy(gameObject);
             }
         }

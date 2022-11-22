@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Linq;
 using Bullets;
 using UI.Pause;
@@ -9,26 +10,24 @@ namespace Enemies
 {
     public class IParatroopMove: MonoBehaviour, IEnemyMove
     {
+        
         public IEnumerator Move()
-        {
+        { 
             EnemyParatrooper enemy = GetComponent<EnemyParatrooper>();
-            GameObject parashoot = enemy.transform.Find("Parashoot").gameObject;
+            
             enemy.SetWaypoints(Level.currentLevel.Waypoints.ToArray());
             yield return new WaitForSeconds(2);
-            while (enemy.transform.position.y > 0.5)
+            while (transform.position.y > 0.5)
             {
                 while (PauseScript.IsPaused)
-                {
                     yield return null;
-                }
-                enemy.transform.position += Physics.gravity * Time.fixedDeltaTime/2;
+                enemy.transform.position += Physics.gravity/4;
                 yield return null;
             }
-
-            if (parashoot == null)
+            if (enemy.parashoot == null)
                 enemy.TakeDamage.TakeDamage(100, DamageType.Normal);
             enemy.Type = EnemyType.Ground;
-            Destroy(parashoot);
+            Destroy(enemy.parashoot);
             enemy.ParashootHP = 0;
             enemy.GetComponent<NavMeshAgent>().enabled = true;
             enemy.GetComponent<CapsuleCollider>().enabled = false;
@@ -42,5 +41,6 @@ namespace Enemies
             Level.currentLevel.TakeDamage(enemy.Damage);
             Destroy(enemy.gameObject);
         }
+        
     }
 }

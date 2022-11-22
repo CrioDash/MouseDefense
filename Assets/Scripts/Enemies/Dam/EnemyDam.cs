@@ -13,16 +13,12 @@ namespace Utilities
 
         public override void SetStats()
         {
-            Move = gameObject.AddComponent<IDamMove>();
             TakeDamage = gameObject.AddComponent<IDamTakeDamage>();
             _surface = FindObjectOfType<NavMeshSurface>();
-        }
-
-        private void OnEnable()
-        {
+            _surface.collectObjects = CollectObjects.All;
             _surface.BuildNavMesh();
         }
         
-        
     }
+    
 }

@@ -40,7 +40,7 @@ namespace Bullets
         
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Road"))
+            if (other.CompareTag("Road")||other.CompareTag("Enemy"))
             {
                 StopCoroutine(Move());
                 Collider[] targets = Physics.OverlapSphere(transform.position, 3, 1<<7);

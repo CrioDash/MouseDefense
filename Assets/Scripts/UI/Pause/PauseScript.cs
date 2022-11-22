@@ -9,12 +9,12 @@ namespace UI.Pause
     public class PauseScript : MonoBehaviour
     {
 
-        public List<GameObject> Pauses = new List<GameObject>();
+        public List<GameObject> ExceptPauses = new List<GameObject>();
         
         public static List<IPausable> _pauses = new List<IPausable>();
         public static bool IsPaused;
 
-        private static List<IPausable> _exceptionPauses = new List<IPausable>();
+        public static List<IPausable> ExceptionPauses = new List<IPausable>();
 
         private void OnEnable()
         {
@@ -29,9 +29,9 @@ namespace UI.Pause
         private void Start()
         {
             IsPaused = false;
-            foreach (GameObject gm in Pauses)
+            foreach (GameObject gm in ExceptPauses)
             {
-                _exceptionPauses.Add(gm.GetComponent<IPausable>());
+                ExceptionPauses.Add(gm.GetComponent<IPausable>());
             }
         }
 
@@ -40,7 +40,7 @@ namespace UI.Pause
             IsPaused = !IsPaused;
             foreach (IPausable pause in _pauses)
             {
-                if(_exceptionPauses.Contains(pause))
+                if(ExceptionPauses.Contains(pause))
                     continue;
                 pause.Pause();
             }

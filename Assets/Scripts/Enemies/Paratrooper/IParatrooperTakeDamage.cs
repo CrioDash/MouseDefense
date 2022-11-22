@@ -18,6 +18,7 @@ namespace Enemies
            if (_parashoot != null && _enemy.ParashootHP <= 0)
            {
                _enemy.GetComponent<Rigidbody>().useGravity = true;
+               _enemy.GetComponent<Rigidbody>().AddForce(0, -350, 0);
                _enemy.Type = EnemyType.Ground;
                Destroy(_parashoot.gameObject);
            }

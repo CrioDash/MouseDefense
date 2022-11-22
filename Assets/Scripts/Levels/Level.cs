@@ -33,6 +33,7 @@ public abstract class Level : MonoBehaviour
     private void Start()
     {
         Camera.main.clearFlags = CameraClearFlags.Nothing;
+        Physics.gravity = new Vector3(0, -20 * Time.deltaTime*2, 0);
         EventBus.Publish(EventType.START);
     }
     
