@@ -21,7 +21,7 @@ namespace Enemies
                 {
                     yield return null;
                 }
-                enemy.transform.position += Physics.gravity * Time.fixedDeltaTime/4;
+                enemy.transform.position += Physics.gravity * Time.fixedDeltaTime/2;
                 yield return null;
             }
 

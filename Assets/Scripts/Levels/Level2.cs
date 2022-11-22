@@ -1,26 +1,25 @@
 ﻿using System.Collections;
 using Enemies;
+using UI.Pause;
+using UnityEditor.AI;
 using UnityEngine;
 
 namespace Levels
 {
     public class Level2: Level
     {
-        //public override IEnumerator LevelScenario()
-        //{
-        //    yield break;
-        //}
-        
+       
+
+
         public override IEnumerator LevelScenario()
         {
-            while (enemies.Count < 50)
+            for(int i =0; i<200; i++)
             {
-                //while (PauseScript.IsPaused)
-                //{
-                //    yield return null;
-                //}
+                while (PauseScript.IsPaused)
+                { 
+                    yield return null;
+                }
                 GameObject enemyGameObject = Instantiate(Enemies[0], enemyContainer.transform);
-                enemies.Add(enemyGameObject);
                 enemyGameObject.transform.position = enemyContainer.transform.position;
                 Enemy enemy = enemyGameObject.GetComponentInChildren<Enemy>();
                 enemy.SetWaypoints(Waypoints.ToArray());

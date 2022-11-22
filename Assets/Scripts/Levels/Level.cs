@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using EventType = Events.EventType;
 
-public abstract class Level : MonoBehaviour, ILevel
+public abstract class Level : MonoBehaviour
 {
     [Header("Level Settings")]
     public GameObject enemyContainer;
@@ -17,16 +17,13 @@ public abstract class Level : MonoBehaviour, ILevel
     public List<GameObject> Enemies;
 
     public static Level currentLevel;
-    
+
     [HideInInspector]
     public float MaxHealth;
     [HideInInspector]
     public float CurrentHealth;
     [HideInInspector]
     public int Gold;
-    
-    protected List<GameObject> enemies = new List<GameObject>();
-
 
     private void Awake()
     {
@@ -38,6 +35,7 @@ public abstract class Level : MonoBehaviour, ILevel
         Camera.main.clearFlags = CameraClearFlags.Nothing;
         EventBus.Publish(EventType.START);
     }
+    
 
     private void OnEnable()
     {

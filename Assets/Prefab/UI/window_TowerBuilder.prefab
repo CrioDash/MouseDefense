@@ -13,12 +13,12 @@ GameObject:
   - component: {fileID: 8181404322276800559}
   - component: {fileID: 5725850655839989261}
   - component: {fileID: 7707361452624677621}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_LevelUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &2457456304191757344
 RectTransform:
@@ -161,12 +161,12 @@ GameObject:
   - component: {fileID: 7733078802831158702}
   - component: {fileID: 2673890998605424650}
   - component: {fileID: 2566298299492023476}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_TowerArtillery
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &5784349749823173723
 RectTransform:
@@ -309,12 +309,12 @@ GameObject:
   - component: {fileID: 6856685891171941494}
   - component: {fileID: 1903388310773017708}
   - component: {fileID: 7258711361283133611}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &6856685891171941494
 RectTransform:
@@ -444,12 +444,12 @@ GameObject:
   - component: {fileID: 2277823813957870880}
   - component: {fileID: 4589627016540693992}
   - component: {fileID: 1780157850729306481}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &2277823813957870880
 RectTransform:
@@ -520,12 +520,12 @@ GameObject:
   - component: {fileID: 8246834852264002935}
   - component: {fileID: 5800317459742372864}
   - component: {fileID: 7764636081762819346}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &8246834852264002935
 RectTransform:
@@ -595,12 +595,12 @@ GameObject:
   m_Component:
   - component: {fileID: 9102933100139217550}
   - component: {fileID: 8927191151780361368}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TowerGunIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &9102933100139217550
 Transform:
@@ -679,12 +679,12 @@ GameObject:
   m_Component:
   - component: {fileID: 8898238427976057951}
   - component: {fileID: 1426667228616796641}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: window_TowerBuilder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8898238427976057951
 Transform:
@@ -722,6 +722,8 @@ MonoBehaviour:
   - {fileID: 1538508757830223832, guid: bb5cea8aef5084a4fb5df2ca4920baf1, type: 3}
   buildContainer: {fileID: 1997992452109534272}
   sellContainer: {fileID: 4792283243835104125}
+  stopClosing: 0
+  opened: 0
   tower: {fileID: 0}
   towerPos: {x: 0, y: 0, z: 0}
   towerTile: {fileID: 0}
@@ -734,7 +736,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8661869250346718881}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: BuildTower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -770,12 +772,12 @@ GameObject:
   - component: {fileID: 4467227891104848262}
   - component: {fileID: 50596638117036999}
   - component: {fileID: 1890992768963531919}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &4467227891104848262
 RectTransform:
@@ -905,12 +907,12 @@ GameObject:
   - component: {fileID: 4509758421036301049}
   - component: {fileID: 8712561187597314174}
   - component: {fileID: 4546535789774100766}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &4509758421036301049
 RectTransform:
@@ -1042,12 +1044,12 @@ GameObject:
   - component: {fileID: 5881388697570054195}
   - component: {fileID: 5335951974037299388}
   - component: {fileID: 4156594320180741900}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_TowerGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &4615434933766250459
 RectTransform:
@@ -1189,12 +1191,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4654779258703544049}
   - component: {fileID: 1327094940361007674}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TowerGunIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4654779258703544049
 Transform:
@@ -1274,12 +1276,12 @@ GameObject:
   - component: {fileID: 230092987606045840}
   - component: {fileID: 6013233583970474672}
   - component: {fileID: 4943110494853778777}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &230092987606045840
 RectTransform:
@@ -1407,7 +1409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2858335939417181336}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: SellUpgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1443,12 +1445,12 @@ GameObject:
   - component: {fileID: 6522684317544794231}
   - component: {fileID: 8005211492186076269}
   - component: {fileID: 4323724849133425744}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &229019394332403814
 RectTransform:
@@ -1574,12 +1576,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5277466976699504013}
   - component: {fileID: 1719881789994277844}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TowerGunIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5277466976699504013
 Transform:
@@ -1659,12 +1661,12 @@ GameObject:
   - component: {fileID: 3719993775020062857}
   - component: {fileID: 3310251973150401536}
   - component: {fileID: 2570528092325102882}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &3719993775020062857
 RectTransform:
@@ -1735,12 +1737,12 @@ GameObject:
   - component: {fileID: 1142685291702409211}
   - component: {fileID: 8119631233333382218}
   - component: {fileID: 1736160916003408464}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MoneyIcon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &1142685291702409211
 RectTransform:
@@ -1812,12 +1814,12 @@ GameObject:
   - component: {fileID: 3640778171175512102}
   - component: {fileID: 2723840534287010652}
   - component: {fileID: 5322819301319985782}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_Sell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &3372815955708207998
 RectTransform:
@@ -1946,12 +1948,12 @@ GameObject:
   - component: {fileID: 6416773397307614197}
   - component: {fileID: 5725663094966330073}
   - component: {fileID: 112915331586544105}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button_TowerAA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &7530421991267187840
 RectTransform:

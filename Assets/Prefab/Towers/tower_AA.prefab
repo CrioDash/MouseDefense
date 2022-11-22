@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 2
-  attackRange: 10
+  attackRange: 15
   cost: 75
   head: {fileID: 1538508758356774278}
   shootType: 1

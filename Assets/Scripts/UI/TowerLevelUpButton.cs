@@ -21,6 +21,7 @@ namespace UI
         
         public void LevelUp()
         {
+            TowerInfo.Info.StartCoroutine("StopClosing");
             _info.tower.LevelUp();
             _info.tower.level++;
             if (_info.tower.level == 3)

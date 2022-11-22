@@ -114,10 +114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 0
-  MaxHealth: 3
+  MaxHealth: 5
   Reward: 10
   Damage: 1
-  Speed: 5
+  Speed: 8
 --- !u!1 &4829992959438374759
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEditor.AI;
 
 namespace Enemies
 {
@@ -8,7 +9,7 @@ namespace Enemies
         private EnemyParatrooper _enemy;
         public void TakeDamage(int dmg, DamageType type)
         {
-           if(_enemy==null) 
+            if(_enemy==null) 
                _enemy = GetComponent<EnemyParatrooper>();
            if (_parashoot == null && _enemy.ParashootHP > 0)
                _parashoot = transform.Find("Parashoot").gameObject;

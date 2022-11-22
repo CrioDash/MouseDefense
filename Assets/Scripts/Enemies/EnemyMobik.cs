@@ -7,6 +7,7 @@ namespace Enemies
     {
         public override void SetStats()
         {
+            SetWaypoints(Level.currentLevel.Waypoints.ToArray());
             Move = gameObject.AddComponent<IDefaultMove>();
             TakeDamage = gameObject.AddComponent<IDefaultTakeDamage>();
         }

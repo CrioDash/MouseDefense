@@ -86,6 +86,8 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
             {
                 yield return null;
             }
+            if(shootType!= ShootType.Both && (int)GetTarget().Type!=(int)shootType)
+                FindTarget();
             Shoot();
             _cd = true;
             StartCoroutine(WaitCooldown(bulletCooldown));

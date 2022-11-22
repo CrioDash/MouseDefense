@@ -4,17 +4,20 @@ using System.Collections.Generic;
 using Tiles;
 using UI.Pause;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Utilities;
+using TouchPhase = UnityEngine.TouchPhase;
 
 namespace UI
 {
-    public class TowerInfo:MonoBehaviour
+    public class TowerInfo : MonoBehaviour
     {
         public List<GameObject> towerPrefabs;
         public GameObject buildContainer;
         public GameObject sellContainer;
 
+        [HideInInspector] public bool stopClosing = false;
         [HideInInspector] public bool opened = false;
         [HideInInspector] public Tower tower;
         [HideInInspector] public Vector3 towerPos;
@@ -28,7 +31,14 @@ namespace UI
             {
                 gm.gameObject.AddComponent<ButtonPause>();
             }
+
             Info = this;
+        }
+
+        private void Update()
+        {
+            if (Input.touchCount != 0 && Input.GetTouch(0).phase == TouchPhase.Ended && opened)
+                StartCoroutine(CloseAnimation());
         }
 
         public void CloseWindow()
@@ -67,6 +77,7 @@ namespace UI
 
         public IEnumerator ShowAnimation()
         {
+            StartCoroutine(StopClosing());
             transform.position = towerPos;
             Vector3 pos;
             pos = transform.localPosition;
@@ -80,9 +91,10 @@ namespace UI
                     yield return null;
                 }
                 transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f),Vector3.one , t);
-                t += Time.fixedDeltaTime*10;
+                t += Time.fixedDeltaTime*8;
                 yield return null;
             }
+            
         }
 
         public IEnumerator CloseAnimation()
@@ -90,18 +102,27 @@ namespace UI
             float t = 0;
             while (t<1)
             {
+                if(stopClosing)
+                    yield break;
                 while (PauseScript.IsPaused)
                 {
                     yield return null;
                 }
                 transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(0.25f, 0.25f), t);
-                t += Time.fixedDeltaTime*10;
+                t += Time.fixedDeltaTime*8;
                 yield return null;
             }
             Vector3 pos = transform.position;
             pos.y = 100;
             transform.position = pos;
             opened = false;
+        }
+
+        public IEnumerator StopClosing()
+        {
+            stopClosing = true;
+            yield return new WaitForSeconds(0.05f);
+            stopClosing = false;
         }
 
     }
