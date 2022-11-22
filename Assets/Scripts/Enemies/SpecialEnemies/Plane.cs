@@ -39,7 +39,7 @@ namespace Enemies.SpecialEnemies
         {
             yield return new WaitUntil(() => transform.position.x >= target.x);
             StartCoroutine(SpawnDesant(3, 1f));
-            yield return new WaitUntil(() => transform.position.x >= 60);
+            yield return new WaitUntil(() => transform.localPosition.x >= 60);
             Destroy(gameObject);
         }
 

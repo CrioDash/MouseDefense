@@ -60,7 +60,8 @@ namespace Enemies
             CurrentHealth = MaxHealth;
             Agent.speed = Speed;
             SetStats();
-            StartCoroutine(Move.Move());
+            if(Move!=null)
+                StartCoroutine(Move.Move());
         }
 
         private void Awake()

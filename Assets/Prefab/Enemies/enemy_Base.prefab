@@ -117,7 +117,7 @@ MonoBehaviour:
   MaxHealth: 5
   Reward: 10
   Damage: 1
-  Speed: 8
+  Speed: 3.5
 --- !u!1 &4829992959438374759
 GameObject:
   m_ObjectHideFlags: 0
