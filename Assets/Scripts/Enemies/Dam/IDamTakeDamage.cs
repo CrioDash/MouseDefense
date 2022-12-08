@@ -9,20 +9,22 @@ namespace Enemies.SpecialEnemies
 {
     public class IDamTakeDamage:MonoBehaviour, ITakeDamage
     {
-        private Enemy enemy;
+        private Enemy _enemy;
         public void TakeDamage(int dmg, DamageType type)
         {
             if (type != DamageType.Splash)
-                dmg /= 5;
-            if(enemy == null)
-                enemy = GetComponent<Enemy>();
-            enemy.CurrentHealth-=dmg;
-            if (enemy.CurrentHealth <= 0)
+                dmg /= 2;
+            if(_enemy == null)
+                _enemy = GetComponent<Enemy>();
+            _enemy.CurrentHealth-=dmg;
+            _enemy.CreateDamageText(dmg);
+            if (_enemy.CurrentHealth <= 0)
             {
-                Rigidbody body = enemy.GetComponent<Rigidbody>();
+                Rigidbody body = _enemy.GetComponent<Rigidbody>();
                 body.AddForce(0, -100, 0);
                 body.useGravity = true;
-                enemy.GetComponent<BoxCollider>().isTrigger = false;
+                tag = "Untagged";
+                _enemy.GetComponent<BoxCollider>().isTrigger = false;
                 List<Collider> targets = Physics.OverlapBox(transform.position, new Vector3(9/2,9/2,9/2), 
                     Quaternion.identity,1<<7).ToList();
                 targets.Remove(GetComponent<Collider>());
@@ -31,9 +33,9 @@ namespace Enemies.SpecialEnemies
                     col.GetComponent<Collider>().isTrigger = false;
                     col.GetComponent<NavMeshAgent>().enabled = false;
                 }
-                NavMeshSurface surface = FindObjectOfType<NavMeshSurface>();
-                surface.collectObjects = CollectObjects.Children;
-                surface.BuildNavMesh();
+
+                transform.parent = null;
+                Level.currentLevel.Surface.BuildNavMesh();
             }
         }
     }

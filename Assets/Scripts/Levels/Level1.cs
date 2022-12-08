@@ -5,6 +5,7 @@ using Enemies;
 using UI.Pause;
 using Unity.VisualScripting;
 using UnityEngine;
+using Variables = Game.Variables;
 
 namespace Levels
 {
@@ -13,16 +14,13 @@ namespace Levels
 
         public override IEnumerator LevelScenario()
         {
-            for(int i =0; i<5; i++)
-            {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
-                GameObject enemyGM = Instantiate(Enemies[0], enemyContainer.transform);
-                enemyGM.transform.position = enemyContainer.transform.position;
-                yield return new WaitForSeconds(2f);
-            }
+            ChangeMoney(225);
+            yield return StartCoroutine(Wait(1f));
+            yield return StartCoroutine(Wave(Variables.EnemyType.Mobik, 10, 1.5f));
+            yield return StartCoroutine(Wait(30f));
+            yield return StartCoroutine(Wave(Variables.EnemyType.Tractor, 3, 2f));
+            yield return StartCoroutine(Wait(10f));
+            yield return StartCoroutine(Wave(Variables.EnemyType.Plane, 3, 1.5f));
         }
     }
 }

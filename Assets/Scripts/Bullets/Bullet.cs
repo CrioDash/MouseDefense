@@ -10,16 +10,11 @@ namespace Bullets
         protected Tower Parent;
         protected float BulletSpeed;
         protected int BulletDamage;
-
-        private void Start()
-        {
-            SetStats();
-            StartCoroutine(Move());
-        }
-
+        
         private void Awake()
         {
             Parent = GetComponentInParent<Tower>();
+            SetStats();
         }
 
         public void SetStats()
@@ -27,11 +22,7 @@ namespace Bullets
             BulletDamage = Parent.bulletDamage;
             BulletSpeed = Parent.bulletSpeed;
         }
-
-        public virtual IEnumerator Move()
-        {
-            yield break;
-        }
+        
 
         public int GetDmg()
         {

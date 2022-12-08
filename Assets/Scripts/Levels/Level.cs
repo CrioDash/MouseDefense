@@ -2,9 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Enemies;
+using Enemies.Dammer;
 using Events;
 using Game;
 using Levels;
+using UI.Pause;
+using Unity.AI.Navigation;
 using UnityEngine;
 using UnityEngine.UI;
 using EventType = Events.EventType;
@@ -18,12 +21,22 @@ public abstract class Level : MonoBehaviour
 
     public static Level currentLevel;
 
+    [HideInInspector] 
+    public Dictionary<Variables.EnemyType, GameObject> EnemyDict = new Dictionary<Variables.EnemyType, GameObject>();
     [HideInInspector]
     public float MaxHealth;
     [HideInInspector]
     public float CurrentHealth;
     [HideInInspector]
     public int Gold;
+    [HideInInspector] 
+    public Canvas Canvas;
+    [HideInInspector] 
+    public NavMeshSurface Surface;
+    [HideInInspector] 
+    public GameObject DammerPositions;
+    [HideInInspector] 
+    public GameObject DamPositions;
 
     private void Awake()
     {
@@ -32,6 +45,16 @@ public abstract class Level : MonoBehaviour
 
     private void Start()
     {
+        if (LevelSwitcher.Switcher != null)
+            EventBus.Publish(EventType.PAUSE);
+        Canvas = FindObjectOfType<Canvas>();
+        Surface = FindObjectOfType<NavMeshSurface>();
+        DammerPositions = GameObject.Find("DammerPositions");
+        DamPositions = GameObject.Find("DamPositions");
+        foreach (GameObject gm in Enemies)
+        {
+            EnemyDict.Add(gm.GetComponent<Enemy>().EnemyType, gm);
+        }
         Camera.main.clearFlags = CameraClearFlags.Nothing;
         Physics.gravity = new Vector3(0, -20 * Time.deltaTime*2, 0);
         EventBus.Publish(EventType.START);
@@ -52,11 +75,10 @@ public abstract class Level : MonoBehaviour
         EventBus.Unsubscribe(EventType.START, StartLevel);
     }
 
-    void SetStats()
+    public virtual void  SetStats()
     {
         MaxHealth = Variables.Health + PlayerStats.BonusHealth;
         TakeDamage(-MaxHealth);
-        ChangeMoney(Variables.Gold + PlayerStats.BonusGold);
     }
 
     public void TakeDamage(float hp)
@@ -92,5 +114,34 @@ public abstract class Level : MonoBehaviour
     }
 
     public abstract IEnumerator LevelScenario();
+
+    public IEnumerator Wave(Variables.EnemyType type, int count, float interval)
+    {
+        for(int i =0; i<count; i++)
+        {
+            while (PauseScript.IsPaused)
+            {
+                yield return null;
+            }
+            GameObject enemyGM = Instantiate(EnemyDict[type], enemyContainer.transform);
+            enemyGM.transform.position = enemyContainer.transform.position;
+            yield return StartCoroutine(Wait(interval));
+        }
+    }
+
+    public IEnumerator Wait(float time)
+    {
+        float t = 0;
+        while (t<time)
+        {
+            while (PauseScript.IsPaused)
+            {
+                yield return null;
+            }
+            t += Time.deltaTime;
+            yield return null;
+            
+        }
+    }
 
 }

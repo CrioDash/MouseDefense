@@ -41,25 +41,44 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         _animator = GetComponent<Animator>();
     }
 
-    public void OnEnable()
-    {
-        StartCoroutine(StartShooting());
-        StartCoroutine(RotateHead());
-        StartCoroutine(LookingForTarget());
+    private void FixedUpdate()
+    { 
+        if (GetTarget() == null || PauseScript.IsPaused)
+           return;
+        if((shootType!= ShootType.Both && (int)GetTarget().Type!=(int)shootType)|| !GetTarget().CompareTag("Enemy"))
+            FindTarget();
+        if (!_cd)
+        {
+            Shoot();
+            _cd = true;
+        }
+        if (_cd)
+        {
+            _bulletTime += Time.fixedDeltaTime;
+            if (_bulletTime >= bulletCooldown)
+            {
+                _bulletTime = 0;
+                _cd = false;
+            }
+        }
+        if (GetTarget() == null || PauseScript.IsPaused)
+            return;
+        head.transform.LookAt(GetTarget().transform.position);
+        head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
     }
 
     public void FindTarget()
     {
         List<Collider> enemies = new List<Collider>();
         if(shootType== ShootType.Ground)
-           enemies = Physics.OverlapSphere(transform.position, attackRange).ToList();
+            enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
         if (shootType == ShootType.Air)
             enemies = Physics.OverlapBox(
                 new Vector3(transform.position.x, transform.position.y + 9f, transform.position.z),
-                new Vector3(attackRange, 18, attackRange) / 2, Quaternion.identity).ToList();
+                new Vector3(attackRange, 18, attackRange) / 2, Quaternion.identity, 1<<7).ToList();
         foreach (Collider col in enemies)
         {
-            if (col.CompareTag("Enemy") && (int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
+            if ((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
             {
                 SetTarget(col.GetComponent<Enemy>());
                 return;
@@ -68,7 +87,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         SetTarget(null);
     }
 
-    private void SetTarget(Enemy target)
+    public void SetTarget(Enemy target)
     {
         _target = target;
     }
@@ -77,70 +96,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     {
         return _target;
     }
-
-    private IEnumerator StartShooting()
-    {
-        while (true)
-        {
-            while (GetTarget() == null || PauseScript.IsPaused)
-            {
-                yield return null;
-            }
-            if(shootType!= ShootType.Both && (int)GetTarget().Type!=(int)shootType)
-                FindTarget();
-            Shoot();
-            _cd = true;
-            StartCoroutine(WaitCooldown(bulletCooldown));
-            yield return new WaitUntil(() => !_cd);
-        }
-    }
-
-    private IEnumerator LookingForTarget()
-    {
-        while (true)
-        {
-            if (GetTarget() != null)
-            {
-                yield return null;
-                continue;
-            }
-
-            FindTarget();
-            yield return new WaitForSeconds(0.5f);
-        }
-    }
-
-    private IEnumerator WaitCooldown(float cd)
-    {
-        float time = 0;
-        while (time < cd*10)
-        {
-            while (PauseScript.IsPaused)
-            {
-                yield return null;
-            }
-            time += Time.deltaTime*8;
-            yield return null;
-        }
-
-        _cd = false;
-    }
     
-
-    public IEnumerator RotateHead()
-    {
-        while (true)
-        {
-            while (GetTarget() == null || PauseScript.IsPaused)
-            {
-                yield return null;
-            }
-            head.transform.LookAt(GetTarget().transform.position);
-            head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
-            yield return null;
-        }
-    }
-
 
     public abstract void LevelUp();
     

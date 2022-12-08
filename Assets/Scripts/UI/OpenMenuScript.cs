@@ -16,7 +16,7 @@ public class OpenMenuScript : MonoBehaviour
 
     private bool _opened = false;
     
-    private void Update()
+    private void FixedUpdate()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             ButtonClick();
@@ -33,7 +33,7 @@ public class OpenMenuScript : MonoBehaviour
 
     public void OpenMenu()
     {
-        EventBus.Publish(EventType.PAUSE);
+       
         _opened = true;
         StopCoroutine(CloseAnimation());
         StartCoroutine(OpenAnimation());
@@ -41,7 +41,6 @@ public class OpenMenuScript : MonoBehaviour
 
     public void CloseMenu()
     {
-        EventBus.Publish(EventType.PAUSE);
         _opened = false;
         StopCoroutine(OpenAnimation());
         StartCoroutine(CloseAnimation());
@@ -58,6 +57,7 @@ public class OpenMenuScript : MonoBehaviour
             t += Time.fixedDeltaTime*4;
             yield return null;
         }
+        EventBus.Publish(EventType.PAUSE);
     }
 
     public IEnumerator OpenAnimation()
@@ -70,6 +70,7 @@ public class OpenMenuScript : MonoBehaviour
             t += Time.fixedDeltaTime*4;
             yield return null;
         }
+        EventBus.Publish(EventType.PAUSE);
     }
     
 }

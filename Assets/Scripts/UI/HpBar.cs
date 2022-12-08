@@ -49,6 +49,7 @@ namespace UI
             }
             if (Level.currentLevel.CurrentHealth <= 0 && !PauseScript.IsPaused)
             {
+                CurrHP.GetComponentInChildren<SpriteRenderer>().color = Color.clear;
                 PauseScript.ExceptionPauses.Clear();
                 EventBus.Publish(EventType.PAUSE);
                 EndGame.SetActive(true);

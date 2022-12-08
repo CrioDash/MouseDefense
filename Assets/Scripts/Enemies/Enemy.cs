@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Bullets;
 using Events;
+using Game;
+using TMPro;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.AI;
@@ -15,11 +17,13 @@ namespace Enemies
     public abstract class Enemy : MonoBehaviour
     {
         [Header("Enemy stats")] 
+        public TextMeshProUGUI Text;
         public EnemyType Type;
         public float MaxHealth;
         public int Reward;
         public int Damage;
         public float Speed;
+        public Variables.EnemyType EnemyType;
 
         public List<GameObject> Waypoints
         {
@@ -53,13 +57,22 @@ namespace Enemies
         
         protected Rigidbody Body;
         protected NavMeshAgent Agent;
-       
 
+        public void CreateDamageText(int dmg)
+        {
+            TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
+            text.transform.position = transform.position;
+            Vector3 pos = text.transform.localPosition;
+            pos.x += 50;
+            text.transform.localPosition = pos;
+            text.text = dmg.ToString();
+        }
+        
         private void Start()
         {
             CurrentHealth = MaxHealth;
             if(Agent!=null)
-            Agent.speed = Speed;
+                Agent.speed = Speed;
             SetStats();
             if(Move!=null)
                 StartCoroutine(Move.Move());
@@ -71,7 +84,7 @@ namespace Enemies
             Agent = GetComponent<NavMeshAgent>();
         }
 
-        private void Update()
+        public virtual void FixedUpdate()
         {
             if (transform.position.y <= -20)
             {

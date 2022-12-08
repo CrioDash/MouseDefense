@@ -132,6 +132,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b73fc1561bc4bf686f4c47dd9ccca25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 1
+  MaxHealth: 0
+  Reward: 0
+  Damage: 0
+  Speed: 0
+  EnemyType: 4
   paratroop: {fileID: 5291350026171429168, guid: 78db5a53c9310a54683b51a18a9afb72, type: 3}
   speed: 25
 --- !u!54 &2859157582221627379

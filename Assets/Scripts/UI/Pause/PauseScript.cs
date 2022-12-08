@@ -26,7 +26,7 @@ namespace UI.Pause
             EventBus.Unsubscribe(EventType.PAUSE, Pause);
         }
 
-        private void Start()
+        private void Awake()
         {
             IsPaused = false;
             foreach (GameObject gm in ExceptPauses)

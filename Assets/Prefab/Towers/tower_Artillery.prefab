@@ -301,13 +301,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 1
   attackRange: 12
-  cost: 100
+  cost: 200
   head: {fileID: 4326373099721120273}
   shootType: 0
   bulletPrefab: {fileID: 811739097488997448, guid: 456d8dfc8805afd43a1cddb9d9ddb79a, type: 3}
   bulletSpeed: 500
   bulletCooldown: 2
-  bulletDamage: 3
+  bulletDamage: 15
   bulletSpawn: {fileID: 6540218564338494419}
   tile: {fileID: 0}
   level: 1

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security.Cryptography;
 using Events;
 using UI;
 using UI.Pause;
@@ -10,10 +11,11 @@ namespace Levels
 {
     public class LevelSwitcher : MonoBehaviour
     {
-    
+        public static LevelSwitcher Switcher;
         void Start()
         {
-            Application.targetFrameRate = 60;
+            Switcher = this;
+            Application.targetFrameRate = 120;
             DontDestroyOnLoad(gameObject);
         }
 
@@ -24,14 +26,22 @@ namespace Levels
 
         public IEnumerator LoadLevel(int num)
         {
+            LoadingScreen screen = FindObjectOfType<LoadingScreen>();
+           
+            yield return screen.StartCoroutine("ShowAnimation");
             AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(num);
-            Debug.Log(Time.time);
+            sceneLoad.allowSceneActivation = false;
             while (sceneLoad.progress<0.9f)
             {
-                Debug.Log(sceneLoad.progress * 100 + "%");
                 yield return null;
+                
             }
+            LoadingScreen.Fade = true;
+            sceneLoad.allowSceneActivation = true;
             yield return new WaitUntil(() => sceneLoad.isDone);
+            screen = FindObjectOfType<LoadingScreen>();
+            screen.StartCoroutine("CloseAnimation");
+
         }
     }
 }

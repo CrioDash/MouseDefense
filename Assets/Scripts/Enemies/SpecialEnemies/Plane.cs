@@ -8,26 +8,22 @@ using Random = UnityEngine.Random;
 
 namespace Enemies.SpecialEnemies
 {
-    public class Plane:MonoBehaviour
+    public class Plane:Enemy
     {
         public GameObject paratroop;
         public float speed;
 
         private Vector3 target;
-        private void Awake()
-        {
-            
-        }
 
-        private void Start()
+        public override void SetStats()
         {
             target = CalculatePoints();
-            Debug.Log(target);
             transform.position = new Vector3(-60, 60, target.z);
             StartCoroutine(WaitDesant());
         }
+        
 
-        private void Update()
+        public override void FixedUpdate()
         {
             if(PauseScript.IsPaused)
                 return;
@@ -38,8 +34,8 @@ namespace Enemies.SpecialEnemies
         public IEnumerator WaitDesant()
         {
             yield return new WaitUntil(() => transform.position.x >= target.x);
-            StartCoroutine(SpawnDesant(3, 1f));
-            yield return new WaitUntil(() => transform.localPosition.x >= 60);
+            StartCoroutine(SpawnDesant(Random.Range(1,3), 1f));
+            yield return new WaitUntil(() => transform.localPosition.x >= 70);
             Destroy(gameObject);
         }
 

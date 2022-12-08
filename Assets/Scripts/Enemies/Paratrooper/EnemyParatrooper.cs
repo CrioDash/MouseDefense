@@ -1,4 +1,5 @@
 ﻿using System;
+using Enemies.Paratrooper;
 using UnityEngine;
 
 namespace Enemies

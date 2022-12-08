@@ -54,7 +54,6 @@ namespace Game
         {
             while (true)
             {
-                yield return new WaitUntil(() => Hour >= 0);
 
                 RenderSettings.fogDensity = 0.0175f;
                 RenderSettings.fogColor = NightColor;
@@ -68,8 +67,7 @@ namespace Game
                     transform.eulerAngles = Vector3.Lerp( new Vector3(265, 40, 0), new Vector3(175, 40, 0), t);
                     yield return null;
                 }
-
-                yield return new WaitUntil(() => Hour >= 3);
+                
 
                 //Ночь-рассвет
                 
@@ -81,9 +79,7 @@ namespace Game
                     RenderSettings.fogDensity = Mathf.Lerp(0.0175f, 0.01f, t);
                     yield return null;
                 }
-                
-                yield return new WaitUntil(() => Hour >= 5);
-                
+
                 //Рассвет-день
                 
                 
@@ -95,9 +91,7 @@ namespace Game
                     RenderSettings.fogDensity = Mathf.Lerp(0.01f, 0.0125f, t);
                     yield return null;
                 }
-                
-                yield return new WaitUntil(() => Hour >= 7);
-                
+
                 //День
                 
                 RenderSettings.fogDensity = 0.0125f;
@@ -119,9 +113,7 @@ namespace Game
                     RenderSettings.fogDensity = Mathf.Lerp(0.0125f, 0.015f, t);
                     yield return null;
                 }
-                
-                yield return new WaitUntil(() => Hour >= 17);
-                
+
                 //Закат
                 
                 
@@ -133,9 +125,7 @@ namespace Game
                     RenderSettings.fogDensity = Mathf.Lerp(0.015f, 0.0175f, t);
                     yield return null;
                 }
-                
-                yield return new WaitUntil(() => Hour >= 21);
-                
+
                 //Ночь
                 
                 RenderSettings.fogDensity = 0.0175f;

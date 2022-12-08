@@ -112,11 +112,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f520e8b4ec5a42e2bb8f7ea10f31192a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
   Type: 0
-  MaxHealth: 3
+  MaxHealth: 50
   Reward: 0
   Damage: 0
   Speed: 0
+  EnemyType: 0
 --- !u!114 &5548447455363368355
 MonoBehaviour:
   m_ObjectHideFlags: 0

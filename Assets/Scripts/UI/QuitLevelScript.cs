@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Levels;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,6 @@ public class QuitLevelScript : MonoBehaviour
 {
     public void QuitLevel()
     {
-        SceneManager.LoadScene(0);
+        LevelSwitcher.Switcher.Switch(0);
     }
 }

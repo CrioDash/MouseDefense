@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1912210057745484525}
   - component: {fileID: -371705422036697473}
   m_Layer: 7
-  m_Name: enemy_Base
+  m_Name: enemy_Mobik
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,11 +113,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c084b0f6e2964ae8926563ca46343372, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
   Type: 0
-  MaxHealth: 3
+  MaxHealth: 30
   Reward: 10
   Damage: 1
   Speed: 3
+  EnemyType: 0
 --- !u!1 &4829992959438374759
 GameObject:
   m_ObjectHideFlags: 0

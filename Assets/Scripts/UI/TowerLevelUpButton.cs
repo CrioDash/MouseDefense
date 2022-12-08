@@ -21,7 +21,6 @@ namespace UI
         
         public void LevelUp()
         {
-            TowerInfo.Info.StartCoroutine("StopClosing");
             _info.tower.LevelUp();
             _info.tower.level++;
             if (_info.tower.level == 3)
@@ -32,7 +31,7 @@ namespace UI
             
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if(PauseScript.IsPaused)
                 return;

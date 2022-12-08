@@ -34,7 +34,7 @@ namespace UI
             }
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (PauseScript.IsPaused)
                 return;

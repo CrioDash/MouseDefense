@@ -6,7 +6,6 @@ namespace Enemies
 {
     public class IDefaultMove:MonoBehaviour,IEnemyMove
     {
-
         public IEnumerator Move()
         {
             Enemy enemy = GetComponent<Enemy>();

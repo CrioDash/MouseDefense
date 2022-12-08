@@ -295,7 +295,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 7782383132550698928, guid: e3df868446801164e8363920ffcc5141, type: 3}
   bulletSpeed: 25
   bulletCooldown: 1
-  bulletDamage: 2
+  bulletDamage: 15
   bulletSpawn: {fileID: 1538508757494517073}
   tile: {fileID: 0}
   level: 1

@@ -8,42 +8,52 @@ using Utilities;
 
 namespace Bullets
 {
-    public class BulletArtillery: Bullet
+    public class BulletArtillery : Bullet
     {
-
+        private Vector3 startPos;
         private Vector3 endPos;
-        public override IEnumerator Move()
+        private float time;
+        private Vector3 middlePos1;
+        private Vector3 middlePos2;
+
+
+
+
+        private void Start()
         {
-            Vector3 startPos = transform.position;
+            startPos = transform.position;
             endPos = Parent.GetTarget().transform.position;
             endPos.y = -0.5f;
-            Vector3 middlePos1 = Vector3.Lerp(startPos, endPos, 1/3f);
-            Vector3 middlePos2 = Vector3.Lerp(startPos, endPos, 2/3f);
-
+            middlePos1 = Vector3.Lerp(startPos, endPos, 1 / 3f);
+            middlePos2 = Vector3.Lerp(startPos, endPos, 2 / 3f);
             middlePos1.y += 6;
             middlePos2.y += 6;
-            float time = 0;
-            while (time<1)
-            {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
-                transform.position = Bezier.GetBezier(startPos, middlePos1, middlePos2, endPos, time);
-                transform.rotation = Quaternion.LookRotation(Bezier.BezierRotation(startPos, middlePos1, middlePos2, endPos, time));
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f, transform.eulerAngles.y, 0);
-                time += Time.deltaTime;
-                yield return null;
-            }
-            Destroy(gameObject);
         }
-        
+
+        public void FixedUpdate()
+        {
+            if (PauseScript.IsPaused)
+            {
+                return;
+            }
+
+            if (time < 1)
+            {
+                transform.position = Bezier.GetBezier(startPos, middlePos1, middlePos2, endPos, time);
+                transform.rotation =
+                    Quaternion.LookRotation(Bezier.BezierRotation(startPos, middlePos1, middlePos2, endPos, time));
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x + 90f, transform.eulerAngles.y, 0);
+                time += Time.deltaTime;
+            }
+        }
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag("Road")||other.CompareTag("Enemy"))
-            {
-                StopCoroutine(Move());
-                Collider[] targets = Physics.OverlapSphere(transform.position, 3, 1<<7);
+
+            if (other.CompareTag("Road") || other.CompareTag("Enemy"))
+
+    {
+                Collider[] targets = Physics.OverlapBox(transform.position, new Vector3(2.5f,2.5f,2.5f), Quaternion.identity, 1<<7);
                 foreach (Collider col in targets)
                 {
                     col.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
@@ -51,10 +61,6 @@ namespace Bullets
                 Destroy(gameObject);
             }
         }
-
-        private void OnDrawGizmos()
-        {
-            Gizmos.DrawWireSphere(transform.position, 3);
-        }
+        
     }
 }

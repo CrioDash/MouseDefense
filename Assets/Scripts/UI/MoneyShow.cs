@@ -29,7 +29,6 @@ namespace UI
 
         private void Start()
         {
-            _gold = Variables.Gold;
             Text.text = _gold.ToString();
         }
 

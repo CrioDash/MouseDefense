@@ -145,12 +145,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c06466ce18f40c1be73d38d1938c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
   Type: 1
-  MaxHealth: 5
-  Reward: 25
+  MaxHealth: 45
+  Reward: 15
   Damage: 1
   Speed: 6.5
-  ParashootHP: 1
+  EnemyType: 2
+  ParashootHP: 30
   parashoot: {fileID: 7921455719966372941}
 --- !u!195 &7226060453797041408
 NavMeshAgent:

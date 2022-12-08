@@ -14,9 +14,7 @@ namespace Utilities
         public override void SetStats()
         {
             TakeDamage = gameObject.AddComponent<IDamTakeDamage>();
-            _surface = FindObjectOfType<NavMeshSurface>();
-            _surface.collectObjects = CollectObjects.All;
-            _surface.BuildNavMesh();
+            Level.currentLevel.Surface.BuildNavMesh();
         }
         
     }

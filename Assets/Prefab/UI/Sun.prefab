@@ -52,7 +52,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   Hour: 0
   Minute: 0
   Second: 0
-  Multiplier: 10000
+  Multiplier: 400
   NightColor: {r: 0.05882353, g: 0.05882353, b: 0.21698111, a: 1}
   DawnColor: {r: 1, g: 0, b: 0.42655182, a: 1}
   DayColor: {r: 1, g: 1, b: 0.49019608, a: 1}

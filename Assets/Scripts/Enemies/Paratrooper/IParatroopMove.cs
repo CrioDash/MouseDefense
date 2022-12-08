@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections;
-using System.Linq;
-using Bullets;
+﻿using System.Collections;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Enemies
+namespace Enemies.Paratrooper
 {
     public class IParatroopMove: MonoBehaviour, IEnemyMove
     {
@@ -29,9 +26,10 @@ namespace Enemies
             enemy.Type = EnemyType.Ground;
             Destroy(enemy.parashoot);
             enemy.ParashootHP = 0;
-            enemy.GetComponent<NavMeshAgent>().enabled = true;
-            enemy.GetComponent<CapsuleCollider>().enabled = false;
-            enemy.GetComponent<CapsuleCollider>().enabled = true;
+            GetComponent<NavMeshAgent>().enabled = true;
+            CapsuleCollider collider = GetComponent<CapsuleCollider>();
+            collider.enabled = false;
+            collider.enabled = true;
             for(int i =1;i<enemy.Waypoints.Count; i++)
             {
                 enemy.Destination = enemy.Waypoints[i].transform.position;

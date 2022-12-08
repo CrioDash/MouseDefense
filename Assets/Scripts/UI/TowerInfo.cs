@@ -35,7 +35,7 @@ namespace UI
             Info = this;
         }
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (Input.touchCount != 0 && Input.GetTouch(0).phase == TouchPhase.Ended && opened)
                 StartCoroutine(CloseAnimation());
@@ -117,7 +117,7 @@ namespace UI
             transform.position = pos;
             opened = false;
         }
-
+        
         public IEnumerator StopClosing()
         {
             stopClosing = true;
