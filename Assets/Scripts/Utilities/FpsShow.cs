@@ -21,7 +21,7 @@ namespace Utilities
     
         void Update()
         {
-            _currentFps = 1 / Time.deltaTime;
+            _currentFps = 1 / Time.smoothDeltaTime;
         }
 
         private void FixedUpdate()
