@@ -9,7 +9,7 @@ namespace Bullets
     {
         protected Tower Parent;
         protected float BulletSpeed;
-        protected int BulletDamage;
+        protected float BulletDamage;
         
         private void Awake()
         {
@@ -24,7 +24,7 @@ namespace Bullets
         }
         
 
-        public int GetDmg()
+        public float GetDmg()
         {
             return BulletDamage;
         }

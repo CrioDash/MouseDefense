@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Timers;
 using Events;
 using UnityEngine;
 using EventType = Events.EventType;
@@ -13,6 +14,7 @@ namespace UI.Pause
         
         public static List<IPausable> _pauses = new List<IPausable>();
         public static bool IsPaused;
+        public static float fixedDeltaTime;
 
         public static List<IPausable> ExceptionPauses = new List<IPausable>();
 
@@ -29,6 +31,7 @@ namespace UI.Pause
         private void Awake()
         {
             IsPaused = false;
+            fixedDeltaTime = Time.fixedDeltaTime;
             foreach (GameObject gm in ExceptPauses)
             {
                 ExceptionPauses.Add(gm.GetComponent<IPausable>());

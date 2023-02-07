@@ -113,6 +113,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
+  Icon: {fileID: 21300000, guid: c37ed1acc9c453b46a1a30920af27cf3, type: 3}
   Type: 0
   MaxHealth: 50
   Reward: 0

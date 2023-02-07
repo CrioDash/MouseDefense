@@ -6,7 +6,7 @@ namespace Enemies
     public class IDefaultTakeDamage: MonoBehaviour, ITakeDamage
     {
         private Enemy _enemy;
-        public void TakeDamage(int dmg, DamageType type)
+        public void TakeDamage(float dmg, DamageType type)
         {
             if(_enemy == null)
                 _enemy = GetComponent<Enemy>();

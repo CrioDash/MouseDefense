@@ -10,7 +10,7 @@ namespace Enemies.SpecialEnemies
     public class IDamTakeDamage:MonoBehaviour, ITakeDamage
     {
         private Enemy _enemy;
-        public void TakeDamage(int dmg, DamageType type)
+        public void TakeDamage(float dmg, DamageType type)
         {
             if (type != DamageType.Splash)
                 dmg /= 2;

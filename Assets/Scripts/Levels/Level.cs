@@ -3,14 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Enemies;
 using Enemies.Dammer;
-using Events;
 using Game;
 using Levels;
 using UI.Pause;
 using Unity.AI.Navigation;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using EventBus = Events.EventBus;
 using EventType = Events.EventType;
+using Variables = Game.Variables;
 
 public abstract class Level : MonoBehaviour
 {
@@ -18,13 +20,14 @@ public abstract class Level : MonoBehaviour
     public GameObject enemyContainer;
     public List<GameObject> Waypoints;
     public List<GameObject> Enemies;
-
     public static Level currentLevel;
 
     [HideInInspector] 
     public Dictionary<Variables.EnemyType, GameObject> EnemyDict = new Dictionary<Variables.EnemyType, GameObject>();
     [HideInInspector]
     public float MaxHealth;
+    [HideInInspector]
+    public int WaveCount;
     [HideInInspector]
     public float CurrentHealth;
     [HideInInspector]
@@ -45,6 +48,7 @@ public abstract class Level : MonoBehaviour
 
     private void Start()
     {
+        WaveCount = 0;
         if (LevelSwitcher.Switcher != null)
             EventBus.Publish(EventType.PAUSE);
         Canvas = FindObjectOfType<Canvas>();
@@ -56,6 +60,7 @@ public abstract class Level : MonoBehaviour
             EnemyDict.Add(gm.GetComponent<Enemy>().EnemyType, gm);
         }
         Camera.main.clearFlags = CameraClearFlags.Nothing;
+        Camera.main.orthographicSize = 15 * (20.0f / 9.0f / Camera.main.aspect);
         Physics.gravity = new Vector3(0, -20 * Time.deltaTime*2, 0);
         EventBus.Publish(EventType.START);
     }
@@ -131,6 +136,7 @@ public abstract class Level : MonoBehaviour
 
     public IEnumerator Wait(float time)
     {
+        
         float t = 0;
         while (t<time)
         {

@@ -8,7 +8,7 @@ namespace Towers
         {
             if (GetTarget() == null)
                 return;
-            _animator.SetTrigger("Shoot");
+            animator.SetTrigger("Shoot");
             GameObject bullet = Instantiate(bulletPrefab, transform);
             bullet.transform.position = bulletSpawn.transform.position;
             

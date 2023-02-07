@@ -24,24 +24,24 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public GameObject bulletPrefab;
     public float bulletSpeed;
     public float bulletCooldown;
-    public int bulletDamage;
+    public float bulletDamage;
     public GameObject bulletSpawn;
 
 
     [HideInInspector] public TowerTile tile;
     [HideInInspector] public int level = 1;
+    [HideInInspector] public Animator animator;
     
-    protected Animator _animator;
     private Enemy _target;
     private float _bulletTime = 0;
     private bool _cd = false;
 
     private void Awake()
     {
-        _animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
     }
 
-    private void FixedUpdate()
+    public virtual void FixedUpdate()
     { 
         if (GetTarget() == null || PauseScript.IsPaused)
            return;
@@ -70,7 +70,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public void FindTarget()
     {
         List<Collider> enemies = new List<Collider>();
-        if(shootType== ShootType.Ground)
+        if(shootType== ShootType.Ground || shootType == ShootType.Both)
             enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
         if (shootType == ShootType.Air)
             enemies = Physics.OverlapBox(

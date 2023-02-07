@@ -6,7 +6,7 @@ namespace Enemies
     {
         private GameObject _parashoot; 
         private EnemyParatrooper _enemy;
-        public void TakeDamage(int dmg, DamageType type)
+        public void TakeDamage(float dmg, DamageType type)
         {
             if(_enemy==null) 
                _enemy = GetComponent<EnemyParatrooper>();

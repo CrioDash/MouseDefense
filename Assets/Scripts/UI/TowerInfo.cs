@@ -113,7 +113,7 @@ namespace UI
                 yield return null;
             }
             Vector3 pos = transform.position;
-            pos.y = 100;
+            pos.y = 200;
             transform.position = pos;
             opened = false;
         }

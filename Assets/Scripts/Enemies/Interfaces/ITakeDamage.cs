@@ -3,6 +3,6 @@ namespace Enemies
 {
     public interface ITakeDamage
     {
-        public void TakeDamage(int dmg, DamageType type);
+        public void TakeDamage(float dmg, DamageType type);
     }
 }

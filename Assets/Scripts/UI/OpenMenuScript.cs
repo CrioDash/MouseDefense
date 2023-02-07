@@ -57,6 +57,8 @@ public class OpenMenuScript : MonoBehaviour
             t += Time.fixedDeltaTime*4;
             yield return null;
         }
+
+        MenuWindow.transform.position = startPoint.transform.position;
         EventBus.Publish(EventType.PAUSE);
     }
 
@@ -70,6 +72,8 @@ public class OpenMenuScript : MonoBehaviour
             t += Time.fixedDeltaTime*4;
             yield return null;
         }
+
+        MenuWindow.transform.position = endPoint.transform.position;
         EventBus.Publish(EventType.PAUSE);
     }
     

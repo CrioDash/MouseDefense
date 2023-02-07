@@ -18,6 +18,7 @@ namespace Enemies
     {
         [Header("Enemy stats")] 
         public TextMeshProUGUI Text;
+        public Sprite Icon;
         public EnemyType Type;
         public float MaxHealth;
         public int Reward;
@@ -58,14 +59,15 @@ namespace Enemies
         protected Rigidbody Body;
         protected NavMeshAgent Agent;
 
-        public void CreateDamageText(int dmg)
+        public void CreateDamageText(float dmg)
         {
+            Debug.Log(CurrentHealth);
             TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
             Vector3 pos = text.transform.localPosition;
             pos.x += 50;
             text.transform.localPosition = pos;
-            text.text = dmg.ToString();
+            text.text = Mathf.Ceil(dmg).ToString();
         }
         
         private void Start()
