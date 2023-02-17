@@ -153,7 +153,7 @@ MonoBehaviour:
   Damage: 1
   Speed: 6.5
   EnemyType: 2
-  ParashootHP: 30
+  ParashootHP: 15
   parashoot: {fileID: 7921455719966372941}
 --- !u!195 &7226060453797041408
 NavMeshAgent:

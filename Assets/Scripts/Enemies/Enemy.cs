@@ -57,11 +57,12 @@ namespace Enemies
         }
         
         protected Rigidbody Body;
-        protected NavMeshAgent Agent;
+        
+        [HideInInspector]
+        public NavMeshAgent Agent;
 
         public void CreateDamageText(float dmg)
         {
-            Debug.Log(CurrentHealth);
             TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
             Vector3 pos = text.transform.localPosition;

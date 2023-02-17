@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Bullets
 {
-    public class Bullet : MonoBehaviour, IBulletMove
+    public class Bullet : MonoBehaviour
     {
         protected Tower Parent;
         protected float BulletSpeed;
@@ -29,10 +29,5 @@ namespace Bullets
             return BulletDamage;
         }
 
-        private void OnDestroy()
-        {
-            if(Parent.GetTarget()==null)
-                Parent.FindTarget();
-        }
     }
 }

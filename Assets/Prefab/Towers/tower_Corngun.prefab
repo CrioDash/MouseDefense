@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 596380872099199369}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.73, z: 0}
+  m_LocalPosition: {x: 0, y: 0.19, z: 0}
   m_LocalScale: {x: 0.79999995, y: 1.5, z: 0.79999995}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -214,9 +214,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9130459015104144461}
   - component: {fileID: 5581727938162767928}
-  - component: {fileID: 6499956928198152868}
   - component: {fileID: 2791867071704350740}
-  - component: {fileID: 641723944292591767}
+  - component: {fileID: 6869325002239658224}
   m_Layer: 9
   m_Name: tower_Corngun
   m_TagString: Tower
@@ -236,10 +235,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3315400252037622733}
   - {fileID: 6363847343879145197}
   - {fileID: 8461295321859565636}
   - {fileID: 8279593343298311589}
-  - {fileID: 3315400252037622733}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -255,7 +254,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6971ae73d49d46aaa39e8dde52c44ea1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6499956928198152868
+--- !u!65 &2791867071704350740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1554303511080314540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 2.7, z: 2}
+  m_Center: {x: 0, y: 0.85, z: 0}
+--- !u!114 &6869325002239658224
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -268,12 +280,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  attackRange: 9
+  attackRange: 7
   cost: 150
   head: {fileID: 6861568908805589348}
-  shootType: 2
-  bulletPrefab: {fileID: 776161753979357573, guid: ec59bc37f7c5e6b44a94151ea82d8ce3, type: 3}
-  bulletSpeed: 50
+  shootType: 0
+  bulletPrefab: {fileID: 8518738755610360070, guid: 8ef1d2d04865cf04fb8b4c53520a3b5d, type: 3}
+  bulletSpeed: 25
   bulletCooldown: 0.25
   bulletDamage: 2
   bulletSpawn: {fileID: 7662040444029348037}
@@ -281,40 +293,7 @@ MonoBehaviour:
   level: 1
   animator: {fileID: 0}
   Barrel: {fileID: 937613082023005302}
-  RotationSpeed: 300
---- !u!65 &2791867071704350740
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554303511080314540}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 1.2, z: 0}
---- !u!95 &641723944292591767
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1554303511080314540}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5ad5448ecce13884880ec52e0d1c248b, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  RotationSpeed: 250
 --- !u!1 &1896260413768443396
 GameObject:
   m_ObjectHideFlags: 0
@@ -673,7 +652,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3432295889362639449}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.37, z: 0}
   m_LocalScale: {x: 2, y: 0.25, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1005,7 +984,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4606151844603539654}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1230,7 +1209,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6861568908805589348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.61, z: 0}
+  m_LocalPosition: {x: 0, y: 1.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

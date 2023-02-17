@@ -11,7 +11,7 @@ using UnityEngine;
 using Utilities;
 
 [RequireComponent(typeof(TowerPause))]
-public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
+public abstract class Tower : MonoBehaviour
 {
     [Header("Tower Settings")] 
     public TowerType type;
@@ -33,42 +33,25 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     [HideInInspector] public Animator animator;
     
     private Enemy _target;
-    private float _bulletTime = 0;
-    private bool _cd = false;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        StartCoroutine(StartShooting());
     }
 
     public virtual void FixedUpdate()
     { 
         if (GetTarget() == null || PauseScript.IsPaused)
            return;
-        if((shootType!= ShootType.Both && (int)GetTarget().Type!=(int)shootType)|| !GetTarget().CompareTag("Enemy"))
-            FindTarget();
-        if (!_cd)
-        {
-            Shoot();
-            _cd = true;
-        }
-        if (_cd)
-        {
-            _bulletTime += Time.fixedDeltaTime;
-            if (_bulletTime >= bulletCooldown)
-            {
-                _bulletTime = 0;
-                _cd = false;
-            }
-        }
-        if (GetTarget() == null || PauseScript.IsPaused)
-            return;
         head.transform.LookAt(GetTarget().transform.position);
         head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
     }
 
     public void FindTarget()
     {
+        if(GetTarget()!=null)
+            return;
         List<Collider> enemies = new List<Collider>();
         if(shootType== ShootType.Ground || shootType == ShootType.Both)
             enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
@@ -80,6 +63,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         {
             if ((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
             {
+                Debug.Log("Found");
                 SetTarget(col.GetComponent<Enemy>());
                 return;
             }
@@ -95,6 +79,17 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
     public Enemy GetTarget()
     {
         return _target;
+    }
+
+    public IEnumerator StartShooting()
+    {
+        while (true)
+        {
+            while (PauseScript.IsPaused || GetTarget() == null)
+                yield return null;
+            Shoot();
+            yield return new WaitForSeconds(bulletCooldown);
+        }
     }
     
 
@@ -115,7 +110,7 @@ public abstract class Tower : MonoBehaviour, ITowerShoot, ITowerLevelUp
         if(shootType == ShootType.Air)
             Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+9f, transform.position.z), 
                 new Vector3(attackRange, 18, attackRange));
-        if(shootType == ShootType.Ground) 
+        if(shootType == ShootType.Ground || shootType == ShootType.Both) 
             Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 

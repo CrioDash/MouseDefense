@@ -345,6 +345,7 @@ MonoBehaviour:
   bulletSpawn: {fileID: 2189462343544321955}
   tile: {fileID: 0}
   level: 1
+  animator: {fileID: 0}
 --- !u!95 &3553140702435566967
 Animator:
   serializedVersion: 4

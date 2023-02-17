@@ -10497,6 +10497,7 @@ MonoBehaviour:
   - {fileID: 7324970918970974557, guid: ba23d53ef3bcc844caa80b5b1dcddb3e, type: 3}
   - {fileID: 2859157582221627390, guid: a025fca770ae8d442ac50b841bf474fa, type: 3}
   - {fileID: 5291350026171429168, guid: 78db5a53c9310a54683b51a18a9afb72, type: 3}
+  - {fileID: 4539417357653936350, guid: af3bcb0ca187dd54e83ae1ce4c5277b6, type: 3}
   MaxHealth: 0
   WaveCount: 0
   CurrentHealth: 0
@@ -75809,7 +75810,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1430894736372120011, guid: 79b5abc1505bed14dafcc363ab1e7d91, type: 3}
       propertyPath: Multiplier
-      value: 750
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430894736372120011, guid: 79b5abc1505bed14dafcc363ab1e7d91, type: 3}
+      propertyPath: NightColor.b
+      value: 0.3773585
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430894736372120011, guid: 79b5abc1505bed14dafcc363ab1e7d91, type: 3}
+      propertyPath: NightColor.g
+      value: 0.21734859
+      objectReference: {fileID: 0}
+    - target: {fileID: 1430894736372120011, guid: 79b5abc1505bed14dafcc363ab1e7d91, type: 3}
+      propertyPath: NightColor.r
+      value: 0.08330365
       objectReference: {fileID: 0}
     - target: {fileID: 1430894736372120015, guid: 79b5abc1505bed14dafcc363ab1e7d91, type: 3}
       propertyPath: m_Name

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Bullets;
 using Enemies;
 using UnityEngine;
 
@@ -32,7 +33,6 @@ public class TowerDetector : MonoBehaviour
             _colliderSphere.radius = _parent.attackRange;
         else
             _colliderBox.size = new Vector3(_parent.attackRange, 18, _parent.attackRange);
-        _parent.FindTarget();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -52,11 +52,8 @@ public class TowerDetector : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (!other.CompareTag("Enemy") || _parent.GetTarget()==null) 
-            return; 
-        if (_parent.GetTarget().Equals(other.GetComponent<Enemy>()))
-        {
-            _parent.SetTarget(null);
-            _parent.FindTarget();
-        }
+            return;
+        _parent.SetTarget(null);
+        _parent.FindTarget();
     }
 }

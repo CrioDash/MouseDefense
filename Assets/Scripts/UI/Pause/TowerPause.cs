@@ -23,10 +23,8 @@ namespace UI.Pause
         }
         public void Pause()
         {
-            if (PauseScript.IsPaused)
-                _animator.speed = 0;
-            else
-                _animator.speed = 1;
+            if (_animator != null) 
+                _animator.speed = PauseScript.IsPaused ? 0 : 1;
         }
     }
 }

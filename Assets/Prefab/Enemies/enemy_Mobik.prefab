@@ -119,8 +119,10 @@ MonoBehaviour:
   MaxHealth: 30
   Reward: 10
   Damage: 1
-  Speed: 3
+  Speed: 8
   EnemyType: 0
+  time: 0
+  Agent: {fileID: 0}
 --- !u!1 &4829992959438374759
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,7 +10,7 @@ namespace Towers
         public float RotationSpeed;
         
 
-        public override void FixedUpdate()
+       public override void FixedUpdate()
         {
             base.FixedUpdate();
             if(PauseScript.IsPaused)
@@ -29,7 +29,6 @@ namespace Towers
 
         public override void LevelUp()
         {
-            animator.speed *= 1.2f;
             transform.localScale += Vector3.one * 0.15f;
             bulletDamage *= 1.5f;
             bulletCooldown *= 0.8f;

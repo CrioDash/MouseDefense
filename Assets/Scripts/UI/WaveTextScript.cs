@@ -14,7 +14,6 @@ public class WaveTextScript : MonoBehaviour
     public GameObject IconSpot;
 
     private GameObject _panel;
-    private TextMeshProUGUI _text;
     private Vector3 _textPosition;
     
     public static WaveTextScript waveTextScript;
@@ -23,9 +22,6 @@ public class WaveTextScript : MonoBehaviour
     {
         waveTextScript = this;
         _panel = GetComponentInChildren<CanvasGroup>().gameObject;
-        _text = GetComponentInChildren<TextMeshProUGUI>();
-        _textPosition = _text.transform.position;
-        _text.transform.position = new Vector3(_textPosition.x, _textPosition.y + 200, _textPosition.z);
     }
 
     // Update is called once per frame
@@ -36,29 +32,8 @@ public class WaveTextScript : MonoBehaviour
 
     public IEnumerator TextMove(params Variables.EnemyType[] enemies)
     {
-        yield return new WaitForSeconds(3f);
         Level.currentLevel.WaveCount++;
-        _text.transform.position = _textPosition;
-        float t = 0;
-        while (t<1)
-        {
-            while (PauseScript.IsPaused)
-                yield return null;
-            _text.color = Color.Lerp(Color.clear, Color.white, t);
-            t += Time.fixedDeltaTime;
-            yield return null;
-        }
-        yield return new WaitForSeconds(1f);
-        t = 0;
-        while (t<1)
-        {
-            while (PauseScript.IsPaused)
-                yield return null;
-            _text.color = Color.Lerp(Color.white, Color.clear, t);
-            t += Time.fixedDeltaTime;
-            yield return null;
-        }
-        _text.transform.position = new Vector3(_textPosition.x, _textPosition.y + 200, _textPosition.z);
+        float t;
         for(int i = 0; i< enemies.Length; i++)
         {
             GameObject gm = Instantiate(EnemyIconPrefab, IconSpot.transform);

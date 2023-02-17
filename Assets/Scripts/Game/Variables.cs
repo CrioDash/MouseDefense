@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Towers;
+using UnityEngine;
 
 namespace Game
 {
@@ -12,7 +13,7 @@ namespace Game
             
             public enum EnemyType
             {
-                Mobik, Tractor, Parashoot, Dammer, Plane
+                Mobik, Tractor, Parashoot, Dammer, Plane, Shielder
             }
             
     }

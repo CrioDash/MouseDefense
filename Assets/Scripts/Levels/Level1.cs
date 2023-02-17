@@ -16,7 +16,7 @@ namespace Levels
         {
             ChangeMoney(225);
             yield return StartCoroutine(Wait(1f));
-            yield return StartCoroutine(WaveTextScript.waveTextScript.TextMove(Variables.EnemyType.Mobik, Variables.EnemyType.Tractor, Variables.EnemyType.Parashoot));
+            yield return StartCoroutine(WaveTextScript.waveTextScript.TextMove(Variables.EnemyType.Shielder));
             yield return StartCoroutine(Wave(Variables.EnemyType.Mobik, 10, 1.5f));
             yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
             yield return StartCoroutine(WaveTextScript.waveTextScript.TextMove(Variables.EnemyType.Tractor));

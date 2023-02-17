@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using Enemies;
 using TMPro;
 using UI.Pause;
@@ -8,6 +9,13 @@ namespace Bullets
 {
     public class BulletGun : Bullet
     {
+        private GameObject target;
+
+        private void Start()
+        {
+            
+        }
+
         public void Update()
         {
             if (PauseScript.IsPaused)
