@@ -15,7 +15,7 @@ namespace Tiles
         public TileType type;
 
         private Renderer _tileRenderer;
-        public static Color Color;
+        public Color Color;
 
         private void Awake()
         {
@@ -48,6 +48,8 @@ namespace Tiles
         {
             if(PauseScript.IsPaused)
                 return;
+            if (TowerInfo.Info.IsOpened)
+                TowerInfo.Info.CloseWindow();
             if (type == TileType.Free && !TowerInfo.Info.IsOpened)
             {
                 _tileRenderer.material.color = Color;

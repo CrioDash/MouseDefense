@@ -16,8 +16,7 @@ namespace UI
         public List<GameObject> towerPrefabs;
         public GameObject buildContainer;
         public GameObject sellContainer;
-
-        public bool IsStopClosing { set; get; }
+        
         public bool IsOpened { set; get; }
         public Tower InfoTower { set; get; }
         public Vector3 TowerPos { set; get; }
@@ -34,12 +33,7 @@ namespace UI
 
             Info = this;
         }
-
-        private void FixedUpdate()
-        {
-            if (Input.touchCount != 0 && Input.GetTouch(0).phase == TouchPhase.Ended && IsOpened)
-                StartCoroutine(CloseAnimation());
-        }
+        
 
         public void CloseWindow()
         {
@@ -72,12 +66,11 @@ namespace UI
                                                       +InfoTower.cost*3/4*(int)Math.Truncate(Convert.ToDecimal(InfoTower.Level / 3)))/2);
             InfoTower.tile.type = TowerTile.TileType.Free;
             Destroy(InfoTower.gameObject);
-            StartCoroutine(CloseAnimation());
+            CloseWindow();
         }
 
         private IEnumerator ShowAnimation()
         {
-            StartCoroutine(StopClosingAnimation());
             transform.position = TowerPos;
             Vector3 pos;
             pos = transform.localPosition;
@@ -97,13 +90,13 @@ namespace UI
             
         }
 
-        public IEnumerator CloseAnimation()
+        private IEnumerator CloseAnimation()
         {
+            if(InfoTower!=null)
+                InfoTower.radiusSprite.color = new Color(1, 1, 1, 0);
             float t = 0;
             while (t<1)
             {
-                if(IsStopClosing)
-                    yield break;
                 while (PauseScript.IsPaused)
                 {
                     yield return null;
@@ -117,13 +110,7 @@ namespace UI
             transform.position = pos;
             IsOpened = false;
         }
-
-        private IEnumerator StopClosingAnimation()
-        {
-            IsStopClosing = true;
-            yield return new WaitForSeconds(0.05f);
-            IsStopClosing = false;
-        }
+        
 
     }
 }

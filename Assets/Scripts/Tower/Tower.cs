@@ -17,6 +17,7 @@ public abstract class Tower : MonoBehaviour
     [Header("Tower Settings")] 
     public TowerType type;
     public float attackRange;
+    public SpriteRenderer radiusSprite;
     public int cost;
 
     [Header("Bullet Settings")] 
@@ -41,6 +42,7 @@ public abstract class Tower : MonoBehaviour
     private void Awake()
     {
         Animator = GetComponent<Animator>();
+        radiusSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, 1);
         StartCoroutine(StartShooting());
         StartCoroutine(StartAnimation());
     }
@@ -107,7 +109,12 @@ public abstract class Tower : MonoBehaviour
         if(PauseScript.IsPaused)
             return;
         if (!TowerInfo.Info.IsOpened)
+        {
+            Color clr = radiusSprite.color;
+            clr.a = 0.1f;
+            radiusSprite.color = clr;
             TowerInfo.Info.ShowSellWindow(this);
+        }
     }
 
     public void OnDrawGizmosSelected()

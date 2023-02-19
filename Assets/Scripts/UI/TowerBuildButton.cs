@@ -51,7 +51,7 @@ namespace UI
             TowerInfo.Info.TowerTile.type = TowerTile.TileType.Towered;
             tower.GetComponent<Tower>().tile = TowerInfo.Info.TowerTile;
             Level.currentLevel.ChangeMoney(-_cost);
-            TowerInfo.Info.StartCoroutine("CloseAnimation");
+            TowerInfo.Info.CloseWindow();
         }
 
     

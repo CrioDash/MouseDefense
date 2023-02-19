@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Enemies;
 using TMPro;
+using UI;
 using UI.Pause;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -16,18 +17,12 @@ public class WaveTextScript : MonoBehaviour
     private GameObject _panel;
     private Vector3 _textPosition;
     
-    public static WaveTextScript waveTextScript;
+    public static WaveTextScript Instance;
     
     void Start()
     {
-        waveTextScript = this;
+        Instance = this;
         _panel = GetComponentInChildren<CanvasGroup>().gameObject;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public IEnumerator TextMove(params Variables.EnemyType[] enemies)
@@ -72,6 +67,11 @@ public class WaveTextScript : MonoBehaviour
                 continue;
             Destroy(gm.gameObject);
         }
-        yield return new WaitForSeconds(3f);
+
+        WaveTimerScript.Instance.TimerStart(5);
+        while (!WaveTimerScript.Instance.waited)
+        {
+            yield return null;
+        }
     }
 }

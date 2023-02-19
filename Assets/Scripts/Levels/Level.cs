@@ -22,24 +22,22 @@ public abstract class Level : MonoBehaviour
     public List<GameObject> Enemies;
     public static Level currentLevel;
 
-    [HideInInspector] 
+    
     public Dictionary<Variables.EnemyType, GameObject> EnemyDict = new Dictionary<Variables.EnemyType, GameObject>();
-    [HideInInspector]
-    public float MaxHealth;
-    [HideInInspector]
-    public int WaveCount;
-    [HideInInspector]
-    public float CurrentHealth;
-    [HideInInspector]
-    public int Gold;
-    [HideInInspector] 
-    public Canvas Canvas;
-    [HideInInspector] 
-    public NavMeshSurface Surface;
-    [HideInInspector] 
-    public GameObject DammerPositions;
-    [HideInInspector] 
-    public GameObject DamPositions;
+    public float MaxHealth { set; get; }
+    
+    public int WaveCount { set; get; }
+    
+    public float CurrentHealth { set; get; }
+    public int Gold { private set; get; }
+   
+    public Canvas Canvas { set; get; }
+   
+    public NavMeshSurface Surface { set; get; }
+  
+    public GameObject DammerPositions { set; get; }
+    
+    public GameObject DamPositions { set; get; }
 
     private void Awake()
     {
@@ -80,7 +78,7 @@ public abstract class Level : MonoBehaviour
         EventBus.Unsubscribe(EventType.START, StartLevel);
     }
 
-    public virtual void  SetStats()
+    public void  SetStats()
     {
         MaxHealth = Variables.Health + PlayerStats.BonusHealth;
         TakeDamage(-MaxHealth);
