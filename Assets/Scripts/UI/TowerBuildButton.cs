@@ -45,11 +45,11 @@ namespace UI
         public void CreateTower()
         {
             GameObject tower = Instantiate(TowerInfo.Info.towerPrefabs[(int)Type]);
-            Vector3 pos = TowerInfo.Info.towerPos;
+            Vector3 pos = TowerInfo.Info.TowerPos;
             pos.y += 1;
             tower.transform.position = pos;
-            TowerInfo.Info.towerTile.type = TowerTile.TileType.Towered;
-            tower.GetComponent<Tower>().tile = TowerInfo.Info.towerTile;
+            TowerInfo.Info.TowerTile.type = TowerTile.TileType.Towered;
+            tower.GetComponent<Tower>().tile = TowerInfo.Info.TowerTile;
             Level.currentLevel.ChangeMoney(-_cost);
             TowerInfo.Info.StartCoroutine("CloseAnimation");
         }

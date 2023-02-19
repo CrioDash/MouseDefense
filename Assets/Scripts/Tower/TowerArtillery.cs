@@ -1,22 +1,17 @@
 ﻿using System.Collections;
+using Towers.Default;
 using UI.Pause;
 using UnityEngine;
 
 namespace Towers
 {
-    public class Artillery: Tower
+    public class TowerArtillery: Tower
     {
-
-
-
-        public override void Shoot()
+        
+        private void Start()
         {
-            if (GetTarget() == null)
-                return;
-            animator.SetTrigger("Shoot");
-            GameObject bullet = Instantiate(bulletPrefab, transform);
-            bullet.transform.position = bulletSpawn.transform.position;
-            
+            TowerShoot = gameObject.AddComponent<DefaultTowerShoot>();
+            TowerAnimation = gameObject.AddComponent<DefaultTowerAnimation>();
         }
 
         public override void LevelUp()

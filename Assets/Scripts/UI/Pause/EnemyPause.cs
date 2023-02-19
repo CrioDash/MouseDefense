@@ -20,12 +20,12 @@ namespace UI.Pause
 
         private void OnEnable()
         {
-            PauseScript._pauses.Add(this);
+            PauseScript.Pauses.Add(this);
         }
         
         private void OnDisable()
         {
-            PauseScript._pauses.Remove(this);
+            PauseScript.Pauses.Remove(this);
         }
         public void Pause()
         {

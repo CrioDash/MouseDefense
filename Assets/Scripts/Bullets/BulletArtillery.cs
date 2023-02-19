@@ -15,10 +15,7 @@ namespace Bullets
         private float time;
         private Vector3 middlePos1;
         private Vector3 middlePos2;
-
-
-
-
+        
         private void Start()
         {
             startPos = transform.position;
@@ -30,13 +27,8 @@ namespace Bullets
             middlePos2.y += 6;
         }
 
-        public void FixedUpdate()
+        public override void Move()
         {
-            if (PauseScript.IsPaused)
-            {
-                return;
-            }
-
             if (time < 1)
             {
                 transform.position = Bezier.GetBezier(startPos, middlePos1, middlePos2, endPos, time);
@@ -51,8 +43,7 @@ namespace Bullets
         {
 
             if (other.CompareTag("Road") || other.CompareTag("Enemy"))
-
-    {
+            {
                 Collider[] targets = Physics.OverlapBox(transform.position, new Vector3(2.5f,2.5f,2.5f), Quaternion.identity, 1<<7);
                 foreach (Collider col in targets)
                 {

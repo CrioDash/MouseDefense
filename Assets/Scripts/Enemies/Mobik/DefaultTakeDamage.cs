@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class IDefaultTakeDamage: MonoBehaviour, ITakeDamage
+    public class DefaultTakeDamage: MonoBehaviour, ITakeDamage
     {
         private Enemy _enemy;
         public void TakeDamage(float dmg, DamageType type)

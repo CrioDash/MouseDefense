@@ -5,6 +5,7 @@ using System.Linq;
 using Enemies;
 using Tiles;
 using Towers;
+using Towers.Interfaces;
 using UI;
 using UI.Pause;
 using UnityEngine;
@@ -28,25 +29,22 @@ public abstract class Tower : MonoBehaviour
     public GameObject bulletSpawn;
 
 
-    [HideInInspector] public TowerTile tile;
-    [HideInInspector] public int level = 1;
-    [HideInInspector] public Animator animator;
+    public TowerTile tile { set; get; }
+    public int Level { set; get; } = 1;
+    public Animator Animator { set; get; }
+
+    public ITowerShoot TowerShoot { set; get; }
+    public ITowerAnimation TowerAnimation { set; get; }
     
     private Enemy _target;
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        Animator = GetComponent<Animator>();
         StartCoroutine(StartShooting());
+        StartCoroutine(StartAnimation());
     }
-
-    public virtual void FixedUpdate()
-    { 
-        if (GetTarget() == null || PauseScript.IsPaused)
-           return;
-        head.transform.LookAt(GetTarget().transform.position);
-        head.transform.eulerAngles = new Vector3(0, head.transform.eulerAngles.y + 90f, 0);
-    }
+    
 
     public void FindTarget()
     {
@@ -85,23 +83,30 @@ public abstract class Tower : MonoBehaviour
     {
         while (true)
         {
-            while (PauseScript.IsPaused || GetTarget() == null)
-                yield return null;
-            Shoot();
+            if(TowerShoot!=null && GetTarget()!=null)
+                TowerShoot.Shoot();
             yield return new WaitForSeconds(bulletCooldown);
         }
     }
-    
+
+    public IEnumerator StartAnimation()
+    {
+        while (true)
+        {
+            if(TowerAnimation!=null && GetTarget()!=null)
+                TowerAnimation.PlayAnimation();
+            yield return null;
+        }
+    }
 
     public abstract void LevelUp();
     
-    public abstract void Shoot();
 
     private void OnMouseUpAsButton()
     {
         if(PauseScript.IsPaused)
             return;
-        if (!TowerInfo.Info.opened)
+        if (!TowerInfo.Info.IsOpened)
             TowerInfo.Info.ShowSellWindow(this);
     }
 

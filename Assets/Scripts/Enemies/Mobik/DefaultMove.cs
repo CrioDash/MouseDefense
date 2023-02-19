@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace Enemies
 {
-    public class IDefaultMove:MonoBehaviour,IEnemyMove
+    public class DefaultMove:MonoBehaviour,IEnemyMove
     {
         public IEnumerator Move()
         {

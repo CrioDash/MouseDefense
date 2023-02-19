@@ -10,13 +10,12 @@ namespace UI.Pause
     public class PauseScript : MonoBehaviour
     {
 
-        public List<GameObject> ExceptPauses = new List<GameObject>();
+        public List<GameObject> exceptPauses = new();
         
-        public static List<IPausable> _pauses = new List<IPausable>();
+        public static List<IPausable> Pauses = new();
         public static bool IsPaused;
-        public static float fixedDeltaTime;
 
-        public static List<IPausable> ExceptionPauses = new List<IPausable>();
+        public static List<IPausable> ExceptionPauses = new();
 
         private void OnEnable()
         {
@@ -31,8 +30,7 @@ namespace UI.Pause
         private void Awake()
         {
             IsPaused = false;
-            fixedDeltaTime = Time.fixedDeltaTime;
-            foreach (GameObject gm in ExceptPauses)
+            foreach (GameObject gm in exceptPauses)
             {
                 ExceptionPauses.Add(gm.GetComponent<IPausable>());
             }
@@ -41,10 +39,8 @@ namespace UI.Pause
         public void Pause()
         {
             IsPaused = !IsPaused;
-            foreach (IPausable pause in _pauses)
+            foreach (IPausable pause in Pauses)
             {
-                if(ExceptionPauses.Contains(pause))
-                    continue;
                 pause.Pause();
             }
         }

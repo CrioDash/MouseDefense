@@ -9,25 +9,21 @@ namespace Bullets
 {
     public class BulletGun : Bullet
     {
-        private GameObject target;
+        private GameObject _target;
 
         private void Start()
         {
-            
+            _target = Parent.GetTarget().gameObject;
         }
 
-        public void Update()
+        public override void Move()
         {
-            if (PauseScript.IsPaused)
-            {
-                return;
-            }
-            if (Parent.GetTarget() == null)
+            if (_target==null)
             {
                 Destroy(gameObject);
                 return;
             }
-            transform.position = Vector3.MoveTowards(transform.position, Parent.GetTarget().transform.position,
+            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
                 BulletSpeed * Time.fixedDeltaTime);
         }
 

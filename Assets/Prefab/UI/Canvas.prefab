@@ -3158,11 +3158,6 @@ MonoBehaviour:
   - {fileID: 1554303511080314540, guid: b3d7a11ff4e5a924cb54575ffdd73f6a, type: 3}
   buildContainer: {fileID: 4823629373749796017}
   sellContainer: {fileID: 6466333130492414366}
-  stopClosing: 0
-  opened: 0
-  tower: {fileID: 0}
-  towerPos: {x: 0, y: 0, z: 0}
-  towerTile: {fileID: 0}
 --- !u!1 &5202193502960626671
 GameObject:
   m_ObjectHideFlags: 0

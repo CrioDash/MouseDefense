@@ -10821,6 +10821,10 @@ PrefabInstance:
       propertyPath: ExceptPauses.Array.data[0]
       value: 
       objectReference: {fileID: 1995874015}
+    - target: {fileID: 286943093776026976, guid: efab4fb75e692824aaf7845150080f62, type: 3}
+      propertyPath: exceptPauses.Array.data[0]
+      value: 
+      objectReference: {fileID: 1995874015}
     - target: {fileID: 286943093776026977, guid: efab4fb75e692824aaf7845150080f62, type: 3}
       propertyPath: m_RootOrder
       value: 6

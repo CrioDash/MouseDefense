@@ -7,23 +7,24 @@ namespace Bullets
 {
     public class BulletAA:Bullet
     {
-        public void FixedUpdate()
+        private GameObject _target;
+
+        private void Start()
         {
-            if (PauseScript.IsPaused)
-            {
-               return;
-            }
-            if (Parent.GetTarget() == null)
+            _target = Parent.GetTarget().gameObject;
+        }
+        
+        public override void Move()
+        {
+            if (_target == null)
             {
                 Destroy(gameObject);
                 return;
             }
-            transform.position = Vector3.MoveTowards(transform.position, Parent.GetTarget().transform.position,
+            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
                 BulletSpeed * Time.fixedDeltaTime);
-            transform.LookAt(Parent.GetTarget().transform.position);
-            var eulerAngles = transform.eulerAngles;
-            eulerAngles = new Vector3(eulerAngles.x+90f, eulerAngles.y, 0);
-            transform.eulerAngles = eulerAngles;
+            transform.LookAt(_target.transform.position);
+            transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f,  transform.eulerAngles.y, 0);
         }
         
         private void OnTriggerEnter(Collider other)

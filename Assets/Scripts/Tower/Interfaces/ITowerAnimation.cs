@@ -2,6 +2,6 @@
 {
     public interface ITowerAnimation
     {
-        
+        public void PlayAnimation();
     }
 }

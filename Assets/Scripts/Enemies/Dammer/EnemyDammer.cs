@@ -28,7 +28,7 @@ namespace Enemies.Dammer
             _damPoints.Remove(_damPoints[0]);
            
             Move = gameObject.AddComponent<IDammerMove>();
-            TakeDamage = gameObject.AddComponent<IDefaultTakeDamage>();
+            TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();
         }
     }
 }

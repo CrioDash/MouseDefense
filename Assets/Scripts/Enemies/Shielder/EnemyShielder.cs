@@ -11,7 +11,7 @@ namespace Enemies.Shielder
         public override void SetStats()
         {
             SetWaypoints(Level.currentLevel.Waypoints.ToArray());
-            Move = gameObject.AddComponent<IDefaultMove>();
+            Move = gameObject.AddComponent<DefaultMove>();
             TakeDamage = gameObject.AddComponent<IShielderTakeDamage>();
         }
     }

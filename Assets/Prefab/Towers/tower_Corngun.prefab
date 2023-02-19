@@ -283,15 +283,12 @@ MonoBehaviour:
   attackRange: 7
   cost: 150
   head: {fileID: 6861568908805589348}
-  shootType: 0
-  bulletPrefab: {fileID: 8518738755610360070, guid: 8ef1d2d04865cf04fb8b4c53520a3b5d, type: 3}
+  shootType: 2
+  bulletPrefab: {fileID: 776161753979357573, guid: ec59bc37f7c5e6b44a94151ea82d8ce3, type: 3}
   bulletSpeed: 25
   bulletCooldown: 0.25
   bulletDamage: 2
   bulletSpawn: {fileID: 7662040444029348037}
-  tile: {fileID: 0}
-  level: 1
-  animator: {fileID: 0}
   Barrel: {fileID: 937613082023005302}
   RotationSpeed: 250
 --- !u!1 &1896260413768443396

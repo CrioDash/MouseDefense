@@ -1,11 +1,12 @@
 using System;
 using System.Collections;
 using Towers;
+using UI.Pause;
 using UnityEngine;
 
 namespace Bullets
 {
-    public class Bullet : MonoBehaviour
+    public abstract class Bullet : MonoBehaviour
     {
         protected Tower Parent;
         protected float BulletSpeed;
@@ -16,6 +17,14 @@ namespace Bullets
             Parent = GetComponentInParent<Tower>();
             SetStats();
         }
+
+        public void FixedUpdate()
+        {
+            if(!PauseScript.IsPaused)
+                Move();
+        }
+
+        public abstract void Move();
 
         public void SetStats()
         {

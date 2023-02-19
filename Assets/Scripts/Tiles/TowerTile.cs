@@ -32,7 +32,7 @@ namespace Tiles
         {
             if(PauseScript.IsPaused)
                 return;
-            if(type==TileType.Free && !TowerInfo.Info.opened)
+            if(type==TileType.Free && !TowerInfo.Info.IsOpened)
                 _tileRenderer.material.color = Color.green;
         }
 
@@ -40,7 +40,7 @@ namespace Tiles
         {
             if(PauseScript.IsPaused)
                 return;
-            if(type==TileType.Free && !TowerInfo.Info.opened)
+            if(type==TileType.Free && !TowerInfo.Info.IsOpened)
                 _tileRenderer.material.color = Color;
         }
 
@@ -48,7 +48,7 @@ namespace Tiles
         {
             if(PauseScript.IsPaused)
                 return;
-            if (type == TileType.Free && !TowerInfo.Info.opened)
+            if (type == TileType.Free && !TowerInfo.Info.IsOpened)
             {
                 _tileRenderer.material.color = Color;
                 TowerInfo.Info.ShowBuildWindow(this);
