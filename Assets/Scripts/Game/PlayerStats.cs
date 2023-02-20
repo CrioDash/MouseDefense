@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using Consumables;
+
 namespace Game
 {
     public static class PlayerStats
@@ -10,6 +13,9 @@ namespace Game
 
         //Towers
         public static TowerType[] Towers = {TowerType.Gun, TowerType.Artillery, TowerType.AntiAir, TowerType.Corngun};
+
+        public static Dictionary<Consumable.ConsumableType, int> Consumables =
+            new Dictionary<Consumable.ConsumableType, int>();
 
     }
 }

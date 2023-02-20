@@ -2,6 +2,7 @@ using System;
 using UI;
 using UI.Pause;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 namespace Tiles
 {
@@ -15,7 +16,7 @@ namespace Tiles
         public TileType type;
 
         private Renderer _tileRenderer;
-        public Color Color;
+        private Color Color;
 
         private void Awake()
         {
@@ -30,7 +31,7 @@ namespace Tiles
 
         private void OnMouseEnter()
         {
-            if(PauseScript.IsPaused)
+            if(PauseScript.IsPaused || EventSystem.current.IsPointerOverGameObject())
                 return;
             if(type==TileType.Free && !TowerInfo.Info.IsOpened)
                 _tileRenderer.material.color = Color.green;
@@ -38,7 +39,7 @@ namespace Tiles
 
         private void OnMouseExit()
         {
-            if(PauseScript.IsPaused)
+            if(PauseScript.IsPaused )
                 return;
             if(type==TileType.Free && !TowerInfo.Info.IsOpened)
                 _tileRenderer.material.color = Color;
@@ -46,13 +47,17 @@ namespace Tiles
 
         private void OnMouseUpAsButton()
         {
-            if(PauseScript.IsPaused)
+            if(PauseScript.IsPaused || EventSystem.current.IsPointerOverGameObject())
                 return;
             if (TowerInfo.Info.IsOpened)
+            {
+                ConsumableWindow.Instance.Close();
                 TowerInfo.Info.CloseWindow();
+            }
             if (type == TileType.Free && !TowerInfo.Info.IsOpened)
             {
                 _tileRenderer.material.color = Color;
+                ConsumableWindow.Instance.Close();
                 TowerInfo.Info.ShowBuildWindow(this);
             }
         }

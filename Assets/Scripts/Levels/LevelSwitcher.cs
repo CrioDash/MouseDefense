@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Security.Cryptography;
+using Consumables;
 using Events;
+using Game;
 using UI;
 using UI.Pause;
 using UnityEngine;
@@ -16,6 +18,8 @@ namespace Levels
         {
             Switcher = this;
             Application.targetFrameRate = 120;
+            Consumable.Add(Consumable.ConsumableType.Bomb, 7);
+            Consumable.Add(Consumable.ConsumableType.Poison, 4);
             DontDestroyOnLoad(gameObject);
         }
 

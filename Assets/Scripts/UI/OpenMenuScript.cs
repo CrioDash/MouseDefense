@@ -48,6 +48,7 @@ public class OpenMenuScript : MonoBehaviour
 
     public IEnumerator CloseAnimation()
     {
+        
         float t = 0;
         
         while (t<1f)
@@ -64,6 +65,7 @@ public class OpenMenuScript : MonoBehaviour
 
     public IEnumerator OpenAnimation()
     {
+        EventBus.Publish(EventType.PAUSE);
         float t = 0;
         while (t<1f)
         {
@@ -74,7 +76,7 @@ public class OpenMenuScript : MonoBehaviour
         }
 
         MenuWindow.transform.position = endPoint.transform.position;
-        EventBus.Publish(EventType.PAUSE);
+       
     }
     
 }

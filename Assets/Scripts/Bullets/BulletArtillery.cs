@@ -42,9 +42,9 @@ namespace Bullets
         private void OnTriggerEnter(Collider other)
         {
 
-            if (other.CompareTag("Road") || other.CompareTag("Enemy"))
+            if (other.CompareTag("Road"))
             {
-                Collider[] targets = Physics.OverlapBox(transform.position, new Vector3(2.5f,2.5f,2.5f), Quaternion.identity, 1<<7);
+                Collider[] targets = Physics.OverlapSphere(transform.position, 5, 1<<7);
                 foreach (Collider col in targets)
                 {
                     col.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
