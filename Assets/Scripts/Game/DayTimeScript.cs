@@ -29,8 +29,6 @@ namespace Game
 
         private void FixedUpdate()
         {
-            if(PauseScript.IsPaused)
-                return;
             Second += Time.fixedDeltaTime*Multiplier;
             if (Second >= 60)
             {

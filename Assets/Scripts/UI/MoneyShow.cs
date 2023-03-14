@@ -44,10 +44,6 @@ namespace UI
             float time = 0;
             while (time<1)
             {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
                 _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, Level.currentLevel.Gold, time));
                 Text.text = _gold.ToString();
                 time += Time.fixedDeltaTime*4;
@@ -85,10 +81,6 @@ namespace UI
             float time = 0;
             while (time<1)
             {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
                 prefab.color = Color.Lerp(prefab.color, color, time);
                 Text.text = _gold.ToString();
                 time += Time.fixedDeltaTime;

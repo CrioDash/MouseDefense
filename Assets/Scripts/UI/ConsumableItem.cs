@@ -13,7 +13,7 @@ namespace UI
         public Consumable.ConsumableType Type;
         public GameObject Prefab;
 
-        private GameObject currentPrefab;
+        private Consumable currentPrefab;
         private TextMeshProUGUI _text;
 
         private void Awake()
@@ -29,15 +29,21 @@ namespace UI
                 _text.text = PlayerStats.Consumables[Type].ToString();
         }
 
+        private void FixedUpdate()
+        {
+            _text.text = PlayerStats.Consumables[Type].ToString();
+            if (PlayerStats.Consumables[Type]==0)
+                gameObject.SetActive(false);
+        }
+
         public void OnEndDrag(PointerEventData eventData)
         {
-           Destroy(currentPrefab.gameObject);
+            Destroy(currentPrefab.gameObject);
         }
 
         public void OnBeginDrag(PointerEventData eventData)
         {
-            Debug.Log("fdkgopdfkopg");
-            currentPrefab = Instantiate(Prefab, Level.currentLevel.Canvas.transform);
+            currentPrefab = Instantiate(Prefab).GetComponent<Consumable>();
         }
 
         public void OnDrag(PointerEventData eventData)

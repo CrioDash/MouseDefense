@@ -38,10 +38,6 @@ namespace UI
             var scale = CurrHP.transform.localScale;
             while (t<1)
             {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
                 CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, Level.currentLevel.CurrentHealth/ Level.currentLevel.MaxHealth, t), 
                     scale.y,scale.z);
                 t += Time.fixedDeltaTime*8;

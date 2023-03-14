@@ -44,8 +44,6 @@ public class WaveTextScript : MonoBehaviour
         t = 0;
         while (t<1)
         {
-            while (PauseScript.IsPaused)
-                yield return null;
             group.alpha = Mathf.Lerp(0, 1, t);
             t += Time.fixedDeltaTime*2;
             yield return null;
@@ -54,8 +52,6 @@ public class WaveTextScript : MonoBehaviour
         t = 0;
         while (t<1)
         {
-            while (PauseScript.IsPaused)
-                yield return null;
             group.alpha = Mathf.Lerp(1, 0, t);
             t += Time.fixedDeltaTime*2;
             yield return null;

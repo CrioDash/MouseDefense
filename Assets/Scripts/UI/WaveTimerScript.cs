@@ -36,8 +36,6 @@ namespace UI
             t = 0;
             while (t<1)
             {
-                while (PauseScript.IsPaused)
-                    yield return null;
                 _group.alpha = Mathf.Lerp(0, 1, t);
                 t += Time.fixedDeltaTime*4;
                 yield return null;
@@ -45,8 +43,6 @@ namespace UI
             t = time;
             while (t>0 && !waited)
             {
-                while (PauseScript.IsPaused)
-                    yield return null;
                 t -= Time.fixedDeltaTime/2;
                 _text.text = Mathf.CeilToInt(t).ToString();
                 yield return null;
@@ -54,8 +50,6 @@ namespace UI
             t = 0;
             while (t<1)
             {
-                while (PauseScript.IsPaused)
-                    yield return null;
                 _group.alpha = Mathf.Lerp(1, 0, t);
                 t += Time.fixedDeltaTime*4;
                 yield return null;

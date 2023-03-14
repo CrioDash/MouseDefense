@@ -33,8 +33,6 @@ namespace UI
 
         private void FixedUpdate()
         {
-            if(PauseScript.IsPaused)
-                return;
             if (_info.InfoTower != null)
             {
                 cost = (int)Math.Truncate(_info.InfoTower.cost * (((float)_info.InfoTower.Level+1) / 4));

@@ -38,7 +38,6 @@ namespace Levels
             while (sceneLoad.progress<0.9f)
             {
                 yield return null;
-                
             }
             LoadingScreen.Fade = true;
             sceneLoad.allowSceneActivation = true;

@@ -39,6 +39,7 @@ namespace UI.Pause
         public void Pause()
         {
             IsPaused = !IsPaused;
+            Time.timeScale = IsPaused?0:1;
             foreach (IPausable pause in Pauses)
             {
                 pause.Pause();

@@ -122,10 +122,6 @@ public abstract class Level : MonoBehaviour
     {
         for(int i =0; i<count; i++)
         {
-            while (PauseScript.IsPaused)
-            {
-                yield return null;
-            }
             GameObject enemyGM = Instantiate(EnemyDict[type], enemyContainer.transform);
             enemyGM.transform.position = enemyContainer.transform.position;
             yield return StartCoroutine(Wait(interval));
@@ -138,11 +134,7 @@ public abstract class Level : MonoBehaviour
         float t = 0;
         while (t<time)
         {
-            while (PauseScript.IsPaused)
-            {
-                yield return null;
-            }
-            t += Time.deltaTime;
+            t += Time.fixedDeltaTime;
             yield return null;
             
         }

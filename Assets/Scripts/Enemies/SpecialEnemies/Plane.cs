@@ -25,8 +25,6 @@ namespace Enemies.SpecialEnemies
 
         public override void FixedUpdate()
         {
-            if(PauseScript.IsPaused)
-                return;
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(60, 60, transform.position.z),
                 speed * Time.fixedDeltaTime);
         }

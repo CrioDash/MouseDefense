@@ -79,10 +79,6 @@ namespace UI
             float t = 0;
             while (t<1)
             {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
                 transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f),Vector3.one , t);
                 t += Time.fixedDeltaTime*8;
                 yield return null;
@@ -97,10 +93,6 @@ namespace UI
             float t = 0;
             while (t<1)
             {
-                while (PauseScript.IsPaused)
-                {
-                    yield return null;
-                }
                 transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(0.25f, 0.25f), t);
                 t += Time.fixedDeltaTime*8;
                 yield return null;

@@ -15,7 +15,7 @@ namespace Levels
         public override IEnumerator LevelScenario()
         {
             ChangeMoney(225);
-            yield return StartCoroutine(Wait(10f));
+            yield return StartCoroutine(Wait(3f));
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Shielder));
             yield return StartCoroutine(Wave(Variables.EnemyType.Mobik, 10, 0.5f));
             yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);

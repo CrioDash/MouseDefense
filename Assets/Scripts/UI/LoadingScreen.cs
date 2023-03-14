@@ -31,12 +31,12 @@ namespace UI
         public IEnumerator CloseAnimation()
         {
             _renderer.color = Color.black;
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSecondsRealtime(0.5f);
             float t = 0;
             while (t<1)
             {
                 _renderer.color = Color.Lerp(new Color(0, 0, 0, 1), new Color(0, 0, 0, 0), t);
-                t += Time.fixedDeltaTime*2;
+                t += Time.unscaledDeltaTime*2;
                 yield return null;
             }
             if(PauseScript.IsPaused)
@@ -50,7 +50,7 @@ namespace UI
             while (t<1)
             {
                 _renderer.color = Color.Lerp(new Color(0, 0, 0, 0), new Color(0, 0, 0, 1), t);
-                t += Time.fixedDeltaTime*2;
+                t += Time.unscaledDeltaTime*2;
                 yield return null;
             }
             if(PauseScript.IsPaused)

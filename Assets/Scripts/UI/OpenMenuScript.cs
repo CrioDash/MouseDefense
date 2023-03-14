@@ -55,7 +55,7 @@ public class OpenMenuScript : MonoBehaviour
         {
             MenuButton.transform.localEulerAngles = Vector3.Lerp(new Vector3(0, 0, -180),Vector3.zero,  t * 2);
             MenuWindow.transform.position = Vector3.Lerp(endPoint.transform.position,startPoint.transform.position, t);
-            t += Time.fixedDeltaTime*4;
+            t += Time.unscaledDeltaTime*4;
             yield return null;
         }
 
@@ -71,7 +71,7 @@ public class OpenMenuScript : MonoBehaviour
         {
             MenuButton.transform.localEulerAngles = Vector3.Lerp(Vector3.zero, new Vector3(0, 0, -180), t * 2);
             MenuWindow.transform.position = Vector3.Lerp(startPoint.transform.position, endPoint.transform.position, t);
-            t += Time.fixedDeltaTime*4;
+            t += Time.unscaledDeltaTime*4;
             yield return null;
         }
 

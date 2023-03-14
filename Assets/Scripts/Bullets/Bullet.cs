@@ -11,17 +11,18 @@ namespace Bullets
         protected Tower Parent;
         protected float BulletSpeed;
         protected float BulletDamage;
+        protected Rigidbody _body;
         
         private void Awake()
         {
+            _body = GetComponent<Rigidbody>();
             Parent = GetComponentInParent<Tower>();
             SetStats();
         }
 
         public void FixedUpdate()
         {
-            if(!PauseScript.IsPaused)
-                Move();
+            Move();
         }
 
         public abstract void Move();

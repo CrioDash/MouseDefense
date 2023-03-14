@@ -5883,6 +5883,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 5258509405822942476, guid: 56317c38873422c429cb1a6f96365288, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5725416492987800128, guid: 56317c38873422c429cb1a6f96365288, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -62448,14 +62452,6 @@ MonoBehaviour:
   Enemies:
   - {fileID: 7324970918970974557, guid: ba23d53ef3bcc844caa80b5b1dcddb3e, type: 3}
   - {fileID: 4667825729129609177, guid: 9f7e8ba8b791f514fb9fbcf0a4075c42, type: 3}
-  WaveText: {fileID: 0}
-  MaxHealth: 0
-  CurrentHealth: 0
-  Gold: 0
-  Canvas: {fileID: 0}
-  Surface: {fileID: 0}
-  DammerPositions: {fileID: 0}
-  DamPositions: {fileID: 0}
 --- !u!4 &1921548191
 Transform:
   m_ObjectHideFlags: 0
@@ -64841,6 +64837,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 286943093776026976, guid: efab4fb75e692824aaf7845150080f62, type: 3}
       propertyPath: ExceptPauses.Array.data[0]
+      value: 
+      objectReference: {fileID: 1889700252}
+    - target: {fileID: 286943093776026976, guid: efab4fb75e692824aaf7845150080f62, type: 3}
+      propertyPath: exceptPauses.Array.data[0]
       value: 
       objectReference: {fileID: 1889700252}
     - target: {fileID: 286943093776026977, guid: efab4fb75e692824aaf7845150080f62, type: 3}
