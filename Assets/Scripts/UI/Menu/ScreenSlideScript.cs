@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.Rendering;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -8,6 +9,7 @@ using UnityEngine.UI;
 
 public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    public List<MenuBackgroundScript> MenuScripts = new List<MenuBackgroundScript>();
     public List<RectTransform> MenuSlides = new List<RectTransform>();
     public int sceneCount;
 
@@ -23,12 +25,13 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         _canvas = transform.root.GetComponent<RectTransform>();
         _toggles = FindObjectOfType<ToggleGroup>().GetComponentsInChildren<Toggle>();
         MenuSlides[0].sizeDelta = new Vector2(_canvas.rect.width, _canvas.rect.height);
-        MenuSlides[0].transform.localPosition = new Vector3(-_canvas.rect.width / 2 , 0, 0);
+        MenuSlides[0].transform.localPosition = new Vector3(-_canvas.rect.width / 2 + 3 , 0, 0);
         MenuSlides[1].sizeDelta = new Vector2(_canvas.rect.width, _canvas.rect.height);
         MenuSlides[1].transform.localPosition = new Vector3(MenuSlides[1].transform.localPosition.x,
             MenuSlides[1].transform.localPosition.y, -_canvas.rect.width / 2 );
         MenuSlides[2].sizeDelta = new Vector2(_canvas.rect.width, _canvas.rect.height);
-        MenuSlides[2].transform.localPosition = new Vector3(_canvas.rect.width / 2, 0, 0);
+        MenuSlides[2].transform.localPosition = new Vector3(_canvas.rect.width / 2 - 3, 0, 0);
+        MenuSlides[_activeScene].SetAsLastSibling();
     }
     
 
@@ -63,11 +66,14 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         int difference =  _moveDifference < 0 ? -1 : 1;
        if((Mathf.Abs(_moveDifference)>_canvas.rect.width/12 && _timeDifference<0.5f || Mathf.Abs(_moveDifference)>_canvas.rect.width/5) && _activeScene+difference!=MenuSlides.Count && _activeScene+difference != -1)
        {
+           StartCoroutine(MenuScripts[_activeScene].Fade(1,0));
            _activeScene += difference;
+           StartCoroutine(MenuScripts[_activeScene].Fade(0,1));
            _toggles[_activeScene].isOn = true;
        }
+       MenuSlides[_activeScene].SetAsLastSibling();
        StartCoroutine(RotateAnimation(transform.localRotation.eulerAngles.y, (_activeScene - 1) * 90f));
-        _moveDifference = 0;
+       _moveDifference = 0;
        _timeDifference = Time.time;
     }
 
