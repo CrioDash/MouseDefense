@@ -22,7 +22,7 @@ namespace Bullets
                 return;
             }
             transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
-                BulletSpeed * Time.fixedDeltaTime);
+                BulletSpeed * Time.deltaTime);
             transform.LookAt(_target.transform.position);
             transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f,  transform.eulerAngles.y, 0);
         }

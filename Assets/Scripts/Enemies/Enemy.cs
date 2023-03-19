@@ -65,6 +65,7 @@ namespace Enemies
         {
             TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
+            text.color = Color.Lerp(Color.green, Color.red, Mathf.Clamp01(1 - CurrentHealth / MaxHealth - 0.1f));
             Vector3 pos = text.transform.localPosition;
             pos.x += 50;
             text.transform.localPosition = pos;
@@ -87,7 +88,7 @@ namespace Enemies
             Agent = GetComponent<NavMeshAgent>();
         }
 
-        public virtual void FixedUpdate()
+        public virtual void Update()
         {
             if (transform.position.y <= -20)
             {

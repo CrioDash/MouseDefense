@@ -14,12 +14,14 @@ namespace Towers
 
         public override void LevelUp()
         {
+            
             transform.localScale += Vector3.one * 0.15f;
             bulletDamage++;
             bulletCooldown *= 0.8f;
             bulletSpeed *= 1.2f;
             attackRange += 0.5f;
             radiusSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, 1);
+            _detector.UpdateColliders();
         }
     }
 }

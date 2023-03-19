@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemies;
+using Game;
 using Tiles;
 using Towers;
 using Towers.Interfaces;
@@ -37,11 +38,14 @@ public abstract class Tower : MonoBehaviour
     public ITowerShoot TowerShoot { set; get; }
     public ITowerAnimation TowerAnimation { set; get; }
     
+    protected TowerDetector _detector;
+    
     private Enemy _target;
-
+    
     private void Awake()
     {
         Animator = GetComponent<Animator>();
+        _detector = GetComponentInChildren<TowerDetector>();
         radiusSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, 1);
         StartCoroutine(StartShooting());
         StartCoroutine(StartAnimation());
@@ -57,11 +61,11 @@ public abstract class Tower : MonoBehaviour
             enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
         if (shootType == ShootType.Air)
             enemies = Physics.OverlapBox(
-                new Vector3(transform.position.x, transform.position.y + 9f, transform.position.z),
-                new Vector3(attackRange, 18, attackRange) / 2, Quaternion.identity, 1<<7).ToList();
+                new Vector3(transform.position.x, transform.position.y + attackRange*0.75f, transform.position.z),
+                new Vector3(attackRange* 1.5f, attackRange*1.5f, attackRange* 1.5f) / 2, Quaternion.identity, 1<<7).ToList();
         foreach (Collider col in enemies)
         {
-            if ((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both)
+            if (((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both) && col.GetComponent<Enemy>().Type!=EnemyType.None)
             {
                 Debug.Log("Found");
                 SetTarget(col.GetComponent<Enemy>());
@@ -108,6 +112,12 @@ public abstract class Tower : MonoBehaviour
     {
         if(PauseScript.IsPaused)
             return;
+        if (TowerInfo.Info.IsOpened)
+        {
+            ConsumableWindow.Instance.Close();
+            TowerInfo.Info.CloseWindow();
+        }
+
         if (!TowerInfo.Info.IsOpened)
         {
             Color clr = radiusSprite.color;
@@ -120,8 +130,8 @@ public abstract class Tower : MonoBehaviour
     public void OnDrawGizmosSelected()
     {
         if(shootType == ShootType.Air)
-            Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+9f, transform.position.z), 
-                new Vector3(attackRange, 18, attackRange));
+            Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+attackRange*1.5f/2, transform.position.z), 
+                new Vector3(attackRange*1.5f, attackRange*1.5f, attackRange*1.5f));
         if(shootType == ShootType.Ground || shootType == ShootType.Both) 
             Gizmos.DrawWireSphere(transform.position, attackRange);
     }

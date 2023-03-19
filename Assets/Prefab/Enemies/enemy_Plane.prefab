@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 2859157582221627389}
   - component: {fileID: 2859157582221627388}
   - component: {fileID: 2859157582221627379}
+  - component: {fileID: 8891525266084255708}
   m_Layer: 2
   m_Name: enemy_Plane
   m_TagString: Untagged
@@ -132,14 +133,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b73fc1561bc4bf686f4c47dd9ccca25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Text: {fileID: 0}
+  Icon: {fileID: 0}
   Type: 1
   MaxHealth: 0
   Reward: 0
   Damage: 0
   Speed: 0
   EnemyType: 4
+  Agent: {fileID: 0}
   paratroop: {fileID: 5291350026171429168, guid: 78db5a53c9310a54683b51a18a9afb72, type: 3}
-  speed: 25
+  speed: 35
 --- !u!54 &2859157582221627379
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -156,6 +160,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8891525266084255708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2859157582221627390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a66f837e89f4419b2877f6b400f98b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2859157582969205741
 GameObject:
   m_ObjectHideFlags: 0

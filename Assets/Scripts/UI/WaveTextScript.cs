@@ -45,7 +45,7 @@ public class WaveTextScript : MonoBehaviour
         while (t<1)
         {
             group.alpha = Mathf.Lerp(0, 1, t);
-            t += Time.fixedDeltaTime*2;
+            t += Time.deltaTime*2;
             yield return null;
         }
         yield return new WaitForSeconds(2f);
@@ -53,7 +53,7 @@ public class WaveTextScript : MonoBehaviour
         while (t<1)
         {
             group.alpha = Mathf.Lerp(1, 0, t);
-            t += Time.fixedDeltaTime*2;
+            t += Time.deltaTime*2;
             yield return null;
         }
         group.alpha = 0;

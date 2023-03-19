@@ -11,16 +11,12 @@ namespace Enemies.Paratrooper
         public IEnumerator Move()
         { 
             EnemyParatrooper enemy = GetComponent<EnemyParatrooper>();
+            Rigidbody body = GetComponent<Rigidbody>();
             
             enemy.SetWaypoints(Level.currentLevel.Waypoints.ToArray());
             yield return new WaitForSeconds(2);
-            while (transform.position.y > 0.5)
-            {
-                while (PauseScript.IsPaused)
-                    yield return null;
-                enemy.transform.position += Physics.gravity/4;
-                yield return null;
-            }
+            body.useGravity = true;
+            yield return new WaitUntil(() => transform.position.y <= 0.5f);
             if (enemy.parashoot == null)
                 enemy.TakeDamage.TakeDamage(100, DamageType.Normal);
             enemy.Type = EnemyType.Ground;

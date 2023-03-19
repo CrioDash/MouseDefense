@@ -20,7 +20,7 @@ namespace Bullets
             SetStats();
         }
 
-        public void FixedUpdate()
+        public void Update()
         {
             Move();
         }

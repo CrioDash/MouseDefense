@@ -123,16 +123,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430894736372120015}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0a486acbbbce455a8a4180b26823dfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hour: 0
+  Hour: 4
   Minute: 0
   Second: 0
   Multiplier: 500
-  NightColor: {r: 0.05882353, g: 0.05882353, b: 0.21698111, a: 1}
+  NightColor: {r: 0, g: 0.44168624, b: 0.9056604, a: 1}
   DawnColor: {r: 1, g: 0, b: 0.42655182, a: 1}
   DayColor: {r: 1, g: 1, b: 0.49019608, a: 1}
   DuskColor: {r: 1, g: 0.38329774, b: 0, a: 1}

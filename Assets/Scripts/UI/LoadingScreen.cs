@@ -20,13 +20,8 @@ namespace UI
             _renderer.color = Fade ? Color.black : Color.clear;
         }
 
-        private void Start()
-        {
-           
-        }
 
 
-            
 
         public IEnumerator CloseAnimation()
         {
@@ -36,9 +31,10 @@ namespace UI
             while (t<1)
             {
                 _renderer.color = Color.Lerp(new Color(0, 0, 0, 1), new Color(0, 0, 0, 0), t);
-                t += Time.unscaledDeltaTime*2;
+                t += Time.unscaledDeltaTime*4;
                 yield return null;
             }
+            _renderer.color = Color.clear;
             if(PauseScript.IsPaused)
                 EventBus.Publish(EventType.PAUSE);
         }
@@ -50,9 +46,10 @@ namespace UI
             while (t<1)
             {
                 _renderer.color = Color.Lerp(new Color(0, 0, 0, 0), new Color(0, 0, 0, 1), t);
-                t += Time.unscaledDeltaTime*2;
+                t += Time.unscaledDeltaTime*4;
                 yield return null;
             }
+            _renderer.color = Color.black;
             if(PauseScript.IsPaused)
                 EventBus.Publish(EventType.PAUSE);
         }

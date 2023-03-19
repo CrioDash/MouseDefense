@@ -24,8 +24,7 @@ namespace Towers
             bulletSpeed *= 1.2f;
             attackRange += 0.5f;
             radiusSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, 1);
+            _detector.UpdateColliders();
         }
-        
-        
     }
 }

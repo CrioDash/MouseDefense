@@ -19,11 +19,11 @@ namespace UI
            Destroy(gameObject, 0.5f);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             Vector3 pos = transform.position;
-            pos.x += 10 * Time.fixedDeltaTime;
-            pos.y += 20 * Time.fixedDeltaTime;
+            pos.x += 10 * Time.deltaTime;
+            pos.y += 20 * Time.deltaTime;
             transform.position = pos;
             _text.color = new Color(_text.color.r, _text.color.g, _text.color.b, _text.color.a - 0.04f);
         }

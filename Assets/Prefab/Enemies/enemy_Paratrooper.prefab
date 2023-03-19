@@ -148,11 +148,12 @@ MonoBehaviour:
   Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
   Icon: {fileID: 21300000, guid: 3a3e34a2737d3f841b03a1594686afc1, type: 3}
   Type: 1
-  MaxHealth: 45
+  MaxHealth: 30
   Reward: 15
   Damage: 1
   Speed: 6.5
   EnemyType: 2
+  Agent: {fileID: 0}
   ParashootHP: 15
   parashoot: {fileID: 7921455719966372941}
 --- !u!195 &7226060453797041408

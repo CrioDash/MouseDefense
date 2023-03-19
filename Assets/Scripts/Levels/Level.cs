@@ -124,20 +124,9 @@ public abstract class Level : MonoBehaviour
         {
             GameObject enemyGM = Instantiate(EnemyDict[type], enemyContainer.transform);
             enemyGM.transform.position = enemyContainer.transform.position;
-            yield return StartCoroutine(Wait(interval));
+            yield return new WaitForSeconds(interval);
         }
     }
-
-    public IEnumerator Wait(float time)
-    {
-        
-        float t = 0;
-        while (t<time)
-        {
-            t += Time.fixedDeltaTime;
-            yield return null;
-            
-        }
-    }
+    
 
 }

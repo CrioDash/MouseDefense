@@ -2,6 +2,6 @@
 {
     public enum EnemyType
     {
-        Ground, Air, Both
+        Ground, Air, Both, None
     }
 }

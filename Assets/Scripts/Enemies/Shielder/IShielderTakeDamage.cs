@@ -20,7 +20,6 @@ namespace Enemies.Shielder
                 _shielder.Agent.Warp(transform.position + dir/2);
                 _shielder.Agent.destination = waypoint;
                 _shielder.ShieldHP-=(int)type+1;
-                _shielder.CreateDamageText(1);
                 return;
             }
             if (_shielder.Shield != null)

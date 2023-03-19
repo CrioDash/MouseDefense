@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
-  attackRange: 7
+  attackRange: 7.5
   radiusSprite: {fileID: 7997310935666281134}
   cost: 150
   head: {fileID: 6861568908805589348}

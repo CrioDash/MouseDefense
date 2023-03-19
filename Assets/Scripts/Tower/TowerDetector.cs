@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Bullets;
 using Enemies;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TowerDetector : MonoBehaviour
@@ -29,10 +30,18 @@ public class TowerDetector : MonoBehaviour
 
     private void Start()
     {
+        UpdateColliders();
+    }
+
+    public void UpdateColliders()
+    {
         if (Type == ColliderType.Sphere)
             _colliderSphere.radius = _parent.attackRange;
         else
-            _colliderBox.size = new Vector3(_parent.attackRange, 18, _parent.attackRange);
+        {
+            _colliderBox.center = new Vector3(0, _parent.attackRange * 0.75f, 0);
+            _colliderBox.size = new Vector3(_parent.attackRange* 1.5f, _parent.attackRange * 1.5f, _parent.attackRange* 1.5f);
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -44,9 +53,11 @@ public class TowerDetector : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if(!other.CompareTag("Enemy") || _parent.GetTarget() != null)
-            return;
-        _parent.FindTarget();
+        if (other.CompareTag("Enemy") && (_parent.GetTarget() == null || _parent.GetTarget().Type == EnemyType.None))
+        {
+            _parent.SetTarget(null);
+            _parent.FindTarget();
+        }
     }
 
     private void OnTriggerExit(Collider other)

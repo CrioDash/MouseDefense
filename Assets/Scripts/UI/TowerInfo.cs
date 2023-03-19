@@ -80,7 +80,7 @@ namespace UI
             while (t<1)
             {
                 transform.localScale = Vector3.Lerp(new Vector3(0.25f, 0.25f),Vector3.one , t);
-                t += Time.fixedDeltaTime*8;
+                t += Time.deltaTime*8;
                 yield return null;
             }
             
@@ -94,7 +94,7 @@ namespace UI
             while (t<1)
             {
                 transform.localScale = Vector3.Lerp(Vector3.one, new Vector3(0.25f, 0.25f), t);
-                t += Time.fixedDeltaTime*8;
+                t += Time.deltaTime*8;
                 yield return null;
             }
             Vector3 pos = transform.position;

@@ -27,7 +27,7 @@ public class MenuBackgroundScript : MonoBehaviour
         while (t < 1)
         {
             _group.alpha = Mathf.Lerp(alpha1, alpha2, t);
-            t += Time.fixedDeltaTime*2;
+            t += Time.deltaTime*2;
             yield return null;
         }
 

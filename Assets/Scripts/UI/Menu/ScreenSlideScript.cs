@@ -83,7 +83,7 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         while (t<1)
         {
             transform.rotation = Quaternion.Lerp(Quaternion.Euler(0,startAngle,0),Quaternion.Euler(0,endAngle,0), t);
-            t += Time.fixedDeltaTime*2;
+            t += Time.deltaTime*2;
             yield return null;
         }
         transform.rotation = Quaternion.Euler(0,endAngle,0);

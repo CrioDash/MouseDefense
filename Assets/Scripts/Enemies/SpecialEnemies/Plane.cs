@@ -18,22 +18,22 @@ namespace Enemies.SpecialEnemies
         public override void SetStats()
         {
             target = CalculatePoints();
-            transform.position = new Vector3(-60, 60, target.z);
+            transform.position = new Vector3(-60, 35, target.z);
             StartCoroutine(WaitDesant());
         }
         
 
-        public override void FixedUpdate()
+        public override void Update()
         {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(60, 60, transform.position.z),
-                speed * Time.fixedDeltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(130, 60, transform.position.z),
+                speed * Time.deltaTime);
         }
 
         public IEnumerator WaitDesant()
         {
             yield return new WaitUntil(() => transform.position.x >= target.x);
-            StartCoroutine(SpawnDesant(Random.Range(1,3), 1f));
-            yield return new WaitUntil(() => transform.localPosition.x >= 70);
+            StartCoroutine(SpawnDesant(Random.Range(1,3), 2f));
+            yield return new WaitUntil(() => transform.localPosition.x >= 130);
             Destroy(gameObject);
         }
 
@@ -53,13 +53,13 @@ namespace Enemies.SpecialEnemies
             List<Vector3> points = new List<Vector3>();
             for (int z = -30; z < 35; z++)
             {
-                for (int x = -35; x < 5; x++)
+                for (int x = -35; x < 10; x++)
                 {
-                    Physics.Raycast(new Vector3(x, 60, z), new Vector3(x, 0, z) - new Vector3(x, 60, z), out var raycast, Mathf.Infinity);
+                    Physics.Raycast(new Vector3(x, 35, z), new Vector3(x, 0, z) - new Vector3(x, 35, z), out var raycast, Mathf.Infinity);
                     if (raycast.collider.CompareTag("Road"))
                         if (!Physics.OverlapSphere(new Vector3(x, 0, z), 1.5f).ToList()
                                 .Exists(x => x.CompareTag("TowerPlace")))
-                            points.Add(new Vector3(x, 60, z));
+                            points.Add(new Vector3(x, 35, z));
                 }
             }
             return points[Random.Range(0, points.Count - 1)];

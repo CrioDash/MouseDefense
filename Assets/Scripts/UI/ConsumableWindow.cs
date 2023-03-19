@@ -29,6 +29,7 @@ namespace UI
         public void Start()
         {
             Instance = this;
+            Close();
         }
 
         public void ButtonClick()
@@ -63,7 +64,7 @@ namespace UI
             while (t<1f)
             {
                 transform.position = Vector3.Lerp(startPos.transform.position,endPos.transform.position, t);
-                t += Time.fixedDeltaTime*8;
+                t += Time.unscaledDeltaTime*8;
                 yield return null;
             }
 
@@ -77,7 +78,7 @@ namespace UI
             while (t<1f)
             {
                 transform.position = Vector3.Lerp(endPos.transform.position,startPos.transform.position, t);
-                t += Time.fixedDeltaTime*8;
+                t += Time.unscaledDeltaTime*8;
                 yield return null;
             }
 

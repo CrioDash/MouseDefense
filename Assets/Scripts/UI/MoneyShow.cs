@@ -46,7 +46,7 @@ namespace UI
             {
                 _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, Level.currentLevel.Gold, time));
                 Text.text = _gold.ToString();
-                time += Time.fixedDeltaTime*4;
+                time += Time.deltaTime*4;
                 yield return null;
             }
             if (_gold != Level.currentLevel.Gold)
@@ -83,7 +83,7 @@ namespace UI
             {
                 prefab.color = Color.Lerp(prefab.color, color, time);
                 Text.text = _gold.ToString();
-                time += Time.fixedDeltaTime;
+                time += Time.deltaTime;
                 yield return null;
             }
 

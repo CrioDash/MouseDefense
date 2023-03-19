@@ -24,7 +24,7 @@ namespace Bullets
                 return;
             }
             transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
-                BulletSpeed * Time.fixedDeltaTime);
+                BulletSpeed * Time.deltaTime);
         }
 
 
