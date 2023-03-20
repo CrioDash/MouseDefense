@@ -52,7 +52,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -89,7 +89,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 6570
+  m_ColorTemperature: 1500
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -128,11 +128,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a486acbbbce455a8a4180b26823dfa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hour: 4
+  Hour: 0
   Minute: 0
   Second: 0
   Multiplier: 500
-  NightColor: {r: 0, g: 0.44168624, b: 0.9056604, a: 1}
+  NightColor: {r: 0, g: 0.17082825, b: 0.509434, a: 1}
   DawnColor: {r: 1, g: 0, b: 0.42655182, a: 1}
-  DayColor: {r: 1, g: 1, b: 0.49019608, a: 1}
+  DayColor: {r: 0.97014207, g: 0.9811321, b: 0.43873262, a: 1}
   DuskColor: {r: 1, g: 0.38329774, b: 0, a: 1}

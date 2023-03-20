@@ -58,7 +58,7 @@ public abstract class Level : MonoBehaviour
             EnemyDict.Add(gm.GetComponent<Enemy>().EnemyType, gm);
         }
         Camera.main.clearFlags = CameraClearFlags.Nothing;
-        Camera.main.orthographicSize = 15 * (20.0f / 9.0f / Camera.main.aspect);
+        Camera.main.orthographicSize = 18 * (20.0f / 9.0f / Camera.main.aspect);
         Physics.gravity = new Vector3(0, -20 * Time.deltaTime*2, 0);
         EventBus.Publish(EventType.START);
     }

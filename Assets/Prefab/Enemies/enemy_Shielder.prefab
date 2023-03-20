@@ -320,8 +320,9 @@ MonoBehaviour:
   MaxHealth: 15
   Reward: 25
   Damage: 2
-  Speed: 3
+  Speed: 4
   EnemyType: 5
+  Agent: {fileID: 0}
   ShieldHP: 5
   Shield: {fileID: 4127705281383397430}
 --- !u!1 &4539417358853372747

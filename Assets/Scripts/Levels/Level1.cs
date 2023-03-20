@@ -20,7 +20,7 @@ namespace Levels
             yield return StartCoroutine(Wave(Variables.EnemyType.Shielder, 5, 2f));
             yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Tractor));
-            yield return StartCoroutine(Wave(Variables.EnemyType.Plane, 5, 3f));
+            yield return StartCoroutine(Wave(Variables.EnemyType.Tractor, 5, 3f));
             yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Parashoot));
             yield return StartCoroutine(Wave(Variables.EnemyType.Plane, 3, 1.5f));
