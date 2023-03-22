@@ -13,7 +13,7 @@ namespace Enemies
             {
                 enemy.Destination = enemy.Waypoints[i].transform.position;
                 yield return new WaitUntil(
-                    () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 1.5f);
+                    () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 2f);
             }
             Level.currentLevel.TakeDamage(enemy.Damage);
             Destroy(enemy.gameObject);

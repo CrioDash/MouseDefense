@@ -9,6 +9,7 @@ using TMPro;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.AI;
+using Random = UnityEngine.Random;
 
 namespace Enemies
 {
@@ -63,9 +64,10 @@ namespace Enemies
 
         public void CreateDamageText(float dmg)
         {
+            
             TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
-            text.color = Color.Lerp(Color.green, Color.red, Mathf.Clamp01(1 - CurrentHealth / MaxHealth - 0.1f));
+            text.color = Color.Lerp(Color.green, Color.red, 1 - CurrentHealth / MaxHealth);
             Vector3 pos = text.transform.localPosition;
             pos.x += 50;
             text.transform.localPosition = pos;

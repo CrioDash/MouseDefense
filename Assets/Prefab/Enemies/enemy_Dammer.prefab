@@ -124,6 +124,7 @@ MonoBehaviour:
   Damage: 0
   Speed: 10
   EnemyType: 3
+  Agent: {fileID: 0}
   dam: {fileID: 7324970919620461262}
   damPrefab: {fileID: 9054639037492785073, guid: f5773284c7b9a4841bca0473a142ce8b, type: 3}
   _damPoints: []

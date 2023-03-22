@@ -2,6 +2,6 @@
 {
     public enum DamageType
     {
-        Normal, Splash, Pierce
+        Normal, Splash, Periodical
     }
 }

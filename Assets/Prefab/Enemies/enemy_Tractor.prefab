@@ -423,6 +423,7 @@ MonoBehaviour:
   Damage: 2
   Speed: 10
   EnemyType: 1
+  Agent: {fileID: 0}
 --- !u!1 &4829992959438374759
 GameObject:
   m_ObjectHideFlags: 0

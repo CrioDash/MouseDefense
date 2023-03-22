@@ -85,7 +85,7 @@ Light:
     serializedVersion: 2
     m_Bits: 983
   m_RenderingLayerMask: 1
-  m_Lightmapping: 4
+  m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -131,7 +131,7 @@ MonoBehaviour:
   Hour: 0
   Minute: 0
   Second: 0
-  Multiplier: 500
+  Multiplier: 250
   NightColor: {r: 0, g: 0.17082825, b: 0.509434, a: 1}
   DawnColor: {r: 1, g: 0, b: 0.42655182, a: 1}
   DayColor: {r: 0.97014207, g: 0.9811321, b: 0.43873262, a: 1}

@@ -121,7 +121,6 @@ MonoBehaviour:
   Damage: 1
   Speed: 8
   EnemyType: 0
-  time: 0
   Agent: {fileID: 0}
 --- !u!1 &4829992959438374759
 GameObject:

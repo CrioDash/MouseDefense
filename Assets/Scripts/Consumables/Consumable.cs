@@ -28,7 +28,7 @@ namespace Consumables
             _spriteRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             Vector3 pos = ray.origin;
