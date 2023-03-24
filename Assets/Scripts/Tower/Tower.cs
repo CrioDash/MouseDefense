@@ -54,7 +54,7 @@ public abstract class Tower : MonoBehaviour
 
     public void FindTarget()
     {
-        if(GetTarget()!=null)
+        if (GetTarget()!=null)
             return;
         List<Collider> enemies = new List<Collider>();
         if(shootType== ShootType.Ground || shootType == ShootType.Both)
@@ -67,7 +67,6 @@ public abstract class Tower : MonoBehaviour
         {
             if (((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both) && col.GetComponent<Enemy>().Type!=EnemyType.None)
             {
-                Debug.Log("Found");
                 SetTarget(col.GetComponent<Enemy>());
                 return;
             }

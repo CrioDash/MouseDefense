@@ -1,4 +1,6 @@
+using System;
 using System.Linq;
+using Events;
 using Game;
 using Tiles;
 using TMPro;
@@ -7,6 +9,7 @@ using UI.Pause;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
+using EventType = Events.EventType;
 
 namespace UI
 {
@@ -34,12 +37,19 @@ namespace UI
             }
         }
 
-        private void FixedUpdate()
+        private void OnEnable()
         {
-            if (PauseScript.IsPaused)
-                return;
+            EventBus.Subscribe(EventType.MONEYCHANGE, UpdateButton);
+        }
+
+        private void OnDisable()
+        {
+            EventBus.Unsubscribe(EventType.MONEYCHANGE, UpdateButton);
+        }
+
+        public void UpdateButton()
+        {
             _button.interactable = Level.currentLevel.Gold >= _cost;
-            
         }
 
         public void CreateTower()

@@ -53,7 +53,7 @@ public class TowerDetector : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy") && (_parent.GetTarget() == null || _parent.GetTarget().Type == EnemyType.None))
+        if (other.CompareTag("Enemy") && (_parent.GetTarget()==null || _parent.GetTarget().Type == EnemyType.None))
         {
             _parent.SetTarget(null);
             _parent.FindTarget();

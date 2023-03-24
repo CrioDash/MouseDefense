@@ -17,7 +17,7 @@ namespace Enemies.Paratrooper
             yield return new WaitForSeconds(2);
             body.useGravity = true;
             yield return new WaitUntil(() => transform.position.y <= 0.5f);
-            if (enemy.parashoot == null)
+            if (enemy.parashoot==null)
                 enemy.TakeDamage.TakeDamage(100, DamageType.Normal);
             enemy.Type = EnemyType.Ground;
             Destroy(enemy.parashoot);

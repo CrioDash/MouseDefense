@@ -30,11 +30,11 @@ namespace UI.Pause
         {
             if(_towerShoot==null)
                 _towerShoot = GetComponent<ITowerShoot>();
-            if (_towerAnimation == null)
+            if (_towerAnimation==null)
                 _towerAnimation = GetComponent<ITowerAnimation>();
             _tower.TowerShoot = PauseScript.IsPaused ? null : _towerShoot;
             _tower.TowerAnimation = PauseScript.IsPaused ? null : _towerAnimation;
-            if (_animator != null) 
+            if (_animator!=null)
                 _animator.speed = PauseScript.IsPaused ? 0 : 1;
         }
     }

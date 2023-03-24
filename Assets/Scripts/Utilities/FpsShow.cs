@@ -9,6 +9,8 @@ namespace Utilities
         private TextMeshProUGUI _text;
 
         private float _currentFps;
+        private float _delay = 0.25f;
+        private float _timer = 0.0f;
         private void Awake()
         {
             _text = GetComponent<TextMeshProUGUI>();
@@ -21,7 +23,11 @@ namespace Utilities
     
         void Update()
         {
+            _timer += Time.deltaTime;
+            if(_timer<_delay)
+                return;
             _currentFps = 1 / Time.smoothDeltaTime;
+            _timer -= _delay;
         }
 
         private void FixedUpdate()

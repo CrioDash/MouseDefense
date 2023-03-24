@@ -40,11 +40,12 @@ namespace Enemies.SpecialEnemies
         private IEnumerator SpawnDesant(int count, float time)
         {
             Vector3 spawnPoint = transform.position;
+            WaitForSeconds wait = new WaitForSeconds(time);
             for (int i = 0; i < count; i++)
             {
                 GameObject gm = Instantiate(paratroop);
                 gm.transform.position = spawnPoint;
-                yield return new WaitForSeconds(time);
+                yield return wait;
             }
         }
 

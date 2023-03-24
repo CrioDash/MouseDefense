@@ -47,7 +47,7 @@ public abstract class Level : MonoBehaviour
     private void Start()
     {
         WaveCount = 0;
-        if (LevelSwitcher.Switcher != null)
+        if (LevelSwitcher.Switcher == null)
             EventBus.Publish(EventType.PAUSE);
         Canvas = FindObjectOfType<Canvas>();
         Surface = FindObjectOfType<NavMeshSurface>();
@@ -98,15 +98,16 @@ public abstract class Level : MonoBehaviour
     public IEnumerator MoneyCount()
     {
         int money = Gold;
+        WaitForSeconds wait = new WaitForSeconds(0.2f);
         while (true)
         {
             if (Gold != money)
             {
-                yield return new WaitForSeconds(0.25f);
+                yield return wait;
                 EventBus.Publish(EventType.MONEYCHANGE);
                 money = Gold;
             }
-            yield return null;
+            yield return wait;
         }
     }
 
@@ -120,11 +121,12 @@ public abstract class Level : MonoBehaviour
 
     public IEnumerator Wave(Variables.EnemyType type, int count, float interval)
     {
+        WaitForSeconds wait = new WaitForSeconds(interval);
         for(int i =0; i<count; i++)
         {
             GameObject enemyGM = Instantiate(EnemyDict[type], enemyContainer.transform);
             enemyGM.transform.position = enemyContainer.transform.position;
-            yield return new WaitForSeconds(interval);
+            yield return wait;
         }
     }
     

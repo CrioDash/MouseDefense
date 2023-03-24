@@ -1,9 +1,11 @@
 ﻿using System;
+using Events;
 using TMPro;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
+using EventType = Events.EventType;
 
 namespace UI
 {
@@ -28,12 +30,22 @@ namespace UI
             Level.currentLevel.ChangeMoney(-cost);
             cost = (int)Math.Truncate(_info.InfoTower.cost * (((float)_info.InfoTower.Level+1) / 4));
             GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();
-            
+            UpdateButton();
         }
 
-        private void FixedUpdate()
+        public void OnEnable()
         {
-            if (_info.InfoTower != null)
+            EventBus.Subscribe(EventType.MONEYCHANGE, UpdateButton);
+        }
+
+        public void OnDisable()
+        {
+            EventBus.Unsubscribe(EventType.MONEYCHANGE, UpdateButton);
+        }
+
+        public void UpdateButton()
+        {
+            if (_info.InfoTower!=null)
             {
                 cost = (int)Math.Truncate(_info.InfoTower.cost * (((float)_info.InfoTower.Level+1) / 4));
                 GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();

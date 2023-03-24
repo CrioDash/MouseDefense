@@ -14,7 +14,7 @@ namespace Enemies.SpecialEnemies
         {
             if (type != DamageType.Splash)
                 dmg /= 2;
-            if(_enemy == null)
+            if(_enemy==null)
                 _enemy = GetComponent<Enemy>();
             _enemy.CurrentHealth-=dmg;
             _enemy.CreateDamageText(dmg);

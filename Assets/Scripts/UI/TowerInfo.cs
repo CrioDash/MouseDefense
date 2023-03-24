@@ -24,6 +24,9 @@ namespace UI
 
         public static TowerInfo Info;
 
+        private TowerBuildButton[] _btnTowerBuild;
+        private TowerLevelUpButton _btnLevelUp;
+
         private void Awake()
         {
             foreach (Button gm in GetComponentsInChildren<Button>())
@@ -31,6 +34,8 @@ namespace UI
                 gm.gameObject.AddComponent<ButtonPause>();
             }
 
+            _btnTowerBuild = GetComponentsInChildren<TowerBuildButton>();
+            _btnLevelUp = GetComponentInChildren<TowerLevelUpButton>();
             Info = this;
         }
         
@@ -46,6 +51,7 @@ namespace UI
             buildContainer.SetActive(false);
             sellContainer.SetActive(true);
             InfoTower = tower;
+            _btnLevelUp.UpdateButton();
             TowerPos = tower.transform.position;
             StartCoroutine(ShowAnimation());
         }
@@ -76,6 +82,8 @@ namespace UI
             pos = transform.localPosition;
             pos.z = 0;
             transform.localPosition = pos;
+            foreach (TowerBuildButton btn in _btnTowerBuild)
+                btn.UpdateButton();
             float t = 0;
             while (t<1)
             {

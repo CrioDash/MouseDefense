@@ -38,7 +38,7 @@ namespace UI.Pause
             else
             {
                 _body.isKinematic = false;
-                if(_agent!=null)
+                if(_agent != null)
                     _agent.speed = _enemy.Speed;
             }
         }

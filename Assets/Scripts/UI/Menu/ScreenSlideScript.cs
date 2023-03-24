@@ -45,12 +45,12 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         if(_moveDifference>0 && _activeScene+1!=MenuSlides.Count)
             MenuSlides[_activeScene+1].SetAsLastSibling();
         float rotationIndex = Mathf.Clamp(_moveDifference/(_canvas.rect.width/5), -1, 1);
-        Debug.Log(_activeScene);
         if (_activeScene - 1 == -1)
             rotationIndex = Mathf.Clamp(rotationIndex, 0, 1);
         if (_activeScene+1==MenuSlides.Count)
             rotationIndex = Mathf.Clamp(rotationIndex, -1, 0);
         transform.localRotation = Quaternion.Euler(new Vector3(0,(_activeScene-1)*90f+30*rotationIndex,0));
+        MenuScripts[_activeScene].Background.transform.rotation = Quaternion.Euler(Vector3.zero);
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -84,6 +84,7 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
         while (t<1)
         {
             transform.rotation = Quaternion.Lerp(Quaternion.Euler(0,startAngle,0),Quaternion.Euler(0,endAngle,0), t);
+            MenuScripts[_activeScene].Background.transform.rotation = Quaternion.Euler(Vector3.zero);
             t += Time.deltaTime*2;
             yield return null;
         }

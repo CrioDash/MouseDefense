@@ -156,6 +156,7 @@ Library: lib_burst_generated
 --generate-link-xml=Temp\burst.link.xml
 --output=D:\UnityProjects\TowerDefense\Temp\StagingArea\tempburstlibs\armeabi-v7a\lib_burst_generated
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\UnityEngine.UI.dll
+--root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Fungus.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.Runtime.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.Services.Core.Telemetry.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.InputSystem.dll
@@ -184,6 +185,7 @@ Library: lib_burst_generated
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.Services.Core.Analytics.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.2D.Common.Runtime.dll
+--root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Assembly-CSharp-firstpass.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.ProBuilder.KdTree.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=D:\UnityProjects\TowerDefense\Temp\StagingArea\Data\Managed\Unity.Services.Core.Configuration.dll

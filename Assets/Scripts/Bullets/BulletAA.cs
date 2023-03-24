@@ -16,7 +16,7 @@ namespace Bullets
         
         public override void Move()
         {
-            if (_target == null)
+            if (_target==null)
             {
                 Destroy(gameObject);
                 return;
@@ -31,7 +31,7 @@ namespace Bullets
         {
             if (other.CompareTag("Enemy"))
             {
-                other.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Normal);
+                _target.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Normal);
                 Destroy(gameObject);
             }
         }

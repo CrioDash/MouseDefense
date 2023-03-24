@@ -17,7 +17,7 @@ namespace Levels
         void Start()
         {
             Switcher = this;
-            Application.targetFrameRate = 120;
+            Application.targetFrameRate = 60;
             Consumable.Add(Consumable.ConsumableType.Bomb, 7);
             Consumable.Add(Consumable.ConsumableType.Poison, 4);
             DontDestroyOnLoad(gameObject);

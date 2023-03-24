@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using Game;
+using UI;
 using UnityEngine;
 
 namespace Consumables
@@ -7,6 +9,7 @@ namespace Consumables
     public abstract class Consumable: MonoBehaviour
     {
         public GameObject ConsumablePrefab;
+        public bool Global;
         
         protected ConsumableType _type;
         protected RaycastHit ConsumableRaycast;
@@ -14,7 +17,11 @@ namespace Consumables
         private GameObject _circle;
         private Material _material;
         private SpriteRenderer _spriteRenderer;
+        private Camera _camera;
+        private float _delay = 0.1f;
+        private float _timer = 0f;
         
+        public ConsumableItem Parent { set; get; }
         
         public enum ConsumableType
         {
@@ -26,17 +33,20 @@ namespace Consumables
         {
             _material = transform.GetChild(0).GetComponent<Renderer>().material;
             _spriteRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+            _camera = Camera.main;
         }
 
         private void Update()
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            Vector3 pos = ray.origin;
+            _timer += Time.deltaTime;
+            Vector3 pos = _camera.ScreenToWorldPoint(Input.mousePosition);
             transform.position = pos + transform.TransformDirection(new Vector3(0, 0, 10));
+            if(Global || _timer<_delay)
+                return;
+            Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
             pos.y -= 8f;
             pos += transform.TransformDirection(new Vector3(0, 0, 10));
             ray.origin = pos;
-            
             Debug.DrawRay(ray.origin, ray.direction);
             Physics.Raycast(ray, out ConsumableRaycast);
             if(ConsumableRaycast.collider==null)
@@ -45,7 +55,7 @@ namespace Consumables
                 ChangeColor(Color.green);
             else
                 ChangeColor(Color.red);
-           
+            _timer -= _delay;
         }
         
         private void OnDestroy()
@@ -55,6 +65,9 @@ namespace Consumables
                 PlayerStats.Consumables[_type]--;
                 Activate();
             }
+            Parent.Text.text = PlayerStats.Consumables[Parent.Type].ToString();
+            if (PlayerStats.Consumables[Parent.Type]==0)
+                gameObject.SetActive(false);
         }
 
         public void ChangeColor(Color color)

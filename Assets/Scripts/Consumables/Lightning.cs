@@ -16,6 +16,8 @@ namespace Consumables
 
         private IEnumerator LaunchZipZap()
         {
+            WaitForSeconds wait0025 = new WaitForSeconds(0.0125f);
+            WaitForSeconds wait1 = new WaitForSeconds(1);
             while (true)
             {
                 _line.SetPosition(0,transform.position);
@@ -25,11 +27,11 @@ namespace Consumables
                     Vector3 point = Random.onUnitSphere;
                     point = new Vector3(point.x, -Mathf.Abs(point.y)*4, point.z);
                     _line.SetPosition(_line.positionCount - 1, _line.GetPosition(_line.positionCount - 2) + point);
-                    yield return null;
+                    yield return wait0025;
                 }
                 _line.positionCount = 1;
                 
-                yield return new WaitForSeconds(1f);
+                yield return wait1;
             }
         }
     }

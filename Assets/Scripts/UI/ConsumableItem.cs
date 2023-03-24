@@ -12,13 +12,15 @@ namespace UI
     {
         public Consumable.ConsumableType Type;
         public GameObject Prefab;
+        public bool Global;
 
         private Consumable currentPrefab;
-        private TextMeshProUGUI _text;
+        
+        public TextMeshProUGUI Text { set; get; }
 
         private void Awake()
         {
-            _text = GetComponentInChildren<TextMeshProUGUI>();
+            Text = GetComponentInChildren<TextMeshProUGUI>();
         }
 
         private void Start()
@@ -26,14 +28,7 @@ namespace UI
             if (!PlayerStats.Consumables.ContainsKey(Type))
                 gameObject.SetActive(false);
             else
-                _text.text = PlayerStats.Consumables[Type].ToString();
-        }
-
-        private void FixedUpdate()
-        {
-            _text.text = PlayerStats.Consumables[Type].ToString();
-            if (PlayerStats.Consumables[Type]==0)
-                gameObject.SetActive(false);
+                Text.text = PlayerStats.Consumables[Type].ToString();
         }
 
         public void OnEndDrag(PointerEventData eventData)
@@ -44,6 +39,7 @@ namespace UI
         public void OnBeginDrag(PointerEventData eventData)
         {
             currentPrefab = Instantiate(Prefab).GetComponent<Consumable>();
+            currentPrefab.Parent = this;
         }
 
         public void OnDrag(PointerEventData eventData)
