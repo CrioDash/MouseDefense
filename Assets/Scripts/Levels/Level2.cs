@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using Enemies;
 using Game;
+using GameData;
 using UI.Pause;
 using UnityEngine;
 

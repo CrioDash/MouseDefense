@@ -2,6 +2,7 @@
 using System.Security.Cryptography;
 using Consumables;
 using Game;
+using GameData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;

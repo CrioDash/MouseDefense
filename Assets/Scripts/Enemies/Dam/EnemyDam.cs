@@ -14,7 +14,7 @@ namespace Utilities
         public override void SetStats()
         {
             TakeDamage = gameObject.AddComponent<IDamTakeDamage>();
-            Level.currentLevel.Surface.BuildNavMesh();
+            Level.Instance.Surface.BuildNavMesh();
         }
         
     }

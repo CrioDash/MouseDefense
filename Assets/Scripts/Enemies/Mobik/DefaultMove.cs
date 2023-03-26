@@ -15,7 +15,7 @@ namespace Enemies
                 yield return new WaitUntil(
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 2f);
             }
-            Level.currentLevel.TakeDamage(enemy.Damage);
+            Level.Instance.TakeDamage(enemy.Damage);
             Destroy(enemy.gameObject);
         }
     }

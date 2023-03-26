@@ -9,7 +9,10 @@ namespace UI
 {
     public class LoadingScreen:MonoBehaviour
     {
-        public static bool Fade = false;
+
+        public static LoadingScreen Instance;
+            
+        public bool Fade = false;
         
         private SpriteRenderer _renderer;
         
@@ -20,7 +23,10 @@ namespace UI
             _renderer.color = Fade ? Color.black : Color.clear;
         }
 
-
+        private void Start()
+        {
+            Instance = this;
+        }
 
 
         public IEnumerator CloseAnimation()

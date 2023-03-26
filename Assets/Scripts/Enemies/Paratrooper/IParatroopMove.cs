@@ -13,7 +13,7 @@ namespace Enemies.Paratrooper
             EnemyParatrooper enemy = GetComponent<EnemyParatrooper>();
             Rigidbody body = GetComponent<Rigidbody>();
             
-            enemy.SetWaypoints(Level.currentLevel.Waypoints.ToArray());
+            enemy.SetWaypoints(Level.Instance.Waypoints.ToArray());
             yield return new WaitForSeconds(2);
             body.useGravity = true;
             yield return new WaitUntil(() => transform.position.y <= 0.5f);
@@ -32,7 +32,7 @@ namespace Enemies.Paratrooper
                 yield return new WaitUntil(
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 2f);
             }
-            Level.currentLevel.TakeDamage(enemy.Damage);
+            Level.Instance.TakeDamage(enemy.Damage);
             Destroy(enemy.gameObject);
         }
         

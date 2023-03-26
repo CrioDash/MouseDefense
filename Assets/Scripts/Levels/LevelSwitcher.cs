@@ -30,21 +30,17 @@ namespace Levels
 
         public IEnumerator LoadLevel(int num)
         {
-            LoadingScreen screen = FindObjectOfType<LoadingScreen>();
-           
-            yield return screen.StartCoroutine("ShowAnimation");
+            yield return LoadingScreen.Instance.StartCoroutine("ShowAnimation");
             AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(num);
             sceneLoad.allowSceneActivation = false;
             while (sceneLoad.progress<0.9f)
             {
                 yield return null;
             }
-            LoadingScreen.Fade = true;
+            LoadingScreen.Instance.Fade = true;
             sceneLoad.allowSceneActivation = true;
             yield return new WaitUntil(() => sceneLoad.isDone);
-            screen = FindObjectOfType<LoadingScreen>();
-            screen.StartCoroutine("CloseAnimation");
-
+            LoadingScreen.Instance.StartCoroutine("CloseAnimation");
         }
     }
 }

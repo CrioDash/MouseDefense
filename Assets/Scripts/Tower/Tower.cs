@@ -11,6 +11,7 @@ using UI;
 using UI.Pause;
 using UnityEngine;
 using Utilities;
+using TowerType = GameData.Variables.TowerType;
 
 [RequireComponent(typeof(TowerPause))]
 public abstract class Tower : MonoBehaviour
@@ -49,29 +50,6 @@ public abstract class Tower : MonoBehaviour
         radiusSprite.transform.localScale = new Vector3(attackRange * 2, attackRange * 2, 1);
         StartCoroutine(StartShooting());
         StartCoroutine(StartAnimation());
-    }
-    
-
-    public void FindTarget()
-    {
-        if (GetTarget()!=null)
-            return;
-        List<Collider> enemies = new List<Collider>();
-        if(shootType== ShootType.Ground || shootType == ShootType.Both)
-            enemies = Physics.OverlapSphere(transform.position, attackRange, 1<<7).ToList();
-        if (shootType == ShootType.Air)
-            enemies = Physics.OverlapBox(
-                new Vector3(transform.position.x, transform.position.y + attackRange*0.75f, transform.position.z),
-                new Vector3(attackRange* 1.5f, attackRange*1.5f, attackRange* 1.5f) / 2, Quaternion.identity, 1<<7).ToList();
-        foreach (Collider col in enemies)
-        {
-            if (((int)shootType == (int)col.GetComponent<Enemy>().Type || shootType == ShootType.Both) && col.GetComponent<Enemy>().Type!=EnemyType.None)
-            {
-                SetTarget(col.GetComponent<Enemy>());
-                return;
-            }
-        }
-        SetTarget(null);
     }
 
     public void SetTarget(Enemy target)
@@ -131,8 +109,10 @@ public abstract class Tower : MonoBehaviour
         if(shootType == ShootType.Air)
             Gizmos.DrawWireCube(new Vector3(transform.position.x, transform.position.y+attackRange*1.5f/2, transform.position.z), 
                 new Vector3(attackRange*1.5f, attackRange*1.5f, attackRange*1.5f));
-        if(shootType == ShootType.Ground || shootType == ShootType.Both) 
-            Gizmos.DrawWireSphere(transform.position, attackRange);
+        if (shootType == ShootType.Ground || shootType == ShootType.Both)
+        {
+            Gizmos.DrawWireSphere(transform.position, attackRange*1.5f);
+        }
     }
 
 }

@@ -22,7 +22,7 @@ namespace Enemies.Shielder
                 _shielder.ShieldHP-=(int)type+1;
                 return;
             }
-            if (_shielder.Shield==null)
+            if (_shielder.Shield!=null)
                 Destroy(_shielder.Shield.gameObject);
             _shielder.CurrentHealth -= dmg;
             _shielder.CreateDamageText(dmg);

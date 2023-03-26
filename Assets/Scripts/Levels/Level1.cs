@@ -5,7 +5,7 @@ using Enemies;
 using UI.Pause;
 using Unity.VisualScripting;
 using UnityEngine;
-using Variables = Game.Variables;
+using Variables = GameData.Variables;
 
 namespace Levels
 {

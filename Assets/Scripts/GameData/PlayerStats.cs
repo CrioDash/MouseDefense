@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using Consumables;
+using GameData;
+using TowerType = GameData.Variables.TowerType;
 
-namespace Game
+namespace GameData
 {
     public static class PlayerStats
     {

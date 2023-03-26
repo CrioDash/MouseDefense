@@ -7,7 +7,7 @@ using UI.Pause;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
-using Variables = Game.Variables;
+using Variables = GameData.Variables;
 
 public class WaveTextScript : MonoBehaviour
 {
@@ -27,18 +27,18 @@ public class WaveTextScript : MonoBehaviour
 
     public IEnumerator TextMove(params Variables.EnemyType[] enemies)
     {
-        Level.currentLevel.WaveCount++;
+        Level.Instance.WaveCount++;
         float t;
         for(int i = 0; i< enemies.Length; i++)
         {
             GameObject gm = Instantiate(EnemyIconPrefab, IconSpot.transform);
-            gm.GetComponent<Image>().sprite = Level.currentLevel.EnemyDict[enemies[i]].GetComponent<Enemy>().Icon;
+            gm.GetComponent<Image>().sprite = Level.Instance.EnemyDict[enemies[i]].GetComponent<Enemy>().Icon;
             RectTransform rt = gm.GetComponent<RectTransform>();
             rt.anchoredPosition = new Vector2(-135 * (enemies.Length - 1) / 2 + i * 135,
                 0);
         }
 
-        _panel.GetComponentInChildren<TextMeshProUGUI>().text = "WAVE: " + Level.currentLevel.WaveCount;
+        _panel.GetComponentInChildren<TextMeshProUGUI>().text = "WAVE: " + Level.Instance.WaveCount;
         yield return new WaitForSeconds(3f);
         CanvasGroup group = _panel.GetComponent<CanvasGroup>();
         t = 0;

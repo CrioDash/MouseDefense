@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using Tiles;
 using UI.Pause;
 using UnityEngine;
@@ -8,15 +9,17 @@ using UnityEngine.InputSystem;
 using UnityEngine.UI;
 using Utilities;
 using TouchPhase = UnityEngine.TouchPhase;
+using TowerType = GameData.Variables.TowerType;
 
 namespace UI
 {
     public class TowerInfo : MonoBehaviour
     {
-        public List<GameObject> towerPrefabs;
+        public List<Tower> towerPrefabs;
         public GameObject buildContainer;
         public GameObject sellContainer;
-        
+
+        public Dictionary<TowerType, Tower> Towers { set; get; }
         public bool IsOpened { set; get; }
         public Tower InfoTower { set; get; }
         public Vector3 TowerPos { set; get; }
@@ -29,9 +32,15 @@ namespace UI
 
         private void Awake()
         {
+            Towers = new Dictionary<TowerType, Tower>();
             foreach (Button gm in GetComponentsInChildren<Button>())
             {
                 gm.gameObject.AddComponent<ButtonPause>();
+            }
+
+            foreach (Tower tower in towerPrefabs)
+            {
+                Towers.Add(tower.type, tower);
             }
 
             _btnTowerBuild = GetComponentsInChildren<TowerBuildButton>();
@@ -68,7 +77,7 @@ namespace UI
 
         public void SellTower()
         {
-            Level.currentLevel.ChangeMoney((InfoTower.cost+InfoTower.cost*1/2*(int)Math.Truncate(Convert.ToDecimal(InfoTower.Level / 2))
+            Level.Instance.ChangeMoney((InfoTower.cost+InfoTower.cost*1/2*(int)Math.Truncate(Convert.ToDecimal(InfoTower.Level / 2))
                                                       +InfoTower.cost*3/4*(int)Math.Truncate(Convert.ToDecimal(InfoTower.Level / 3)))/2);
             InfoTower.tile.type = TowerTile.TileType.Free;
             Destroy(InfoTower.gameObject);

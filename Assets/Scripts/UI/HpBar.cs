@@ -38,12 +38,12 @@ namespace UI
             var scale = CurrHP.transform.localScale;
             while (t<1)
             {
-                CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, Level.currentLevel.CurrentHealth/ Level.currentLevel.MaxHealth, t), 
+                CurrHP.transform.localScale = new Vector3(Mathf.Lerp(scale.x, Level.Instance.CurrentHealth/ Level.Instance.MaxHealth, t), 
                     scale.y,scale.z);
                 t += Time.deltaTime*8;
                 yield return null;
             }
-            if (Level.currentLevel.CurrentHealth <= 0 && !PauseScript.IsPaused)
+            if (Level.Instance.CurrentHealth <= 0 && !PauseScript.IsPaused)
             {
                 CurrHP.GetComponentInChildren<SpriteRenderer>().color = Color.clear;
                 PauseScript.ExceptionPauses.Clear();

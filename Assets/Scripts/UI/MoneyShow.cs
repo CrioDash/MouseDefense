@@ -44,14 +44,14 @@ namespace UI
             float time = 0;
             while (time<1)
             {
-                _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, Level.currentLevel.Gold, time));
+                _gold = Mathf.RoundToInt(Mathf.Lerp(_gold, Level.Instance.Gold, time));
                 Text.text = _gold.ToString();
                 time += Time.deltaTime*4;
                 yield return null;
             }
-            if (_gold != Level.currentLevel.Gold)
+            if (_gold != Level.Instance.Gold)
             {
-                _gold = (int)Level.currentLevel.Gold;
+                _gold = (int)Level.Instance.Gold;
                 Text.text = _gold.ToString();
             }
             
@@ -60,13 +60,13 @@ namespace UI
         private IEnumerator FlowText()
         {
             TextMeshProUGUI prefab = Instantiate(TextPrefab, transform).GetComponent<TextMeshProUGUI>();
-            prefab.text = Mathf.Abs(_gold - Level.currentLevel.Gold).ToString();
-            if(_gold<Level.currentLevel.Gold)
+            prefab.text = Mathf.Abs(_gold - Level.Instance.Gold).ToString();
+            if(_gold<Level.Instance.Gold)
             {
                 prefab.text = "+" + prefab.text;
                 prefab.color = Color.green;
             }
-            else if (_gold>Level.currentLevel.Gold)
+            else if (_gold>Level.Instance.Gold)
             {
                 prefab.text = "-" + prefab.text;
                 prefab.color = Color.red;

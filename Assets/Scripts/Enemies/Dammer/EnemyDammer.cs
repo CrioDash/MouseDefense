@@ -9,23 +9,12 @@ namespace Enemies.Dammer
         public GameObject dam;
         public GameObject damPrefab;
 
-        [HideInInspector] public List<Vector3> _damPoints = new List<Vector3>();
+        public List<Transform> DamPoints { set; get; }
         
         public override void SetStats()
         {
-            List<GameObject> points = new List<GameObject>();
-            foreach (Transform transform in Level.currentLevel.DammerPositions.GetComponentsInChildren<Transform>())
-            {
-                points.Add(transform.gameObject);
-            }
-            points.Remove(points[0]);
-            SetWaypoints(points.ToArray());
-            foreach (Transform transform in Level.currentLevel.DamPositions.GetComponentsInChildren<Transform>())
-            {
-                _damPoints.Add(transform.position);
-            }
-
-            _damPoints.Remove(_damPoints[0]);
+            SetWaypoints(Level.Instance.DammerPositions.ToArray());
+            DamPoints = Level.Instance.DamPositions;
            
             Move = gameObject.AddComponent<IDammerMove>();
             TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();

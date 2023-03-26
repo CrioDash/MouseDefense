@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using Towers;
-using UnityEngine;
-
-namespace Game
+﻿namespace GameData
 {
     public static class Variables
     {
@@ -13,6 +9,11 @@ namespace Game
             public enum EnemyType
             {
                 Mobik, Tractor, Parashoot, Dammer, Plane, Shielder
+            }
+            
+            public enum TowerType
+            {
+                Gun, Artillery, AntiAir, Corngun, Mortar, Firegun
             }
             
     }

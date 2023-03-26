@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Events;
 using Game;
+using GameData;
 using Tiles;
 using TMPro;
 using Towers;
@@ -10,6 +11,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Utilities;
 using EventType = Events.EventType;
+using TowerType = GameData.Variables.TowerType;
 
 namespace UI
 {
@@ -29,7 +31,7 @@ namespace UI
 
         private void Start()
         {
-            _cost = TowerInfo.Info.towerPrefabs.Find(x => x.GetComponent<Tower>().type == Type).GetComponent<Tower>().cost;
+            _cost = TowerInfo.Info.Towers[Type].cost;
             GetComponentInChildren<TextMeshProUGUI>().text = _cost.ToString();
             if (!PlayerStats.Towers.Contains(Type))
             {
@@ -49,18 +51,18 @@ namespace UI
 
         public void UpdateButton()
         {
-            _button.interactable = Level.currentLevel.Gold >= _cost;
+            _button.interactable = Level.Instance.Gold >= _cost;
         }
 
         public void CreateTower()
         {
-            GameObject tower = Instantiate(TowerInfo.Info.towerPrefabs[(int)Type]);
+            GameObject tower = Instantiate(TowerInfo.Info.Towers[Type].gameObject);
             Vector3 pos = TowerInfo.Info.TowerPos;
             pos.y += 1;
             tower.transform.position = pos;
             TowerInfo.Info.TowerTile.type = TowerTile.TileType.Towered;
             tower.GetComponent<Tower>().tile = TowerInfo.Info.TowerTile;
-            Level.currentLevel.ChangeMoney(-_cost);
+            Level.Instance.ChangeMoney(-_cost);
             TowerInfo.Info.CloseWindow();
         }
 

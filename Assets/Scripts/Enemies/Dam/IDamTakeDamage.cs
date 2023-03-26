@@ -35,7 +35,7 @@ namespace Enemies.SpecialEnemies
                 }
 
                 transform.parent = null;
-                Level.currentLevel.Surface.BuildNavMesh();
+                Level.Instance.Surface.BuildNavMesh();
             }
         }
     }

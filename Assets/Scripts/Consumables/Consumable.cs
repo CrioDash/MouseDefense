@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Game;
+using GameData;
 using UI;
 using UnityEngine;
 

@@ -13983,7 +13983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &752298497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14020,7 +14020,7 @@ LineRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752298496}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 0
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_StaticShadowCaster: 0
@@ -22581,14 +22581,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyContainer: {fileID: 1971971241}
   Waypoints:
-  - {fileID: 988295990}
-  - {fileID: 1436888526}
-  Enemies:
-  - {fileID: 4667825729129609177, guid: 9f7e8ba8b791f514fb9fbcf0a4075c42, type: 3}
-  - {fileID: 5291350026171429168, guid: 78db5a53c9310a54683b51a18a9afb72, type: 3}
-  - {fileID: 2859157582221627390, guid: a025fca770ae8d442ac50b841bf474fa, type: 3}
+  - {fileID: 988295991}
+  - {fileID: 1436888527}
+  EnemyPrefabs:
   - {fileID: 4539417357653936350, guid: af3bcb0ca187dd54e83ae1ce4c5277b6, type: 3}
   - {fileID: 4667825729129609177, guid: 36c656121fabdd2418245130d1d89e59, type: 3}
+  - {fileID: 2859157582221627390, guid: a025fca770ae8d442ac50b841bf474fa, type: 3}
+  DammerPositions: []
+  DamPositions: []
+  Canvas: {fileID: 1485634344}
+  Surface: {fileID: 949415027}
 --- !u!4 &1257899500
 Transform:
   m_ObjectHideFlags: 0
@@ -26194,6 +26196,11 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 56317c38873422c429cb1a6f96365288, type: 3}
+--- !u!223 &1485634344 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 7221333756647573186, guid: 56317c38873422c429cb1a6f96365288, type: 3}
+  m_PrefabInstance: {fileID: 1485634343}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1485941715
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,7 @@ using System.Linq;
 using Bullets;
 using Events;
 using Game;
+using GameData;
 using TMPro;
 using UI.Pause;
 using UnityEngine;
@@ -27,7 +28,7 @@ namespace Enemies
         public float Speed;
         public Variables.EnemyType EnemyType;
 
-        public List<GameObject> Waypoints
+        public List<Transform> Waypoints
         {
             set;
             get;
@@ -65,7 +66,7 @@ namespace Enemies
         public void CreateDamageText(float dmg)
         {
             
-            TextMeshProUGUI text = Instantiate(Text, Level.currentLevel.Canvas.transform).GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI text = Instantiate(Text, Level.Instance.Canvas.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
             text.color = Color.Lerp(Color.green, Color.red, 1 - CurrentHealth / MaxHealth);
             Vector3 pos = text.transform.localPosition;
@@ -106,12 +107,12 @@ namespace Enemies
         {
             if (CurrentHealth <= 0)
             {
-                Level.currentLevel.ChangeMoney(Reward);
+                Level.Instance.ChangeMoney(Reward);
             }
         }
         
 
-        public void SetWaypoints(GameObject[] waypoints)
+        public void SetWaypoints(Transform[] waypoints)
         {
             Waypoints = waypoints.ToList();
         }

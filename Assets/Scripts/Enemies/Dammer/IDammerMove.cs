@@ -13,8 +13,8 @@ namespace Enemies.Dammer
             WaitUntil wait = new WaitUntil(() => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 2f);
             enemy.Destination = enemy.Waypoints[0].transform.position;
             yield return wait;
-            GameObject gm = Instantiate(enemy.damPrefab, Level.currentLevel.Surface.transform);
-            gm.transform.position = enemy._damPoints[0];
+            GameObject gm = Instantiate(enemy.damPrefab, Level.Instance.Surface.transform);
+            gm.transform.position = enemy.DamPoints[0].position;
             Destroy(enemy.dam.gameObject);
             enemy.Destination = enemy.Waypoints[1].transform.position;
             yield return wait;

@@ -60,7 +60,7 @@ namespace UI
 
         public void StopTiming()
         {
-            Level.currentLevel.ChangeMoney(Mathf.CeilToInt(t)*5);
+            Level.Instance.ChangeMoney(Mathf.CeilToInt(t)*5);
             waited = true;
         }
     }

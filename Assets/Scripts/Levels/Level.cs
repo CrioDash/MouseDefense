@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Enemies;
 using Enemies.Dammer;
 using Game;
+using GameData;
 using Levels;
 using UI.Pause;
 using Unity.AI.Navigation;
@@ -12,15 +13,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using EventBus = Events.EventBus;
 using EventType = Events.EventType;
-using Variables = Game.Variables;
+using Variables = GameData.Variables;
 
 public abstract class Level : MonoBehaviour
 {
     [Header("Level Settings")]
     public GameObject enemyContainer;
-    public List<GameObject> Waypoints;
-    public List<GameObject> Enemies;
-    public static Level currentLevel;
+    public List<Transform> Waypoints;
+    public List<GameObject> EnemyPrefabs;
+    public List<Transform> DammerPositions;
+    public List<Transform> DamPositions;
+    public Canvas Canvas;
+    public NavMeshSurface Surface;
+    
+    public static Level Instance;
 
     
     public Dictionary<Variables.EnemyType, GameObject> EnemyDict = new Dictionary<Variables.EnemyType, GameObject>();
@@ -30,30 +36,20 @@ public abstract class Level : MonoBehaviour
     
     public float CurrentHealth { set; get; }
     public int Gold { private set; get; }
-   
-    public Canvas Canvas { set; get; }
-   
-    public NavMeshSurface Surface { set; get; }
-  
-    public GameObject DammerPositions { set; get; }
+
     
-    public GameObject DamPositions { set; get; }
+
+    
 
     private void Awake()
     {
-        currentLevel = this;
+        Instance = this;
     }
 
     private void Start()
     {
         WaveCount = 0;
-        if (LevelSwitcher.Switcher == null)
-            EventBus.Publish(EventType.PAUSE);
-        Canvas = FindObjectOfType<Canvas>();
-        Surface = FindObjectOfType<NavMeshSurface>();
-        DammerPositions = GameObject.Find("DammerPositions");
-        DamPositions = GameObject.Find("DamPositions");
-        foreach (GameObject gm in Enemies)
+        foreach (GameObject gm in EnemyPrefabs)
         {
             EnemyDict.Add(gm.GetComponent<Enemy>().EnemyType, gm);
         }
