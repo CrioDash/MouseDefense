@@ -88,7 +88,7 @@ namespace Game
                 {
                     float t = (Hour * 3600 + Minute * 60 + Second - 5*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(160, 40, 0), new Vector3(140, 40, 0), t);
-                    RenderSettings.fogColor = Color.Lerp(DawnColor, DayColor, t);
+                    RenderSettings.fogColor = Color.Lerp(DawnColor, DayColor, t); 
                     RenderSettings.fogDensity = Mathf.Lerp(0.0075f, _dayMultiplier, t);
                     yield return null;
                 }
