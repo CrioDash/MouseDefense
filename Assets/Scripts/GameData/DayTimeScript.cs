@@ -21,6 +21,8 @@ namespace Game
         public Color DayColor;
         public Color DuskColor;
 
+        private float _dayMultiplier = 0;
+
         private void Start()
         {
             RenderSettings.fog = true;
@@ -87,13 +89,13 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 5*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(160, 40, 0), new Vector3(140, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(DawnColor, DayColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0.0075f, 0f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(0.0075f, _dayMultiplier, t);
                     yield return null;
                 }
 
                 //День
                 
-                RenderSettings.fogDensity = 0f;
+                RenderSettings.fogDensity = _dayMultiplier;
                 RenderSettings.fogColor = DayColor;
                 transform.eulerAngles = new Vector3(140, 40, 0);
 
@@ -109,7 +111,7 @@ namespace Game
                     float t = (Hour * 3600 + Minute * 60 + Second - 15*3600)  / (2 * 3600);
                     transform.eulerAngles = Vector3.Lerp( new Vector3(40, 40, 0), new Vector3(20, 40, 0), t);
                     RenderSettings.fogColor = Color.Lerp(DayColor, DuskColor, t);
-                    RenderSettings.fogDensity = Mathf.Lerp(0f, 0.0075f, t);
+                    RenderSettings.fogDensity = Mathf.Lerp(_dayMultiplier, 0.0075f, t);
                     yield return null;
                 }
 
