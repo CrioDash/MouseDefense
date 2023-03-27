@@ -8,7 +8,7 @@
 
             public enum EnemyType
             {
-                Mobik, Tractor, Parashoot, Dammer, Plane, Shielder
+                Mobik, Tractor, Parashoot, Dammer, Plane, Shielder, Lighter
             }
             
             public enum TowerType
