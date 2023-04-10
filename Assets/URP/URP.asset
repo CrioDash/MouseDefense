@@ -17,9 +17,9 @@ MonoBehaviour:
   m_RendererType: 1
   m_RendererData: {fileID: 0}
   m_RendererDataList:
-  - {fileID: 11400000, guid: 8afe77d8cd655674abfe14e44de93c40, type: 2}
+  - {fileID: 11400000, guid: 533ead75324cdb6438a311522ccfc783, type: 2}
   m_DefaultRendererIndex: 0
-  m_RequireDepthTexture: 1
+  m_RequireDepthTexture: 0
   m_RequireOpaqueTexture: 0
   m_OpaqueDownsampling: 1
   m_SupportsTerrainHoles: 0
@@ -30,37 +30,37 @@ MonoBehaviour:
   m_UpscalingFilter: 0
   m_FsrOverrideSharpness: 0
   m_FsrSharpness: 0.92
-  m_EnableLODCrossFade: 1
+  m_EnableLODCrossFade: 0
   m_LODCrossFadeDitheringType: 1
   m_MainLightRenderingMode: 1
   m_MainLightShadowsSupported: 1
-  m_MainLightShadowmapResolution: 2048
-  m_AdditionalLightsRenderingMode: 0
+  m_MainLightShadowmapResolution: 1024
+  m_AdditionalLightsRenderingMode: 1
   m_AdditionalLightsPerObjectLimit: 4
-  m_AdditionalLightShadowsSupported: 1
+  m_AdditionalLightShadowsSupported: 0
   m_AdditionalLightsShadowmapResolution: 2048
   m_AdditionalLightsShadowResolutionTierLow: 256
   m_AdditionalLightsShadowResolutionTierMedium: 512
   m_AdditionalLightsShadowResolutionTierHigh: 1024
   m_ReflectionProbeBlending: 0
   m_ReflectionProbeBoxProjection: 0
-  m_ShadowDistance: 130
+  m_ShadowDistance: 150
   m_ShadowCascadeCount: 1
   m_Cascade2Split: 0.25
   m_Cascade3Split: {x: 0.1, y: 0.3}
   m_Cascade4Split: {x: 0.067, y: 0.2, z: 0.467}
-  m_CascadeBorder: 0.19999999
-  m_ShadowDepthBias: 3.75
-  m_ShadowNormalBias: 0
+  m_CascadeBorder: 0.2
+  m_ShadowDepthBias: 1
+  m_ShadowNormalBias: 1
   m_AnyShadowsSupported: 1
-  m_SoftShadowsSupported: 1
+  m_SoftShadowsSupported: 0
   m_ConservativeEnclosingSphere: 1
   m_NumIterationsEnclosingSphere: 64
   m_SoftShadowQuality: 2
   m_AdditionalLightsCookieResolution: 2048
   m_AdditionalLightsCookieFormat: 3
   m_UseSRPBatcher: 1
-  m_SupportsDynamicBatching: 0
+  m_SupportsDynamicBatching: 1
   m_MixedLightingSupported: 1
   m_SupportsLightCookies: 1
   m_SupportsLightLayers: 0
@@ -70,7 +70,7 @@ MonoBehaviour:
   m_UseAdaptivePerformance: 1
   m_ColorGradingMode: 0
   m_ColorGradingLutSize: 32
-  m_UseFastSRGBLinearConversion: 1
+  m_UseFastSRGBLinearConversion: 0
   m_ShadowType: 1
   m_LocalShadowsSupported: 0
   m_LocalShadowsAtlasResolution: 256

@@ -12,7 +12,8 @@ namespace UI
         public GameObject startPos;
         public GameObject endPos;
 
-        private bool _opened = false;
+        public bool Opened {set;get; 
+    }
 
         public static ConsumableWindow Instance;
 
@@ -29,12 +30,11 @@ namespace UI
         public void Start()
         {
             Instance = this;
-            Close();
         }
 
         public void ButtonClick()
         {
-            if(!_opened)
+            if(!Opened)
                 Open();
             else
                 Close();
@@ -43,16 +43,16 @@ namespace UI
         public void Open()
         {
             TowerInfo.Info.CloseWindow();
-            _opened = true;
+            Opened = true;
             StopCoroutine(CloseAnimation());
             StartCoroutine(OpenAnimation());
         }
 
         public void Close()
         {
-            if (transform.position == startPos.transform.position)
+            if(!Opened)
                 return;
-            _opened = false;
+            Opened = false;
             StopCoroutine(OpenAnimation());
             StartCoroutine(CloseAnimation());
         }

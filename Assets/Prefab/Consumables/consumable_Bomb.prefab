@@ -54,7 +54,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ee487596b0bfd444bb758f2000455aa7, type: 2}
+  - {fileID: 2100000, guid: 0a386d7f4691f8b40b2f4d70f1dc848e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -123,6 +123,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 1
+      m_ColorSpace: -1
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -210,7 +211,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0, g: 1, b: 0, a: 0.54901963}
+  m_Color: {r: 0, g: 0.74509805, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -230,7 +231,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7633646245834451944}
   - component: {fileID: 2684309567538394811}
-  - component: {fileID: -1894205611751755244}
+  - component: {fileID: 203658152646120816}
   m_Layer: 0
   m_Name: consumable_Bomb
   m_TagString: Untagged
@@ -295,18 +296,18 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 248a596c6f06e6345beb5a736750038b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e5bed4a1dddcd3a499c7e21167374f0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-1894205611751755244
+--- !u!114 &203658152646120816
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -315,7 +316,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 6581204226299950187}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 68aca8277e504020a387533cde79b980, type: 3}
+  m_Script: {fileID: 11500000, guid: c3e2a7aff2541664fa05a249157cab9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ConsumablePrefab: {fileID: 0}
+  Global: 0

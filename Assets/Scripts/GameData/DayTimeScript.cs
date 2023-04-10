@@ -21,7 +21,7 @@ namespace Game
         public Color DayColor;
         public Color DuskColor;
 
-        private float _dayMultiplier = 0;
+        private float _dayMultiplier = 0.002f;
 
         private void Start()
         {

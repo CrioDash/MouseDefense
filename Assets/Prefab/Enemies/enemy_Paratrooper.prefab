@@ -92,11 +92,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7006662086215667096}
-  - component: {fileID: 2633960228570692094}
-  - component: {fileID: 5559102693877948532}
   - component: {fileID: 7226060453797041408}
   - component: {fileID: 6704343514722854809}
   - component: {fileID: 3360803078566002096}
+  - component: {fileID: 3671659877023158464}
+  - component: {fileID: 538164724941987510}
   m_Layer: 7
   m_Name: enemy_Paratrooper
   m_TagString: Enemy
@@ -121,41 +121,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2633960228570692094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291350026171429168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a66f837e89f4419b2877f6b400f98b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5559102693877948532
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5291350026171429168}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c06466ce18f40c1be73d38d1938c958, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
-  Icon: {fileID: 21300000, guid: 3a3e34a2737d3f841b03a1594686afc1, type: 3}
-  Type: 1
-  MaxHealth: 30
-  Reward: 15
-  Damage: 1
-  Speed: 6.5
-  EnemyType: 2
-  Agent: {fileID: 0}
-  ParashootHP: 15
-  parashoot: {fileID: 7921455719966372941}
 --- !u!195 &7226060453797041408
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -185,10 +150,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291350026171429168}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.9
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -202,12 +178,56 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5291350026171429168}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3671659877023158464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291350026171429168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1579cd4db07a3864ab3c2840629ca9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &538164724941987510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5291350026171429168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 197f27ce0b000f548ae7754fc52f17e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
+  Icon: {fileID: 21300000, guid: 8e7b331a157416145ab05ed5cc84c5a3, type: 3}
+  Type: 1
+  MaxHealth: 30
+  Reward: 25
+  Damage: 1
+  Speed: 7.5
+  EnemyType: 2
+  Agent: {fileID: 0}
+  ParashootHP: 3
+  parashoot: {fileID: 7921455719966372941}
 --- !u!1 &5941453638706535182
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +455,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7f3d2d5866112f740b8649605da59c8c, type: 2}
+  - {fileID: 2100000, guid: d657b0a864d851446b201d30cf5ce906, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

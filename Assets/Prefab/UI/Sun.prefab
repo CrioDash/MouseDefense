@@ -52,7 +52,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -85,7 +85,7 @@ Light:
     serializedVersion: 2
     m_Bits: 983
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -108,14 +108,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 474bcb49853aa07438625e644c072ee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Version: 1
+  m_Version: 3
   m_UsePipelineSettings: 1
   m_AdditionalLightsShadowResolutionTier: 2
   m_LightLayerMask: 1
+  m_RenderingLayers: 1
   m_CustomShadowLayers: 0
   m_ShadowLayerMask: 1
+  m_ShadowRenderingLayers: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
+  m_SoftShadowQuality: 1
 --- !u!114 &1430894736372120011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,14 +128,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1430894736372120015}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a486acbbbce455a8a4180b26823dfa0, type: 3}
+  m_Script: {fileID: 11500000, guid: d615005e4b64bab4aaf1a2518746d445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Hour: 0
+  Hour: 4
   Minute: 0
   Second: 0
   Multiplier: 250
-  NightColor: {r: 0, g: 0.17082825, b: 0.509434, a: 1}
-  DawnColor: {r: 1, g: 0, b: 0.42655182, a: 1}
-  DayColor: {r: 0.97014207, g: 0.9811321, b: 0.43873262, a: 1}
-  DuskColor: {r: 1, g: 0.38329774, b: 0, a: 1}
+  NightColor: {r: 0, g: 0.30262187, b: 0.6132076, a: 0.22745098}
+  DawnColor: {r: 0.7830189, g: 0, b: 0.394219, a: 0.60784316}
+  DayColor: {r: 0.93779373, g: 1, b: 0.645283, a: 0.60784316}
+  DuskColor: {r: 1, g: 0.48424345, b: 0, a: 0.60784316}

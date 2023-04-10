@@ -11,7 +11,6 @@ namespace Enemies.SpecialEnemies
     public class Plane:Enemy
     {
         public GameObject paratroop;
-        public float speed;
 
         private Vector3 target;
 
@@ -26,7 +25,7 @@ namespace Enemies.SpecialEnemies
         public override void Update()
         {
             transform.position = Vector3.MoveTowards(transform.position, new Vector3(130, 60, transform.position.z),
-                speed * Time.deltaTime);
+                Speed * Time.deltaTime);
         }
 
         public IEnumerator WaitDesant()
@@ -43,7 +42,7 @@ namespace Enemies.SpecialEnemies
             WaitForSeconds wait = new WaitForSeconds(time);
             for (int i = 0; i < count; i++)
             {
-                GameObject gm = Instantiate(paratroop);
+                GameObject gm = Instantiate(paratroop, Level.Instance.enemyContainer.transform);
                 gm.transform.position = spawnPoint;
                 yield return wait;
             }
