@@ -7,6 +7,8 @@ namespace Enemies
     public class EnemyParatrooper : Enemy
     {
         [Header("Настройки парашютиста")] public float ParashootHP;
+
+        [HideInInspector] public float parashootHP;
         
         public GameObject parashoot;
         public override void SetStats()

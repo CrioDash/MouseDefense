@@ -341,11 +341,11 @@ MonoBehaviour:
   type: 2
   attackRange: 8
   radiusSprite: {fileID: 8669007597124747481}
-  cost: 75
+  cost: 1
   head: {fileID: 1538508758356774278}
   shootType: 1
   bulletPrefab: {fileID: 7782383132550698928, guid: d32548ed02281b843a7eef13a2ddbe11, type: 3}
-  bulletSpeed: 50
+  bulletSpeed: 25
   bulletCooldown: 1
   bulletDamage: 3
   bulletSpawn: {fileID: 1538508757494517073}

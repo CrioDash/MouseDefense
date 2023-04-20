@@ -33,7 +33,7 @@ namespace UI
         {
             _cost = TowerInfo.Info.Towers[Type].cost;
             GetComponentInChildren<TextMeshProUGUI>().text = _cost.ToString();
-            if (!PlayerStats.Towers.Contains(Type))
+            if (!PlayerStats.Instance.Towers.ContainsKey(Type))
             {
                 gameObject.SetActive(false);
             }

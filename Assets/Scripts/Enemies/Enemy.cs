@@ -21,7 +21,7 @@ namespace Enemies
         [Header("Enemy stats")] 
         public TextMeshProUGUI Text;
         public Sprite Icon;
-        public EnemyType Type;
+        public EnemyMoveType moveType;
         public float MaxHealth;
         public int Reward;
         public int Damage;
@@ -66,7 +66,7 @@ namespace Enemies
         public void CreateDamageText(float dmg)
         {
             
-            TextMeshProUGUI text = Instantiate(Text, Level.Instance.Canvas.transform).GetComponent<TextMeshProUGUI>();
+            TextMeshProUGUI text = Instantiate(Text, Level.Instance.CanvasText.transform).GetComponent<TextMeshProUGUI>();
             text.transform.position = transform.position;
             text.color = Color.Lerp(Color.green, Color.red, 1 - CurrentHealth / MaxHealth);
             Vector3 pos = text.transform.localPosition;
@@ -75,11 +75,14 @@ namespace Enemies
             text.text = Mathf.Ceil(dmg).ToString();
         }
         
-        private void Start()
+        
+        private void OnEnable()
         {
+            
             CurrentHealth = MaxHealth;
             if(Agent!=null)
                 Agent.speed = Speed;
+            transform.position = Level.Instance.enemyContainer.transform.position;
             SetStats();
             if(Move!=null)
                 StartCoroutine(Move.Move());
@@ -96,19 +99,22 @@ namespace Enemies
             if (transform.position.y <= -20)
             {
                 CurrentHealth = 0;
-                Destroy(gameObject);
+                MoveToPool();
             }
         }
 
         public abstract void SetStats();
         
 
-        private void OnDestroy()
+        public void MoveToPool()
         {
             if (CurrentHealth <= 0)
             {
                 Level.Instance.ChangeMoney(Reward);
             }
+            StopAllCoroutines();
+            transform.position = Level.Instance.enemyContainer.transform.position;
+            Level.Instance.EnemyPool.Add(EnemyType, this);
         }
         
 

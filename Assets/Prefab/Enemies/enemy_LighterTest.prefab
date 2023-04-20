@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2a74c1289c773604189f8962f1df4f36, type: 2}
+  - {fileID: 2100000, guid: c864eab0a5bbbbc46896ce96857f38fe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -212,10 +212,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8348010605368807438}
   - component: {fileID: 4318564802783928187}
-  - component: {fileID: 5160509764562825288}
   - component: {fileID: 8081872949143744851}
-  - component: {fileID: 3205486718465612694}
   - component: {fileID: 8334951544325095226}
+  - component: {fileID: 2775704401890653777}
+  - component: {fileID: 1651738847857352050}
   m_Layer: 7
   m_Name: enemy_LighterTest
   m_TagString: Enemy
@@ -237,7 +237,7 @@ Transform:
   m_Children:
   - {fileID: 806470266901677246}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &4318564802783928187
 NavMeshAgent:
@@ -261,18 +261,6 @@ NavMeshAgent:
   m_BaseOffset: 0.96
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &5160509764562825288
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086231002117339226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a66f837e89f4419b2877f6b400f98b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &8081872949143744851
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -300,27 +288,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &3205486718465612694
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4086231002117339226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c084b0f6e2964ae8926563ca46343372, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
-  Icon: {fileID: 21300000, guid: e3822bf9e2c325a4fb6fe2fea46b72ea, type: 3}
-  Type: 0
-  MaxHealth: 30
-  Reward: 10
-  Damage: 1
-  Speed: 8
-  EnemyType: 6
-  Agent: {fileID: 0}
 --- !u!65 &8334951544325095226
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -342,6 +309,39 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.9987187, z: 2}
   m_Center: {x: 0.02505207, y: 0.49935943, z: 0}
+--- !u!114 &2775704401890653777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4086231002117339226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1579cd4db07a3864ab3c2840629ca9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1651738847857352050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4086231002117339226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a5db77927d35e544b64e6b61a754afa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
+  Icon: {fileID: 21300000, guid: 12bb1c8caea448a4baeaa9e451661d83, type: 3}
+  Type: 0
+  MaxHealth: 30
+  Reward: 25
+  Damage: 1
+  Speed: 5
+  EnemyType: 6
+  Agent: {fileID: 0}
 --- !u!1 &6990804101773121889
 GameObject:
   m_ObjectHideFlags: 0

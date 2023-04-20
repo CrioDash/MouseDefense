@@ -43,10 +43,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7324970918970974529}
   - component: {fileID: 7324970918970974558}
-  - component: {fileID: 7324970918970974559}
-  - component: {fileID: 7324970918970974556}
   - component: {fileID: 7324970918970974531}
   - component: {fileID: 7324970918970974528}
+  - component: {fileID: 3216584044421083843}
+  - component: {fileID: 3708517231581857872}
   m_Layer: 7
   m_Name: enemy_Dammer
   m_TagString: Enemy
@@ -92,42 +92,6 @@ NavMeshAgent:
   m_BaseOffset: 1.55
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 0
---- !u!114 &7324970918970974559
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7324970918970974557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a66f837e89f4419b2877f6b400f98b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7324970918970974556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7324970918970974557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e05e489d817d43b6869c33d184051dc8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 4cbc1bd59dd7d534ea46640e4f4a6504, type: 3}
-  Icon: {fileID: 21300000, guid: 15d5ca620df618a47ae83ee408c314be, type: 3}
-  Type: 0
-  MaxHealth: 30
-  Reward: 20
-  Damage: 0
-  Speed: 10
-  EnemyType: 3
-  Agent: {fileID: 0}
-  dam: {fileID: 7324970919620461262}
-  damPrefab: {fileID: 9054639037492785073, guid: f5773284c7b9a4841bca0473a142ce8b, type: 3}
-  _damPoints: []
 --- !u!54 &7324970918970974531
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -135,10 +99,21 @@ Rigidbody:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324970918970974557}
-  serializedVersion: 2
+  serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.9
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -152,12 +127,56 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7324970918970974557}
   m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 1
+  m_ProvidesContacts: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.75
   m_Height: 3.57
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3216584044421083843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324970918970974557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1579cd4db07a3864ab3c2840629ca9fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3708517231581857872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7324970918970974557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f0f6b522555754ab704fbc54639c14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
+  Icon: {fileID: 21300000, guid: fa59ffc22b776fa488f6db9786f55ea4, type: 3}
+  Type: 0
+  MaxHealth: 30
+  Reward: 50
+  Damage: 0
+  Speed: 6
+  EnemyType: 3
+  Agent: {fileID: 0}
+  dam: {fileID: 7324970919620461262}
+  damPrefab: {fileID: 9054639037492785073, guid: afc5acd6a572c6e4b94b3b02a92733aa, type: 3}
 --- !u!1 &7324970919620461262
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public abstract class Tower : MonoBehaviour
     protected TowerDetector _detector;
     
     private Enemy _target;
-    
+
     private void Awake()
     {
         Animator = GetComponent<Animator>();
@@ -66,8 +66,11 @@ public abstract class Tower : MonoBehaviour
     {
         while (true)
         {
-            if(TowerShoot!=null && GetTarget()!=null)
+            if (TowerShoot != null && GetTarget() != null)
+            {
                 TowerShoot.Shoot();
+            }
+
             yield return new WaitForSeconds(bulletCooldown);
         }
     }
@@ -78,6 +81,8 @@ public abstract class Tower : MonoBehaviour
         {
             if(TowerAnimation!=null && GetTarget()!=null)
                 TowerAnimation.PlayAnimation();
+            yield return null;
+            yield return null;
             yield return null;
         }
     }

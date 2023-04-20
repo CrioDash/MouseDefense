@@ -10,6 +10,11 @@ namespace Levels
     public class Level2: Level
     {
         
+        public override IEnumerator InstantiatePrefabs()
+        {
+            yield break;
+        }
+        
         public override IEnumerator LevelScenario()
         {
             ChangeMoney(200);

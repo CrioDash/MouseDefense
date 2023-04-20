@@ -9,22 +9,21 @@ namespace Bullets
 {
     public class BulletGun : Bullet
     {
-        private GameObject _target;
+        
 
-        private void Start()
+        public override IEnumerator Move()
         {
-            _target = Parent.GetTarget().gameObject;
-        }
-
-        public override void Move()
-        {
-            if (_target==null)
+            while (true)
             {
-                Destroy(gameObject);
-                return;
+                if (!_target.activeSelf)
+                {
+                    ReturnToPool();
+                    yield break;
+                }
+                transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
+                    BulletSpeed * Time.deltaTime);
+                yield return null;
             }
-            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
-                BulletSpeed * Time.deltaTime);
         }
 
 
@@ -33,7 +32,7 @@ namespace Bullets
             if (other.CompareTag("Enemy"))
             {
                 _target.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Normal);
-                Destroy(gameObject);
+                ReturnToPool();
             }
         }
     }

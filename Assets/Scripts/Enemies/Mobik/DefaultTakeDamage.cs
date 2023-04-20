@@ -14,7 +14,7 @@ namespace Enemies
             _enemy.CreateDamageText(dmg);
             if (_enemy.CurrentHealth <= 0)
             {
-                Destroy(gameObject);
+                _enemy.MoveToPool();
             }
         }
     }

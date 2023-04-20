@@ -20,12 +20,13 @@ namespace UI
         private void Awake()
         {
             _renderer = GetComponent<SpriteRenderer>();
-            _renderer.color = Fade ? Color.black : Color.clear;
+            
         }
 
         private void Start()
         {
             Instance = this;
+            _renderer.color = Fade ? Color.black : Color.clear;
         }
 
 

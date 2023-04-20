@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1430894736372120008
 Transform:
@@ -135,7 +135,7 @@ MonoBehaviour:
   Minute: 0
   Second: 0
   Multiplier: 250
-  NightColor: {r: 0, g: 0.30262187, b: 0.6132076, a: 0.22745098}
+  NightColor: {r: 0, g: 0.29411766, b: 0.5882353, a: 0.22745098}
   DawnColor: {r: 0.7830189, g: 0, b: 0.394219, a: 0.60784316}
   DayColor: {r: 0.93779373, g: 1, b: 0.645283, a: 0.60784316}
   DuskColor: {r: 1, g: 0.48424345, b: 0, a: 0.60784316}

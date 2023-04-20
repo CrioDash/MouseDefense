@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 21300000, guid: 8e7b331a157416145ab05ed5cc84c5a3, type: 3}
-  Type: 1
+  moveType: 1
   MaxHealth: 30
   Reward: 25
   Damage: 1
@@ -227,6 +227,7 @@ MonoBehaviour:
   EnemyType: 2
   Agent: {fileID: 0}
   ParashootHP: 3
+  parashootHP: 0
   parashoot: {fileID: 7921455719966372941}
 --- !u!1 &5941453638706535182
 GameObject:

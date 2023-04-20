@@ -25,8 +25,6 @@ namespace UI
         {
             _info.InfoTower.LevelUp();
             _info.InfoTower.Level++;
-            if (_info.InfoTower.Level == 3)
-                _button.interactable = false;
             Level.Instance.ChangeMoney(-cost);
             cost = (int)Math.Truncate(_info.InfoTower.cost * (((float)_info.InfoTower.Level+1) / 4));
             GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();
@@ -47,10 +45,13 @@ namespace UI
         {
             if (_info.InfoTower!=null)
             {
+                if (_info.InfoTower.Level == 3)
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
                 cost = (int)Math.Truncate(_info.InfoTower.cost * (((float)_info.InfoTower.Level+1) / 4));
                 GetComponentInChildren<TextMeshProUGUI>().text = cost.ToString();
-                if (_info.InfoTower.Level==3)
-                    return;
                 _button.interactable = Level.Instance.Gold >= cost;
             }
             

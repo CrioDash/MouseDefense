@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using GameData;
 using Tiles;
 using UI.Pause;
 using UnityEngine;
@@ -60,6 +61,7 @@ namespace UI
             sellContainer.SetActive(true);
             InfoTower = tower;
             _btnLevelUp.UpdateButton();
+            _btnLevelUp.gameObject.SetActive(InfoTower.Level < PlayerStats.Instance.Towers[InfoTower.type]);
             TowerPos = tower.transform.position;
             StartCoroutine(ShowAnimation());
         }

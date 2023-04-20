@@ -12,22 +12,22 @@ namespace Enemies.Shielder
                 _body = GetComponent<Rigidbody>();
             if (_shielder == null)
                 _shielder = GetComponent<EnemyShielder>();
-            if (_shielder.ShieldHP > 0)
+            if (_shielder.shieldHP > 0)
             {
                 Vector3 dir = _shielder.Shield.transform.position - transform.position;
                 dir = -dir.normalized;
                 Vector3 waypoint = _shielder.Agent.destination;
                 _shielder.Agent.Warp(transform.position + dir/2);
                 _shielder.Agent.destination = waypoint;
-                _shielder.ShieldHP-=(int)type+1;
+                _shielder.shieldHP-=(int)type+1;
                 return;
             }
-            if (_shielder.Shield!=null)
-                Destroy(_shielder.Shield.gameObject);
+            if (_shielder.Shield.activeSelf)
+                _shielder.Shield.SetActive(false);
             _shielder.CurrentHealth -= dmg;
             _shielder.CreateDamageText(dmg);
             if (_shielder.CurrentHealth <= 0)
-                Destroy(_shielder.gameObject);
+                _shielder.MoveToPool();
         }
     }
 }

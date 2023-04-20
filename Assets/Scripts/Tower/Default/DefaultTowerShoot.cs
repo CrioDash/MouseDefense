@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Bullets;
 using Towers.Interfaces;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -14,8 +15,7 @@ namespace Towers.Default
                 _tower = GetComponent<Tower>();
             if (_tower.Animator!=null)
                 _tower.Animator.SetTrigger("Shoot");
-            GameObject bullet = Instantiate(_tower.bulletPrefab, transform);
-            bullet.transform.position = _tower.bulletSpawn.transform.position;
+            Level.Instance.BulletPool.Get(_tower.type, _tower);
         }
     }
 }

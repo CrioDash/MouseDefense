@@ -5,993 +5,83 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48008355-8c88-4228-978d-49ddb354fb58" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MouseDefense/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.MouseDefense/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefense/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefense/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefense/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefense/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.TowerDefense/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Audio/Click.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Audio/Click2.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Audio/HighVoice.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Audio/LowVoice.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Audio/MidVoice.wav" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Docs/CHANGELOG.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Docs/LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Docs/README.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/FungusEditorResources.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/add_small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/duplicate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/fungus_mushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/Pro/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/add.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/add_small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/delete.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/duplicate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/fungus_mushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Icons/up.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/bullet_point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/choice_node_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/choice_node_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/command_background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/connection_point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/event_node_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/event_node_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/play_big.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/play_small.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/process_node_off.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/EditorResources/Textures/process_node_on.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Amaranth/Amaranth-Bold.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Amaranth/Amaranth-BoldItalic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Amaranth/Amaranth-Italic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Amaranth/Amaranth-Regular.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Amaranth/SIL Open Font License.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Exo2/Exo2-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Exo2/Exo2-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fonts/Exo2/OFL.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Fungus.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Integrations/Playmaker/ReadMe.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Integrations/Spine/Readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/AudioTag.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/Character.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/ClickableSprite.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/DragTargetSprite.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/DraggableSprite.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/EventSystem.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/Flowchart.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/FungusLogo.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/Localization.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/MenuDialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/NarrativeLog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/NarrativeLogEntryDisplay.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/ParallaxSprite.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/SaveData.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/SaveMenu.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/SayDialog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/Stage.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/StagePosition.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/Tag.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Prefabs/View.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Sprites/Background.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Sprites/HandPointer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Resources/Sprites/MousePointer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/AssertCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Break.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Call.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/CallMethod.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ClearMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionBaseCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionBaseIntCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionBaseTwoCollectionCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionBaseVarAndIntCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionBaseVarCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandAdd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandAddAll.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandClear.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandContains.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandContainsAll.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandContainsAny.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandCopy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandCount.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandElement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandExclusive.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandFind.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandInsert.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandIntersection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandOccurrences.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandRemove.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandRemoveAllOf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandRemoveAt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandReserve.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandResize.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandReverse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandShuffle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandSort.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionCommandUnique.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionRandom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/CollectionRandomBag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/ForEach.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/GameObjectFind.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/Physics2DCast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/Physics2DOverlap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/PhysicsCast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Collection/PhysicsOverlap.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Comment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Condition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ControlAudio.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ControlStage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ControlWithDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Conversation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/DebugBreak.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/DebugLog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/DeleteSaveKey.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Destroy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/DestroyOnLoad.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Else.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ElseIf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/End.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ExecuteLua.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/FadeScreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/FadeSprite.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/FadeToView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/FadeUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/FromString.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Fullscreen.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/GetText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/GetToggleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/If.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Input/GetAxis.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Input/GetKey.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Input/GetMousePosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/InvokeEvent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/InvokeMethod.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Jump.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Label.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LeanTween/BaseLeanTweenCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LeanTween/MoveLean.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LeanTween/RotateLean.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LeanTween/ScaleLean.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LeanTween/StopTweensLean.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LoadScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LoadVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LookFrom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LookTo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LoopRange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LuaCondition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LuaElseIf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/LuaIf.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Abs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/BaseUnaryMathCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Clamp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Curve.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Exp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Inv.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/InvLerp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Lerp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Log.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Map.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/MinMax.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Neg.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Pow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Round.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Sign.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Sqrt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/ToInt.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Math/Trig.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Menu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MenuShuffle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MenuTimer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MoveAdd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MoveFrom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MoveTo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/MoveToView.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/OpenURL.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlayAmbianceSound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlayAnimState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlayMusic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlayRandomSound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlaySound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PlayUsfxrSound.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Portrait.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Priority/FungusPriorityCount.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Priority/FungusPriorityDecrease.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Priority/FungusPriorityIncrease.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Priority/FungusPriorityReset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/AnimatorProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/AudioSourceProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/CollectionProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Collider2DProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/ColliderProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Collision2DProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/CollisionProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/ColorProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/ControllerColliderHitProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/GameObjectProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/MaterialProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Matrix4x4Property.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/QuaternionProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Rigidbody2DProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/RigidbodyProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/SpriteProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/TextureProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/TransformProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Vector2Property.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Vector3Property.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Property/Vector4Property.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PunchPosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PunchRotation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/PunchScale.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Quit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/RandomFloat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/RandomInteger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ReadTextFile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Reset.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ResetAnimTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Rigidbody2D/AddForce2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Rigidbody2D/AddTorque2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Rigidbody2D/StopMotionRigidBody2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/RotateAdd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/RotateFrom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/RotateTo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SavePoint.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SaveVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Say.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ScaleAdd.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ScaleFrom.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ScaleTo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Scene/ReloadScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SendMessage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetActive.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAnimBool.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAnimFloat.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAnimInteger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAnimTrigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAudioPitch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetAudioVolume.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetClickable2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetCollider.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetDraggable2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetInteractable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetLanguage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetLayerOrder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetMenuDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetMouseCursor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetSaveProfile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetSayDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetSliderValue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetSprite.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetSpriteOrder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetToggleState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetUIImage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SetVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ShakeCamera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ShakePosition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ShakeRotation.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ShakeScale.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ShowSprite.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/SpawnObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StartSwipe.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Stop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopAmbiance.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopFlowchart.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopMusic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopSwipe.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopTween.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/StopTweens.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ThrowException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/ToString.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/TweenUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/VariableCondition.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Vector3/Vector3Arithmetic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Vector3/Vector3Fields.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Vector3/Vector3Normalise.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Vector3/Vector3ToVector2.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Wait.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/WaitFrames.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/While.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/Write.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Commands/iTweenCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Block.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/CameraManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Character.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Clickable2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Command.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/CommandCopyBuffer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/CustomTag.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/DialogInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Draggable2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/EventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Flowchart.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/FungusManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/FungusState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Localization.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/MenuDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/MusicManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NarrativeLog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NarrativeLogEntryDisplay.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NarrativeLogEntryUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/NarrativeLogMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Node.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Parallax.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/PortraitController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SaveData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SaveManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SaveMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SayDialog.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SceneLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SelectOnEnable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/SpriteFader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Stage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Variable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/View.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/Writer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Components/WriterAudio.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/AnyVariableAndDataPairDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/AssetModProcessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/BasePopupWindowContent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/BlockEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/BlockInspector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/BlockReferenceDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CallEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CameraMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CharacterEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CommandEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CommandListAdaptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/ControlAudioEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CustomGUI.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/CustomVariableDrawerLookup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/DialogInputEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/EditorExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/EditorZoomArea.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/EnumFlagDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/EventHandlerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/EventWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/ExportReferenceDocs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FlowchartEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FlowchartMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FlowchartWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FungusEditor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FungusEditorPreferences.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FungusEditorResources.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/FungusEditorResourcesGenerated.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/GenerateVariableHelper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/GenerateVariableWindow.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/HierarchyIcons.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/InvokeEventEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/InvokeMethodEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/LabelEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/LocalizationEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/LuaScriptedImporter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/MenuEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/MenuTimerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/NarrativeMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/PopupContent/CommandSelectorPopupWindowContent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/PopupContent/EventSelectorPopupWindowContent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/PopupContent/VariableSelectPopupWindowContent.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/PortraitEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SaveMenuEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SaveMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SayEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SerializedPropertyExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SetVariableEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SolutionFileFixer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/SpriteMenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/StageEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableConditionEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableListAdaptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableReferenceDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/AnimatorVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/AudioSourceVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/CollectionVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Collider2DVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/ColliderVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/ColorVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/GameObjectVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/MaterialVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Matrix4x4VariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/ObjectVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/QuaternionVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Rigidbody2DVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/RigidbodyVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/SpriteVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/TextureVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/TransformVariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Vector2VariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Vector3VariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/VariableTypes/Vector4VariableDrawer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/ViewEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/WriteEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Editor/WriterAudioEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EnumFlagAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/ButtonClicked.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/Drag/DragCancelled.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/Drag/DragCompleted.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/Drag/DragEntered.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/Drag/DragExited.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/Drag/DragStarted.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/EndEdit.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/FlowchartEnabled.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/GameStarted.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/KeyPressed.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MessageReceived.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/AnimatorState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/ApplicationState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/BasePhysicsEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/CharacterControllerCollide.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Collision.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Collision2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Mouse.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Particle.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Render.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/TagFilteredEventHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/TransformChanged.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Trigger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/Trigger2D.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/MonoBehaviour/UpdateTick.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/ObjectClicked.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/SavePointLoaded.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/EventHandlers/ToggleChanged.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IBlockCaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/ICollectionCompatible.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IDialogInputListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IFungusCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/ILocalizable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IStringLocationIdentifier.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IUpdateable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IVariableReference.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IWriterListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Interfaces/IWriterTextDestination.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Signals/BlockSignals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Signals/FungusActiveSignals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Signals/MenuSignals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Signals/SaveManagerSignals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Signals/WriterSignals.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/AllVariableTypes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/BlockReference.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/ConversationManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/EventDispatcher.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/FlowchartData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/FungusConstants.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/GlobalVariables.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/PortraitUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/SaveDataItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/SaveHistory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/SavePointData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/StringFormatter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TMProLinkAnimEffects.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TMProLinkAnimLookup.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TMProLinkAnimator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TextAdapter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TextTagParser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TextTagToken.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/TextVariationHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/VariableReference.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/Utils/VariableUtil.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/AnimatorVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/AudioSourceVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/BaseVariableProperty.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/BooleanVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/Collection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/Collider2DCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/ColliderCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/FloatCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/GameObjectCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/GenericCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/IntCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/IntVarCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/StringCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collection/TransformCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/CollectionVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collider2DVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/ColliderVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Collision2DVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/CollisionVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/ColorVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/ControllerColliderHitVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/FloatVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/GameObjectVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/IntegerVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/MaterialVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Matrix4x4Variable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/ObjectVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/QuaternionVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Rigidbody2DVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/RigidbodyVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/SpriteVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/StringVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/TextureVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/TransformVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Vector2Variable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Vector3Variable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/VariableTypes/Vector4Variable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Scripts/link.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/Attribution.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/ContinueIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/CreatedWith.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/DialogBox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/DialogBoxSliced.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/FungusLogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/GreyButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/HistoryIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/Mushroom.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/OptionButton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/OptionButtonDisabled.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/OptionButtonHighlighted.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/OptionButtonPressed.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/ScreenFade.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/ScriptIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/SwipePanIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/menu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/rewind.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Textures/settings.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/CSVParser/CSVSupport.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/CSVParser/CsvParser.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Lua/fungus.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Lua/inspect.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/InfoText.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/Lua.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/LuaBindings.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/LuaEnvironment.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/LuaScript.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Prefabs/LuaStore.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Types/FungusTypes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Resources/Types/UnityTypes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/ExecuteHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/InfoText.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaBindings.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaEnvironment.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaEnvironmentInitializer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaScript.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaStore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Components/LuaUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/DropDownControl.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/ExecuteHandlerEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/Fungus.FungusLuaEditor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/LuaBindingsEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/LuaScriptEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/LuaStoreEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/LuaUtilsEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Editor/MenuItems.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Interfaces/IExecuteHandlerConfigurator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Interfaces/IStringSubstituter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Utils/FungusPrefs.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Utils/LuaScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Utils/PODTypeFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Scripts/Utils/StringSubstituter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/Editor/Fungus.FungusLuaJSONCheckerEditor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/Editor/JSONChecker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/JSONObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/LICENSE.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/VectorTemplates.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/JSON/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/DebuggerLogic/AsyncDebugger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/DebuggerLogic/EmptyDebugSession.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/DebuggerLogic/IAsyncDebuggerClient.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/DebuggerLogic/MoonSharpDebugSession.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/DebuggerLogic/VariableInspector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/MoonSharpVsCodeDebugServer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/SDK/DebugSession.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/SDK/Protocol.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Debugger/SDK/Utilities.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/AsyncExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CodeAnalysis/AstNode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Attributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Framework.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/Base/FrameworkBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/Base/FrameworkClrBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/Base/FrameworkReflectionBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/FrameworkCLR.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/FrameworkCore.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/FrameworkPCL.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Frameworks/FrameworkWin8.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Compatibility/Stopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/BasicModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/Bit32Module.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/CoroutineModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/DebugModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/DynamicModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/ErrorHandlingModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IO/BinaryEncoding.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IO/FileUserData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IO/FileUserDataBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IO/StandardIOFileUserDataBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IO/StreamFileUserDataBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/IoModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/JsonModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/LoadModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/MathModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/MetaTableModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/OsSystemModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/OsTimeModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/StringLib/KopiLua_StrLib.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/StringLib/StringRange.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/StringModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/TableIteratorsModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/CoreLib/TableModule.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/Extension_Methods.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/FastStack.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/FastStackDynamic.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/LinkedListIndex.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/MultiDictionary.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/ReferenceEqualityComparer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataStructs/Slice.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/CallbackArguments.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/CallbackFunction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/Closure.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/Coroutine.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/CoroutineState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/DataType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/DynValue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/IScriptPrivateResource.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/RefIdObject.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/ScriptFunctionDelegate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/SymbolRef.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/SymbolRefType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/Table.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/TablePair.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/TailCallData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/TypeValidationFlags.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/UserData.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/WellKnownSymbols.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/DataTypes/YieldRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/DebugService.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/DebuggerAction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/DebuggerCaps.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/IDebugger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/SourceCode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/SourceRef.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/WatchItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Debugging/WatchType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounterType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounters/DummyPerformanceStopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounters/GlobalPerformanceStopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounters/IPerformanceStopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceCounters/PerformanceStopwatch.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceResult.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Diagnostics/PerformanceStatistics.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Errors/DynamicExpressionException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Errors/InternalErrorException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Errors/InterpreterException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Errors/ScriptRuntimeException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Errors/SyntaxErrorException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/DynamicExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/InstructionFieldUsage.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/BuildTimeScope.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/BuildTimeScopeBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/BuildTimeScopeFrame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/ClosureContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/IClosureBuilder.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/LoopTracker.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/RuntimeScopeBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/Scopes/RuntimeScopeFrame.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/ScriptExecutionContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/ScriptLoadingContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/ByteCode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/CallStackItem.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/CallStackItemFlags.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/ExecutionState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Instruction.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/OpCode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/OpCodeMetadataType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/DebugContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_BinaryDump.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_Coroutines.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_Debugger.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_Errors.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_IExecutionContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_InstructionLoop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_Scope.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Execution/VM/Processor/Processor_UtilityFunctions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/IO/BinDumpBinaryReader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/IO/BinDumpBinaryWriter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/IO/UndisposableStream.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpHiddenAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpHideMemberAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpPropertyAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpUserDataAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpUserDataMetamethodAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Attributes/MoonSharpVisibleAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/DispatchingUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/IMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/IOptimizableDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/IOverloadableMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/MemberDescriptorAccess.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/BasicDescriptors/ParameterDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Converters/ClrToScriptConversions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Converters/NumericConversions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Converters/ScriptToClrConversions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Converters/StringConversions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/Converters/TableConversions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/CustomConvertersCollection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/DescriptorHelpers.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/IGeneratorUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/IUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/IUserDataMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/IUserDataType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/IWireableDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/InteropAccessMode.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/InteropRegistrationPolicy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/CharPtr.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/LuaBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/LuaBase_CLib.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/LuaLBuffer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/LuaState.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/LuaStateInterop/Tools.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/PredefinedUserData/AnonWrapper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/PredefinedUserData/EnumerableWrapper.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/PropertyTableAssigner.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/ProxyObjects/DelegateProxyFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/ProxyObjects/IProxyFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/ReflectionSpecialNames.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/RegistrationPolicies/AutomaticRegistrationPolicy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/RegistrationPolicies/DefaultRegistrationPolicy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/RegistrationPolicies/IRegistrationPolicy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/RegistrationPolicies/PermanentRegistrationPolicy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/AutoDescribingUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/CompositeUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/EventFacade.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/HardwiredDescriptors/DefaultValue.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredMethodMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/HardwiredDescriptors/HardwiredUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/MemberDescriptors/ArrayMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/MemberDescriptors/DynValueMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/MemberDescriptors/FunctionMemberDescriptorBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/MemberDescriptors/ObjectCallbackMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ProxyUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/EventMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/FieldMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/MethodMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/OverloadedMethodMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/PropertyMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/ReflectionMemberDescriptors/ValueTypeDefaultCtorMemberDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/StandardEnumUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/StandardGenericsUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/StandardDescriptors/StandardUserDataDescriptor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/UserDataMemberType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/UserDataRegistries/ExtensionMethodsRegistry.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Interop/UserDataRegistries/TypeDescriptorRegistry.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/LinqHelpers.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/EmbeddedResourcesScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/FileSystemScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/IScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/InvalidScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/ScriptLoaderBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Loaders/UnityAssetsScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Modules/CoreModules.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Modules/ModuleRegister.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Modules/MoonSharpModuleAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Modules/MoonSharpModuleConstantAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Modules/MoonSharpModuleMethodAttribute.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/NameSpace_XmlHelp.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Options/ColonOperatorBehaviour.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/DotNetCorePlatformAccessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/IPlatformAccessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/LimitedPlatformAccessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/PlatformAccessorBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/PlatformAutoDetector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/StandardFileType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Platforms/StandardPlatformAccessor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/REPL/ReplHistoryNavigator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/REPL/ReplInterpreter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/REPL/ReplInterpreterScriptLoader.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Script.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/ScriptGlobalOptions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/ScriptOptions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Serialization/Json/JsonNull.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Serialization/Json/JsonTableConverter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Serialization/ObjectValueConverter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Serialization/SerializationExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expression_.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/AdjustmentExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/BinaryOperatorExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/DynamicExprExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/ExprListExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/FunctionCallExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/FunctionDefinitionExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/IndexExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/LiteralExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/SymbolRefExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/TableConstructor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Expressions/UnaryOperatorExpression.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Fast_Interface/Loader_Fast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/IVariable.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Lexer/Lexer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Lexer/LexerUtils.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Lexer/Token.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Lexer/TokenType.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Loop.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/NodeBase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/AssignmentStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/BreakStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/ChunkStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/CompositeStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/EmptyStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/ForEachLoopStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/ForLoopStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/FunctionCallStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/FunctionDefinitionStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/GotoStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/IfStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/LabelStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/RepeatStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/ReturnStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/ScopeBlockStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/MoonSharp/Interpreter/Tree/Statements/WhileStatement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/FungusLua/Thirdparty/TaskManager/TaskManager.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LTDescr.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LTDescrOptional.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LTSeq.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LeanAudio.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LeanTest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LeanTween.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LeanTween/LeanTween.dll.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LineEndings/Editor/Fungus.LineEndingsEditor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/LineEndings/Editor/LineEndingsEditMenu.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Microsoft/ReflectionExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/ThirdPartyNotices.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Editor/Fungus.UsfxrEditor.asmdef" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Editor/SfxrGenerator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Scripts/SfxrAudioPlayer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Scripts/SfxrCacheSurrogate.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Scripts/SfxrParams.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/Usfxr/Scripts/SfxrSynth.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fungus/Thirdparty/iTween/iTween.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.MouseDefense/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MouseDefense/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Lighting/New Lighting Settings.lighting" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Lighting/New Lighting Settings.lighting" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Bullets/bullet_Blue.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Bullets/bullet_Blue.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Bullets/bullet_Red.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Bullets/bullet_Red.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Consumables/Cloud.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Consumables/Cloud.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Consumables/Consumable_Pointer.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Consumables/Consumable_Pointer.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Consumables/Lightning.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Consumables/Lightning.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Enemies/m_Enemy.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enemies/m_Enemy.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Enemies/m_Parashoot.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enemies/m_Parashoot.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Enemies/m_enemyLighter.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Enemies/m_enemyLighter.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment/m_Grass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment/m_Grass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/StandartDiffuse.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/StandartDiffuse.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment/m_Road.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment/m_Road.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment/m_Rock.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment/m_Rock.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment/m_TowerPlace.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment/m_TowerPlace.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/Environment/m_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Environment/m_Water.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Towers/t1_DarkGreen.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Towers/t1_DarkGreen.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Green.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Green1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Green1.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Gun.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Towers/t1_Gun.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_AA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_AA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Artillery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Artillery.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Corngun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Corngun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Bullets/bullet_Gun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Consumables/consumable_Bomb.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Consumables/consumable_Bomb.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Consumables/consumable_Poison.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Consumables/consumable_Poison.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Dam.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Dam.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Dammer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Dammer.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_LighterTest.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_LighterTest.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Mobik.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Mobik.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Paratrooper.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Paratrooper.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Plane.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Plane.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Grass.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Grass.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Shielder.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Shielder.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Tractor.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Enemies/enemy_Tractor.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Road.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Road.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Rock.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Rock.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_TowerPlace.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_TowerPlace.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Water.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Environment/envir_Water.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_AA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_AA.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Artillery.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Artillery.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Corngun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Corngun.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Gun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Towers/tower_Gun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/Canvas.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/Canvas.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/Canvas.prefab" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/DamageText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/DamageText.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/MoneyText.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/MoneyText.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefab/UI/Sun.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/UI/Sun.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Utilities/util_Pauser.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Utilities/util_Pauser.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/DOTweenSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Utilities/ArtilleryRadius.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Utilities/EnemySpawn.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefab/Utilities/MobIcon.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefab/Utilities/MobIcon.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/LightingData.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/LightingData.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/ReflectionProbe-0.exr" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/ReflectionProbe-0.exr" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh-Road 3.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level1/NavMesh-Road 3.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletAA.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletAA.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletArtillery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletArtillery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Bullets/BulletGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consumables/Consumable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Consumables/Consumable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Consumables/Lightning.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Consumables/LightningStrike.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Dammer/IDammerMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Dammer/IDammerMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/EnemyMoveType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Mobik/DefaultMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Mobik/DefaultMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Mobik/DefaultTakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Mobik/DefaultTakeDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/EnemyParatrooper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/EnemyParatrooper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/IParatroopMove.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/IParatroopMove.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/IParatrooperTakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Paratrooper/IParatrooperTakeDamage.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shielder/EnemyShielder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shielder/EnemyShielder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shielder/IShielderTakeDamage.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/Shielder/IShielderTakeDamage.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemies/SpecialEnemies/Plane.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemies/SpecialEnemies/Plane.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameData/DayTimeScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameData/DayTimeScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameData/PlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameData/PlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Levels/Level.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Levels/Level1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Levels/Level1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConsumableWindow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConsumableWindow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Levels/Level2.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Levels/Level2.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Levels/LevelSwitcher.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Levels/LevelSwitcher.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Default/DefaultTowerShoot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Default/DefaultTowerShoot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/Tower.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/Tower.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/TowerDetector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/TowerDetector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Tower/TowerGun.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Tower/TowerGun.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ConsumableItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ConsumableItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/LoadingScreen.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TowerBuildButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TowerBuildButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TowerInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TowerInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/TowerLevelUpButton.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/TowerLevelUpButton.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Bush (1).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Bush (2).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Cactus (1).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Cactus (2).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Cactus (3).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Crate.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Grass (1).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Grass (2).asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Bush (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Bush (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Cactus (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Cactus (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Cactus (3).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Crate.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Grass (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Grass (2).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Sign.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/SignArrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Skeleton.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Stone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/StoneBlock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Objects/Tree.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Sign.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/SignArrow.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Skeleton.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Stone.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/StoneBlock.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Tile/Tree.asset" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/URP/URP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/URP_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/URP/URP_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/URP/UniversalRenderPipelineGlobalSettings.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/2.0/machine.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/2.0/settings.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/2.0/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.0/machine.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.0/settings.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.0/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.5/machine.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.5/settings.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/4.5/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/browscap.ini" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/MonoBleedingEdge/etc/mono/mconfig/config.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_BurstDebugInformation_DoNotShip/Data/Plugins/x86_64/lib_burst_generated.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/Resources/unity default resources" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/Resources/unity_builtin_extra" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/RuntimeInitializeOnLoads.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/ScriptingAssemblies.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/StreamingAssets/UnityServicesProjectConfiguration.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/app.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/boot.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/globalgamemanagers" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/globalgamemanagers.assets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/globalgamemanagers.assets.resS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/level0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/level0.resS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/resources.assets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/resources.assets.resS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/sharedassets0.assets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/TowerDefense_Data/sharedassets0.assets.resS" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Bin/UnityCrashHandler64.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/AudioManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_Android.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_Android.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_StandaloneWindows.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_WebGL.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/BurstAotSettings_WebGL.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ClusterInputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/CommonBurstAotSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/MemorySettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.progrids/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.testtools.codecoverage/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/PresetManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/QualitySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/SceneTemplateSettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ShaderGraphSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimeManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/UnityConnectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VFXManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/VersionControlSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/XRSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityPlayerStub/Exports.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/UnityPlayerStub/Exports.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UnityPlayerStub/Exports.h" beforeDir="false" afterPath="$PROJECT_DIR$/UnityPlayerStub/Exports.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -1002,10 +92,14 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.2d.tilemap@1.0.0/Editor/UI/TilePaletteElement.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.2.2/Editor/Analytics.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.performance.profile-analyzer@1.2.2/Editor/Columns.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Samples~/Tutorial/Asteroids/Scripts/Controllers/AsteroidController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Samples~/Tutorial/Asteroids/Scripts/Controllers/DebrisController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Samples~/Tutorial/Asteroids/Scripts/Controllers/SpaceshipController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.testtools.codecoverage@1.2.2/Samples~/Tutorial/Asteroids/Scripts/Weapons/LaserController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Expression.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -1086,7 +180,17 @@
       <workItem from="1681118188929" duration="149000" />
       <workItem from="1681119763345" duration="1161000" />
       <workItem from="1681121170959" duration="222000" />
-      <workItem from="1681121434387" duration="6659000" />
+      <workItem from="1681121434387" duration="12104000" />
+      <workItem from="1681207702637" duration="878000" />
+      <workItem from="1681230895315" duration="3327000" />
+      <workItem from="1681400955530" duration="11172000" />
+      <workItem from="1681461125370" duration="3067000" />
+      <workItem from="1681581900999" duration="3043000" />
+      <workItem from="1681597304508" duration="15068000" />
+      <workItem from="1681685477584" duration="594000" />
+      <workItem from="1681717441543" duration="8307000" />
+      <workItem from="1681823724777" duration="1329000" />
+      <workItem from="1682003677517" duration="1201000" />
     </task>
     <servers />
   </component>

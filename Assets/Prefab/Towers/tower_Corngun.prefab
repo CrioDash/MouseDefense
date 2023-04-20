@@ -208,16 +208,16 @@ MonoBehaviour:
   type: 3
   attackRange: 6
   radiusSprite: {fileID: 7997310935666281134}
-  cost: 150
+  cost: 1
   head: {fileID: 6861568908805589348}
   shootType: 2
   bulletPrefab: {fileID: 8518738755610360070, guid: 580411f470534434f94adeac8b517d0f, type: 3}
-  bulletSpeed: 500
+  bulletSpeed: 25
   bulletCooldown: 0.25
-  bulletDamage: 3
+  bulletDamage: 1
   bulletSpawn: {fileID: 7662040444029348037}
   Barrel: {fileID: 937613082023005302}
-  RotationSpeed: 50
+  RotationSpeed: 500
 --- !u!1 &1896260413768443396
 GameObject:
   m_ObjectHideFlags: 0

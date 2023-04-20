@@ -48,7 +48,6 @@ namespace Consumables
             pos.y -= 8f;
             pos += transform.TransformDirection(new Vector3(0, 0, 10));
             ray.origin = pos;
-            Debug.DrawRay(ray.origin, ray.direction);
             Physics.Raycast(ray, out ConsumableRaycast);
             if(ConsumableRaycast.collider==null)
                 return;
@@ -63,11 +62,11 @@ namespace Consumables
         {
             if (ConsumableRaycast.collider.CompareTag("Road")||ConsumableRaycast.collider.CompareTag("Enemy"))
             {
-                PlayerStats.Consumables[_type]--;
+                PlayerStats.Instance.Consumables[_type]--;
                 Activate();
             }
-            Parent.Text.text = PlayerStats.Consumables[Parent.Type].ToString();
-            if (PlayerStats.Consumables[Parent.Type]==0)
+            Parent.Text.text = PlayerStats.Instance.Consumables[Parent.Type].ToString();
+            if (PlayerStats.Instance.Consumables[Parent.Type]==0)
                 gameObject.SetActive(false);
         }
 
@@ -81,10 +80,10 @@ namespace Consumables
 
         public static void Add(ConsumableType type, int count)
         {
-            if (PlayerStats.Consumables.ContainsKey(type))
-                PlayerStats.Consumables[type] += count;
+            if (PlayerStats.Instance.Consumables.ContainsKey(type))
+                PlayerStats.Instance.Consumables[type] += count;
             else
-                PlayerStats.Consumables.Add(type, count);
+                PlayerStats.Instance.Consumables.Add(type, count);
         }
     }
 }

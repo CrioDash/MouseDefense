@@ -26,10 +26,10 @@ namespace UI
 
         private void Start()
         {
-            if (!PlayerStats.Consumables.ContainsKey(Type))
+            if (!PlayerStats.Instance.Consumables.ContainsKey(Type))
                 gameObject.SetActive(false);
             else
-                Text.text = PlayerStats.Consumables[Type].ToString();
+                Text.text = PlayerStats.Instance.Consumables[Type].ToString();
         }
 
         public void OnEndDrag(PointerEventData eventData)

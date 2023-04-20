@@ -12,24 +12,24 @@ namespace Enemies
                _enemy = GetComponent<EnemyParatrooper>();
             if (_parashoot==null && _enemy.ParashootHP > 0)
                 _parashoot = transform.Find("Parashoot").gameObject;
-            if (_enemy.ParashootHP > 0)
+            if (_enemy.parashootHP > 0)
             {
-                _enemy.ParashootHP -= dmg;
+                _enemy.parashootHP -= dmg;
                 _enemy.CreateDamageText(dmg);
             }
-            if (_parashoot!=null && _enemy.ParashootHP <= 0)
+            if (_parashoot.gameObject.activeSelf && _enemy.parashootHP <= 0)
             {
-                _enemy.GetComponent<Rigidbody>().AddForce(0, -350, 0);
-                _enemy.Type = EnemyType.None;
-                Destroy(_parashoot.gameObject);
+                _enemy.GetComponent<Rigidbody>().AddForce(0, -1000, 0);
+                _enemy.moveType = EnemyMoveType.None;
+                _parashoot.gameObject.SetActive(false);
             }
-            if (_parashoot==null)
+            if (!_parashoot.gameObject.activeSelf)
             {
                 _enemy.CreateDamageText(dmg);
                 _enemy.CurrentHealth -= dmg;
                 _enemy.CreateDamageText(dmg);
                 if (_enemy.CurrentHealth <= 0)
-                    Destroy(_enemy.gameObject);
+                     _enemy.MoveToPool();
             }
         }
     }

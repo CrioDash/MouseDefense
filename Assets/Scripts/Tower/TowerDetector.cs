@@ -34,6 +34,15 @@ public class TowerDetector : MonoBehaviour
         UpdateColliders();
     }
 
+    private void Update()
+    {
+        if(_parent.GetTarget()==null)
+            return;
+        if(_parent.GetTarget().gameObject.activeSelf)
+            return;
+        _parent.SetTarget(null);
+    }
+
     public void UpdateColliders()
     {
         if (Type == ColliderType.Sphere)
@@ -53,26 +62,32 @@ public class TowerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(!other.CompareTag("Enemy") || _parent.GetTarget() != null)
-            return;
+        if(_parent.GetTarget()!=null)
+            if(!other.CompareTag("Enemy") || _parent.GetTarget().gameObject.activeSelf) 
+                return;
         Enemy enemy = other.GetComponent<Enemy>();
-        if(enemy.Type!=EnemyType.None && ((int)_parent.shootType == (int)enemy.Type || _parent.shootType==ShootType.Both))
+        if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
             _parent.SetTarget(other.GetComponent<Enemy>());
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Enemy") && (_parent.GetTarget()==null || _parent.GetTarget().Type == EnemyType.None))
+        if(_parent.GetTarget()==null)
+            return;
+        if (other.CompareTag("Enemy") && (!_parent.GetTarget().gameObject.activeSelf || _parent.GetTarget().moveType == EnemyMoveType.None))
         {
+            _parent.SetTarget(null);
             Enemy enemy = other.GetComponent<Enemy>();
-            if(enemy.Type!=EnemyType.None && ((int)_parent.shootType == (int)enemy.Type || _parent.shootType==ShootType.Both))
+            if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
                 _parent.SetTarget(other.GetComponent<Enemy>());
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Enemy") || _parent.GetTarget()==null) 
+        if(_parent.GetTarget()==null)
+            return;
+        if (!other.CompareTag("Enemy") || !_parent.GetTarget().gameObject.activeSelf) 
             return;
         _parent.SetTarget(null);
     }

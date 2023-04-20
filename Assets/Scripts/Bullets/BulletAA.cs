@@ -7,24 +7,22 @@ namespace Bullets
 {
     public class BulletAA:Bullet
     {
-        private GameObject _target;
 
-        private void Start()
+        public override IEnumerator Move()
         {
-            _target = Parent.GetTarget().gameObject;
-        }
-        
-        public override void Move()
-        {
-            if (_target==null)
+            while (true)
             {
-                Destroy(gameObject);
-                return;
+                if (_target == null)
+                {
+                    ReturnToPool();
+                    yield break;
+                }
+                transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
+                    BulletSpeed * Time.deltaTime);
+                transform.LookAt(_target.transform.position);
+                transform.eulerAngles = new Vector3(transform.eulerAngles.x + 90f, transform.eulerAngles.y, 0);
+                yield return null;
             }
-            transform.position = Vector3.MoveTowards(transform.position, _target.transform.position,
-                BulletSpeed * Time.deltaTime);
-            transform.LookAt(_target.transform.position);
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x+90f,  transform.eulerAngles.y, 0);
         }
         
         private void OnTriggerEnter(Collider other)
@@ -32,7 +30,7 @@ namespace Bullets
             if (other.CompareTag("Enemy"))
             {
                 _target.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Normal);
-                Destroy(gameObject);
+                ReturnToPool();
             }
         }
     }
