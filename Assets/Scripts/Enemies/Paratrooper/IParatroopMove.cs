@@ -22,11 +22,14 @@ namespace Enemies.Paratrooper
             body.useGravity = true;
             yield return new WaitUntil(() => transform.position.y <= 0.5f);
             if (!enemy.parashoot.gameObject.activeSelf)
+            {
                 enemy.TakeDamage.TakeDamage(100, DamageType.Normal);
+                yield break;
+            }
             enemy.moveType = EnemyMoveType.Ground;
             enemy.parashoot.SetActive(false);
             enemy.parashootHP = 0;
-            GetComponent<NavMeshAgent>().enabled = true;
+            enemy.Agent.enabled = true;
             CapsuleCollider collider = GetComponent<CapsuleCollider>();
             collider.enabled = false;
             collider.enabled = true;
@@ -39,7 +42,7 @@ namespace Enemies.Paratrooper
                     () => Vector3.Distance(enemy.transform.position, enemy.Destination) <= 2f);
             }
             Level.Instance.TakeDamage(enemy.Damage);
-            enemy.MoveToPool();
+            StartCoroutine(enemy.MoveToPool());
         }
         
     }

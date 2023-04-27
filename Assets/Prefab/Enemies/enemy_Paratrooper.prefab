@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3153955376935690068}
   - component: {fileID: 4943597889821709025}
   - component: {fileID: 2646488247825504566}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 3360803078566002096}
   - component: {fileID: 3671659877023158464}
   - component: {fileID: 538164724941987510}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: enemy_Paratrooper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -217,7 +217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 197f27ce0b000f548ae7754fc52f17e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 21300000, guid: 8e7b331a157416145ab05ed5cc84c5a3, type: 3}
   moveType: 1
   MaxHealth: 30
@@ -225,6 +224,7 @@ MonoBehaviour:
   Damage: 1
   Speed: 7.5
   EnemyType: 2
+  Blood: 1
   Agent: {fileID: 0}
   ParashootHP: 3
   parashootHP: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 8800111811238637787}
   - component: {fileID: 5501603561270655908}
   - component: {fileID: 3814379472636187717}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -323,7 +323,7 @@ GameObject:
   - component: {fileID: 6174894046116247836}
   - component: {fileID: 8814892639359516766}
   - component: {fileID: 3375620593856100309}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -406,7 +406,7 @@ GameObject:
   - component: {fileID: 8247034674125627489}
   - component: {fileID: 7528124839530780369}
   - component: {fileID: 959136724166931812}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -487,7 +487,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9036431090835765025}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Parashoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

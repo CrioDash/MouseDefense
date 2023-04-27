@@ -14,10 +14,10 @@ namespace Consumables
         
         protected ConsumableType _type;
         protected RaycastHit ConsumableRaycast;
+        protected float Radius;
+        protected SpriteRenderer ColorCircle;
+        protected SpriteRenderer RadiusCircle;
         
-        private GameObject _circle;
-        private Material _material;
-        private SpriteRenderer _spriteRenderer;
         private Camera _camera;
         private float _delay = 0.1f;
         private float _timer = 0f;
@@ -32,8 +32,8 @@ namespace Consumables
 
         private void Awake()
         {
-            _material = transform.GetChild(0).GetComponent<Renderer>().material;
-            _spriteRenderer = transform.GetChild(0).GetChild(0).GetComponent<SpriteRenderer>();
+            ColorCircle = transform.GetChild(0).GetComponent<SpriteRenderer>();
+            RadiusCircle = transform.GetChild(1).GetComponent<SpriteRenderer>();
             _camera = Camera.main;
         }
 
@@ -51,29 +51,28 @@ namespace Consumables
             Physics.Raycast(ray, out ConsumableRaycast);
             if(ConsumableRaycast.collider==null)
                 return;
-            if (ConsumableRaycast.collider.CompareTag("Road")|ConsumableRaycast.collider.CompareTag("Enemy"))
-                ChangeColor(Color.green);
+            if (ConsumableRaycast.collider.CompareTag("Road"))
+                ChangeColor(new Color(0,1,0,0.4f));
             else
-                ChangeColor(Color.red);
+                ChangeColor(new Color(1,0,0,0.4f));
             _timer -= _delay;
         }
         
         private void OnDestroy()
         {
-            if (ConsumableRaycast.collider.CompareTag("Road")||ConsumableRaycast.collider.CompareTag("Enemy"))
+            if (ConsumableRaycast.collider.CompareTag("Road"))
             {
                 PlayerStats.Instance.Consumables[_type]--;
                 Activate();
             }
             Parent.Text.text = PlayerStats.Instance.Consumables[Parent.Type].ToString();
             if (PlayerStats.Instance.Consumables[Parent.Type]==0)
-                gameObject.SetActive(false);
+                Parent.gameObject.SetActive(false);
         }
 
         public void ChangeColor(Color color)
         {
-            _material.color = color;
-            _spriteRenderer.color = color;
+            ColorCircle.color = color;
         }
 
         public abstract void Activate();

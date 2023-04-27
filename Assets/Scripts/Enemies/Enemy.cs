@@ -7,6 +7,7 @@ using Events;
 using Game;
 using GameData;
 using TMPro;
+using UI;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.AI;
@@ -18,8 +19,7 @@ namespace Enemies
     [RequireComponent(typeof(EnemyPause))]
     public abstract class Enemy : MonoBehaviour
     {
-        [Header("Enemy stats")] 
-        public TextMeshProUGUI Text;
+        [Header("Enemy stats")]
         public Sprite Icon;
         public EnemyMoveType moveType;
         public float MaxHealth;
@@ -27,6 +27,7 @@ namespace Enemies
         public int Damage;
         public float Speed;
         public Variables.EnemyType EnemyType;
+        public bool Blood;
 
         public List<Transform> Waypoints
         {
@@ -63,11 +64,14 @@ namespace Enemies
         [HideInInspector]
         public NavMeshAgent Agent;
 
-        public void CreateDamageText(float dmg)
+        public void CreateDamageText(float dmg, bool blood)
         {
-            
-            TextMeshProUGUI text = Instantiate(Text, Level.Instance.CanvasText.transform).GetComponent<TextMeshProUGUI>();
+
+            TextMeshProUGUI text = Level.Instance.TextPool.Get();
+            if(blood) 
+                Level.Instance.ParticlePool.Get(transform);
             text.transform.position = transform.position;
+            text.transform.Translate(Vector3.back * 30f);
             text.color = Color.Lerp(Color.green, Color.red, 1 - CurrentHealth / MaxHealth);
             Vector3 pos = text.transform.localPosition;
             pos.x += 50;
@@ -80,9 +84,13 @@ namespace Enemies
         {
             
             CurrentHealth = MaxHealth;
-            if(Agent!=null)
-                Agent.speed = Speed;
             transform.position = Level.Instance.enemyContainer.transform.position;
+            if (Agent != null)
+            {
+                Agent.enabled = true;
+                Agent.speed = Speed;
+            }
+           
             SetStats();
             if(Move!=null)
                 StartCoroutine(Move.Move());
@@ -99,21 +107,25 @@ namespace Enemies
             if (transform.position.y <= -20)
             {
                 CurrentHealth = 0;
-                MoveToPool();
+                StartCoroutine(MoveToPool());
             }
         }
 
         public abstract void SetStats();
         
 
-        public void MoveToPool()
+        public IEnumerator MoveToPool()
         {
             if (CurrentHealth <= 0)
             {
                 Level.Instance.ChangeMoney(Reward);
             }
-            StopAllCoroutines();
-            transform.position = Level.Instance.enemyContainer.transform.position;
+            if(Agent!=null) 
+                Agent.enabled = false;
+            if(Move!=null)
+                StopCoroutine(Move.Move());
+            transform.position = Vector3.left*200;
+            yield return new WaitForSeconds(0.5f);
             Level.Instance.EnemyPool.Add(EnemyType, this);
         }
         

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7324970917720888011}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 7324970918970974528}
   - component: {fileID: 3216584044421083843}
   - component: {fileID: 3708517231581857872}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: enemy_Dammer
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -166,14 +166,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13f0f6b522555754ab704fbc54639c14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 21300000, guid: fa59ffc22b776fa488f6db9786f55ea4, type: 3}
-  Type: 0
+  moveType: 0
   MaxHealth: 30
   Reward: 50
   Damage: 0
   Speed: 6
   EnemyType: 3
+  Blood: 1
   Agent: {fileID: 0}
   dam: {fileID: 7324970919620461262}
   damPrefab: {fileID: 9054639037492785073, guid: afc5acd6a572c6e4b94b3b02a92733aa, type: 3}
@@ -188,7 +188,7 @@ GameObject:
   - component: {fileID: 7324970919620461233}
   - component: {fileID: 7324970919620461234}
   - component: {fileID: 7324970919620461235}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 7324970919647523400}
   - component: {fileID: 7324970919647523402}
   - component: {fileID: 7324970919647523403}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}

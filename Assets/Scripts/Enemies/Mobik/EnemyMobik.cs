@@ -8,8 +8,10 @@ namespace Enemies
         public override void SetStats()
         {
             SetWaypoints(Level.Instance.Waypoints.ToArray());
-            Move = gameObject.AddComponent<DefaultMove>();
-            TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();
+            if(GetComponent<IEnemyMove>()==null)
+                Move = gameObject.AddComponent<DefaultMove>();
+            if(GetComponent<ITakeDamage>()==null)
+                TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();
         }
         
     }

@@ -11,14 +11,20 @@ namespace UI.Menu
     {
         public static MenuSetData Instance;
 
+        [Header("Settings", order = 0)]
         public UniversalRenderPipelineAsset URP;
         public Toggle shadowsToggle;
         public Slider renderScaleSlider;
+
+        //[Header("Shop", order = 1)]
+        
+        
+        
         
         private void Start()
         {
+            LoadingScreen.Instance.StartCoroutine("CloseAnimation");
             Instance = this;
-            URP.renderScale = 1;
             renderScaleSlider.value = PlayerStats.Instance.RenderScale;
             shadowsToggle.isOn = PlayerStats.Instance.IsShadows;
         }

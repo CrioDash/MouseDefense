@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -4301176738430422318}
   - component: {fileID: 6588873426902170602}
   - component: {fileID: 5083145936569915903}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: enemy_Dam
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -159,12 +159,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d860e0e975f7ea641acc1c6a53cc96df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 0}
-  Type: 0
+  moveType: 0
   MaxHealth: 30
   Reward: 0
   Damage: 0
   Speed: 0
   EnemyType: 0
+  Blood: 0
   Agent: {fileID: 0}

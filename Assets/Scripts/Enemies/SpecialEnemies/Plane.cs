@@ -19,22 +19,19 @@ namespace Enemies.SpecialEnemies
         {
             target = CalculatePoints();
             transform.position = new Vector3(-60, 50, target.z);
+            if(Move==null)
+                Move = gameObject.AddComponent<IPlaneMove>();
             StartCoroutine(WaitDesant());
+            
         }
         
-
-        public override void Update()
-        {
-            transform.position = Vector3.MoveTowards(transform.position, new Vector3(130, 50, transform.position.z),
-                Speed * Time.deltaTime);
-        }
 
         public IEnumerator WaitDesant()
         {
             yield return new WaitUntil(() => transform.position.x >= target.x);
             StartCoroutine(SpawnDesant(Random.Range(1,3), 2f));
             yield return new WaitUntil(() => transform.localPosition.x >= 130);
-            MoveToPool();
+            StartCoroutine(MoveToPool());
         }
 
         private IEnumerator SpawnDesant(int count, float time)
@@ -65,7 +62,6 @@ namespace Enemies.SpecialEnemies
             }
 
             Vector3 random = points[Random.Range(0, points.Count - 1)];
-            Debug.Log(random);
             return random;
         }
     }

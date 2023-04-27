@@ -26,7 +26,7 @@ namespace UI
 
         private void Start()
         {
-            if (!PlayerStats.Instance.Consumables.ContainsKey(Type))
+            if (!PlayerStats.Instance.Consumables.ContainsKey(Type) || PlayerStats.Instance.Consumables[Type] == 0)
                 gameObject.SetActive(false);
             else
                 Text.text = PlayerStats.Instance.Consumables[Type].ToString();

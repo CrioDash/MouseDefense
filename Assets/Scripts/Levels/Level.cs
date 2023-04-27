@@ -7,6 +7,8 @@ using Enemies.Dammer;
 using Game;
 using GameData;
 using Levels;
+using Particles;
+using UI;
 using UI.Pause;
 using Unity.AI.Navigation;
 using Unity.VisualScripting;
@@ -23,6 +25,7 @@ public abstract class Level : MonoBehaviour
     [Header("Level Settings")]
     public GameObject enemyContainer;
     public GameObject bulletContainer;
+    public GameObject textContainer;
     public List<Transform> Waypoints;
     public List<GameObject> EnemyPrefabs;
     public List<Transform> DammerPositions;
@@ -32,6 +35,10 @@ public abstract class Level : MonoBehaviour
     public BulletObjectPool BulletPool;
     [HideInInspector]
     public EnemyObjectPool EnemyPool;
+    [HideInInspector]
+    public DamageTextPool TextPool;
+    [HideInInspector]
+    public ParticlePool ParticlePool;
     
     public UniversalRenderPipelineAsset URP;
     public Light Light;
@@ -57,6 +64,8 @@ public abstract class Level : MonoBehaviour
         Instance = this;
         BulletPool = GetComponent<BulletObjectPool>();
         EnemyPool = GetComponent<EnemyObjectPool>();
+        TextPool = GetComponent<DamageTextPool>();
+        ParticlePool = GetComponent<ParticlePool>();
     }
 
     private void Start()

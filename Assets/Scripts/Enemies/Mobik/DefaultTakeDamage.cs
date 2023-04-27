@@ -10,11 +10,14 @@ namespace Enemies
         {
             if(_enemy==null)
                 _enemy = GetComponent<Enemy>();
+            bool Blood = _enemy.Blood;
+            if (type == DamageType.Periodical)
+                Blood = false;
             _enemy.CurrentHealth-=dmg;
-            _enemy.CreateDamageText(dmg);
+            _enemy.CreateDamageText(dmg, Blood);
             if (_enemy.CurrentHealth <= 0)
             {
-                _enemy.MoveToPool();
+               StartCoroutine(_enemy.MoveToPool());
             }
         }
     }

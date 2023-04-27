@@ -79,7 +79,7 @@ public abstract class Tower : MonoBehaviour
     {
         while (true)
         {
-            if(TowerAnimation!=null && GetTarget()!=null)
+            if(TowerAnimation!=null && GetTarget()!=null && GetTarget().gameObject.activeSelf)
                 TowerAnimation.PlayAnimation();
             yield return null;
             yield return null;

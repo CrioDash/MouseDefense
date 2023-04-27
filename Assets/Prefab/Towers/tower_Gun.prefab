@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
-  attackRange: 6
+  attackRange: 8
   radiusSprite: {fileID: 648251222525294705}
   cost: 1
   head: {fileID: 2189462343881450174}
@@ -397,7 +397,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 776161753979357573, guid: 1fa5e239ad1972546abb64dec3239322, type: 3}
   bulletSpeed: 25
   bulletCooldown: 1
-  bulletDamage: 5
+  bulletDamage: 1
   bulletSpawn: {fileID: 2189462343544321955}
 --- !u!1 &2189462344544367725
 GameObject:

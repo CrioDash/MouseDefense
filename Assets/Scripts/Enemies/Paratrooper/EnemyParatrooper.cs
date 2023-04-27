@@ -13,8 +13,10 @@ namespace Enemies
         public GameObject parashoot;
         public override void SetStats()
         {
-            Move = gameObject.AddComponent<IParatroopMove>();
-            TakeDamage = gameObject.AddComponent<IParatrooperTakeDamage>();
+            if(GetComponent<IEnemyMove>()==null)
+                Move = gameObject.AddComponent<IParatroopMove>();
+            if(GetComponent<ITakeDamage>() == null)
+             TakeDamage = gameObject.AddComponent<IParatrooperTakeDamage>();
         }
         
     }

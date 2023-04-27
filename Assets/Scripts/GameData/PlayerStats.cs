@@ -21,6 +21,9 @@ namespace GameData
         public int BonusHealth = 0;
         public int BonusGold = 0;
         
+        //Consumables
+        public int PoisonDamage = 0;
+        public float PoisonRadius = 0;
 
         //Towers
         public Dictionary<TowerType, int> Towers = new Dictionary<TowerType, int>();
@@ -30,8 +33,15 @@ namespace GameData
 
         public PlayerStats()
         {
-            Towers.Add(TowerType.Gun, 1);
+            Towers.Add(TowerType.Gun, 3);
+            Consumables.Add(Consumable.ConsumableType.Bomb, 3);
+            Consumables.Add(Consumable.ConsumableType.Poison, 3);
+            IsShadows = true;
             RenderScale = 1f;
+            BonusHealth = 0;
+            BonusGold = 0;
+            PoisonDamage = 2;
+            PoisonRadius = 12;
         }
         
     }

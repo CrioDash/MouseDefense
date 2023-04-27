@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1366597815298807160}
   - component: {fileID: 1741836401922937323}
   - component: {fileID: 3612202857993998965}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cylinder (3)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f11683921cf0f914a9f154a9c6719d7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 7818669595112283992}
   - component: {fileID: 4982044887334372541}
   - component: {fileID: 3679235643100706356}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cylinder (2)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f11683921cf0f914a9f154a9c6719d7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 5888518215530743053}
   - component: {fileID: 3434253680254024140}
   - component: {fileID: 5221591825049988855}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cylinder
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f11683921cf0f914a9f154a9c6719d7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -258,7 +258,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7935305426215812486}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 7068252206964828726}
   - component: {fileID: 2684371419280891297}
   - component: {fileID: 2332059471656766913}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: enemy_Tractor
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -414,14 +414,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a5db77927d35e544b64e6b61a754afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 21300000, guid: 2972403a9e689724f8ec98f0ed77eefc, type: 3}
-  Type: 0
+  moveType: 0
   MaxHealth: 25
   Reward: 25
   Damage: 1
   Speed: 8
   EnemyType: 1
+  Blood: 0
   Agent: {fileID: 0}
 --- !u!1 &4829992959438374759
 GameObject:
@@ -432,7 +432,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4392909658011513384}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Body
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ GameObject:
   - component: {fileID: 6974174671110285795}
   - component: {fileID: 1954624260945637248}
   - component: {fileID: 7967219583432016639}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -551,7 +551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8786050905143466336}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -583,7 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2640512380566234319}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 2418510800337056703}
   - component: {fileID: 8832839072022561628}
   - component: {fileID: 5592764899443058892}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Cylinder (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f11683921cf0f914a9f154a9c6719d7c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -698,7 +698,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3835350020593035962}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Wheel3
   m_TagString: Enemy
   m_Icon: {fileID: 0}

@@ -13,18 +13,18 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
     public List<MenuBackgroundScript> MenuScripts = new List<MenuBackgroundScript>();
     public List<RectTransform> MenuSlides = new List<RectTransform>();
     public int sceneCount;
+    public Toggle[] Toggles;
 
     private RectTransform _canvas;
     private int _activeScene = 1;
     private Vector2 _startPos;
     private int _moveDifference;
     private float _timeDifference;
-    private Toggle[] _toggles;
+    
    
     void Start()
     {
         _canvas = transform.root.GetComponent<RectTransform>();
-        _toggles = FindObjectOfType<ToggleGroup>().GetComponentsInChildren<Toggle>();
         MenuSlides[0].sizeDelta = new Vector2(_canvas.rect.width, _canvas.rect.height);
         MenuSlides[0].transform.localPosition = new Vector3(-_canvas.rect.width / 2 + 3 , 0, 0);
         MenuSlides[1].sizeDelta = new Vector2(_canvas.rect.width, _canvas.rect.height);
@@ -70,7 +70,7 @@ public class ScreenSlideScript : MonoBehaviour, IDragHandler, IBeginDragHandler,
            StartCoroutine(MenuScripts[_activeScene].Fade(1,0));
            _activeScene += difference;
            StartCoroutine(MenuScripts[_activeScene].Fade(0,1));
-           _toggles[_activeScene].isOn = true;
+           Toggles[_activeScene].isOn = true;
        }
        MenuSlides[_activeScene].SetAsLastSibling();
        StartCoroutine(RotateAnimation(transform.localRotation.eulerAngles.y, (_activeScene - 1) * 90f));

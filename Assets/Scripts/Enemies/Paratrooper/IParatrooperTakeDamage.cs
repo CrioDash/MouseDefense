@@ -10,12 +10,15 @@ namespace Enemies
         {
             if(_enemy==null)
                _enemy = GetComponent<EnemyParatrooper>();
+            bool Blood = _enemy.Blood;
+            if (type == DamageType.Periodical)
+                Blood = false;
             if (_parashoot==null && _enemy.ParashootHP > 0)
                 _parashoot = transform.Find("Parashoot").gameObject;
             if (_enemy.parashootHP > 0)
             {
+                _enemy.CreateDamageText(dmg, false);
                 _enemy.parashootHP -= dmg;
-                _enemy.CreateDamageText(dmg);
             }
             if (_parashoot.gameObject.activeSelf && _enemy.parashootHP <= 0)
             {
@@ -25,11 +28,10 @@ namespace Enemies
             }
             if (!_parashoot.gameObject.activeSelf)
             {
-                _enemy.CreateDamageText(dmg);
                 _enemy.CurrentHealth -= dmg;
-                _enemy.CreateDamageText(dmg);
+                _enemy.CreateDamageText(dmg, Blood);
                 if (_enemy.CurrentHealth <= 0)
-                     _enemy.MoveToPool();
+                     StartCoroutine(_enemy.MoveToPool());
             }
         }
     }

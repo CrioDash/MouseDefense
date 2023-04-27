@@ -36,6 +36,7 @@ namespace Enemies
         public void Add(EnemyType type, Enemy enemy)
         {
             _enemies[type].Push(enemy);
+            enemy.StopAllCoroutines();
             enemy.gameObject.SetActive(false);
         }
     }

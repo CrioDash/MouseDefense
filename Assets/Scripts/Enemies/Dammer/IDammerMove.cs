@@ -19,7 +19,7 @@ namespace Enemies.Dammer
             enemy.dam.gameObject.SetActive(false);
             enemy.Destination = enemy.Waypoints[1].transform.position;
             yield return wait;
-            enemy.MoveToPool();
+            StartCoroutine(enemy.MoveToPool());
         }
     }
 }

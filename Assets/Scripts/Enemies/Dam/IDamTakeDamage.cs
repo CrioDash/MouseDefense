@@ -17,7 +17,7 @@ namespace Enemies.SpecialEnemies
             if(_enemy==null)
                 _enemy = GetComponent<Enemy>();
             _enemy.CurrentHealth-=dmg;
-            _enemy.CreateDamageText(dmg);
+            _enemy.CreateDamageText(dmg, false);
             if (_enemy.CurrentHealth <= 0)
             {
                 Rigidbody body = _enemy.GetComponent<Rigidbody>();

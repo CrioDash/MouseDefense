@@ -15,8 +15,10 @@ namespace Enemies.Shielder
             shieldHP = ShieldHP;
             Shield.SetActive(true);
             SetWaypoints(Level.Instance.Waypoints.ToArray());
-            Move = gameObject.AddComponent<DefaultMove>();
-            TakeDamage = gameObject.AddComponent<IShielderTakeDamage>();
+            if(GetComponent<IEnemyMove>()==null)
+                Move = gameObject.AddComponent<DefaultMove>();
+            if(GetComponent<ITakeDamage>()==null)
+                TakeDamage = gameObject.AddComponent<IShielderTakeDamage>();
         }
     }
 }

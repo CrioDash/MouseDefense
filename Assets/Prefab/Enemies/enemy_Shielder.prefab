@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 267227666164986220}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4539417356992535499}
   - component: {fileID: 4539417356992535497}
   - component: {fileID: 4539417356992535496}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 4539417357003205426}
   - component: {fileID: 4539417357003205425}
   - component: {fileID: 4539417357003205424}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 4539417357653936323}
   - component: {fileID: 4959510830922940781}
   - component: {fileID: 4861531443614904399}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: enemy_Shielder
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -334,17 +334,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 790f270e3b9c71f47b244fdca2df8dca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Text: {fileID: 1986236484858024807, guid: 5152f743296b3394592eeca2fb056287, type: 3}
   Icon: {fileID: 21300000, guid: 8be4fb2e3873bbf498b6c09c34206458, type: 3}
-  Type: 0
+  moveType: 0
   MaxHealth: 20
   Reward: 30
   Damage: 1
   Speed: 5
   EnemyType: 5
+  Blood: 1
   Agent: {fileID: 0}
   ShieldHP: 3
   Shield: {fileID: 4127705281383397430}
+  shieldHP: 0
 --- !u!1 &4539417358853372747
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,7 +355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4539417358853372744}
-  m_Layer: 7
+  m_Layer: 2
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -388,7 +389,7 @@ GameObject:
   - component: {fileID: 5124285362465353467}
   - component: {fileID: 6301103603379192226}
   - component: {fileID: 1952380038275450402}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -471,7 +472,7 @@ GameObject:
   - component: {fileID: 3076749689463090992}
   - component: {fileID: 1681834866966178243}
   - component: {fileID: 2634865106880992343}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

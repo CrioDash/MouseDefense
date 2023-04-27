@@ -28,16 +28,13 @@ namespace Levels
             DontDestroyOnLoad(gameObject);
         }
 
-        void Start()
-        {
-            
-        }
-
         public void DeleteSave()
         {
             SaveSystem.DeleteSave();
             SaveSystem.Load();
+            Switch(SceneManager.GetActiveScene().buildIndex);
         }
+        
 
         public void Switch(int num)
         {
@@ -47,6 +44,7 @@ namespace Levels
 
         public IEnumerator LoadLevel(int num)
         {
+            LoadingScreen.Instance.Fade = true;
             yield return LoadingScreen.Instance.StartCoroutine("ShowAnimation");
             AsyncOperation sceneLoad = SceneManager.LoadSceneAsync(num);
             sceneLoad.allowSceneActivation = false;
@@ -55,14 +53,13 @@ namespace Levels
             {
                 yield return null;
             }
-            LoadingScreen.Instance.Fade = true;
+            
             Resources.LoadAll("Prefab");
             sceneLoad.allowSceneActivation = true;
             yield return new WaitUntil(() => sceneLoad.isDone);
-            EventBus.Publish(EventType.PAUSE);
-            yield return new WaitForSecondsRealtime(1f);
-            LoadingScreen.Instance.StartCoroutine("CloseAnimation");
-            EventBus.Publish(EventType.START);
+            yield return LoadingScreen.Instance.StartCoroutine("CloseAnimation");
+            if(Level.Instance!=null) 
+                EventBus.Publish(EventType.START);
         }
     }
 }

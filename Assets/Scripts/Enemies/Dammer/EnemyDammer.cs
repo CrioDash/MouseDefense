@@ -15,9 +15,10 @@ namespace Enemies.Dammer
         {
             SetWaypoints(Level.Instance.DammerPositions.ToArray());
             DamPoints = Level.Instance.DamPositions;
-           
-            Move = gameObject.AddComponent<IDammerMove>();
-            TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();
+            if(GetComponent<IEnemyMove>()==null)
+                Move = gameObject.AddComponent<IDammerMove>();
+            if(GetComponent<ITakeDamage>()==null)
+                TakeDamage = gameObject.AddComponent<DefaultTakeDamage>();
         }
     }
 }

@@ -32,15 +32,25 @@ public class TowerDetector : MonoBehaviour
     private void Start()
     {
         UpdateColliders();
+        StartCoroutine(CheckTarget());
     }
 
-    private void Update()
+    public IEnumerator CheckTarget()
     {
-        if(_parent.GetTarget()==null)
-            return;
-        if(_parent.GetTarget().gameObject.activeSelf)
-            return;
-        _parent.SetTarget(null);
+        WaitForSeconds wait = new WaitForSeconds(0.1f);
+        while (true)
+        {
+            if (_parent.GetTarget() != null)
+            {
+                if (!_parent.GetTarget().gameObject.activeSelf)
+                {
+                    _parent.SetTarget(null);
+                    yield return null;
+                    continue;
+                }
+            }
+            yield return null;
+        }
     }
 
     public void UpdateColliders()
@@ -62,33 +72,49 @@ public class TowerDetector : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(_parent.GetTarget()!=null)
-            if(!other.CompareTag("Enemy") || _parent.GetTarget().gameObject.activeSelf) 
-                return;
-        Enemy enemy = other.GetComponent<Enemy>();
-        if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
-            _parent.SetTarget(other.GetComponent<Enemy>());
+        if(!other.CompareTag("Enemy"))
+            return;
+        if (_parent.GetTarget() == null)
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy.moveType != EnemyMoveType.None && ((int) _parent.shootType == (int) enemy.moveType ||
+                                                         _parent.shootType == ShootType.Both))
+                _parent.SetTarget(other.GetComponent<Enemy>());
+        }
+        else if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if (enemy.moveType != EnemyMoveType.None && ((int) _parent.shootType == (int) enemy.moveType ||
+                                                         _parent.shootType == ShootType.Both))
+                _parent.SetTarget(other.GetComponent<Enemy>());
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if(_parent.GetTarget()==null)
+        if(!other.CompareTag("Enemy"))
             return;
-        if (other.CompareTag("Enemy") && (!_parent.GetTarget().gameObject.activeSelf || _parent.GetTarget().moveType == EnemyMoveType.None))
+        if(_parent.GetTarget()==null)
         {
-            _parent.SetTarget(null);
             Enemy enemy = other.GetComponent<Enemy>();
             if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
                 _parent.SetTarget(other.GetComponent<Enemy>());
+        }
+        else if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
+                _parent.SetTarget(other.GetComponent<Enemy>());
+            if (_parent.GetTarget().moveType == EnemyMoveType.None)
+                _parent.SetTarget(null);
         }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if(_parent.GetTarget()==null)
+        if (_parent.GetTarget() == null)
             return;
-        if (!other.CompareTag("Enemy") || !_parent.GetTarget().gameObject.activeSelf) 
-            return;
-        _parent.SetTarget(null);
+        if (other.gameObject == _parent.GetTarget().gameObject)
+            _parent.SetTarget(null);
     }
 }

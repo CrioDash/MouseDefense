@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Security.Cryptography;
 using TMPro;
 using UnityEngine;
@@ -14,9 +15,15 @@ namespace UI
             _text = GetComponent<TextMeshProUGUI>();
         }
 
-        private void Start()
+        private void OnEnable()
         {
-           Destroy(gameObject, 0.5f);
+            StartCoroutine(ToPool());
+        }
+
+        public IEnumerator ToPool()
+        {
+            yield return new WaitForSeconds(1f);
+            Level.Instance.TextPool.Add(_text);
         }
 
         private void Update()
