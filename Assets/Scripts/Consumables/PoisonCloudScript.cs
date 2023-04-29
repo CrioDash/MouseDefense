@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using System.Threading;
 using Enemies;
 using GameData;
 using UnityEngine;
@@ -14,7 +15,7 @@ namespace Consumables
 
         private static Dictionary<GameObject, bool> _enemies;
 
-        private float cd = 1f;
+        private float cd;
         private float time;
 
         private void Start()
@@ -23,7 +24,11 @@ namespace Consumables
                 _renderers = new Dictionary<int, List<Color>>();
             if (_enemies == null)
                 _enemies = new Dictionary<GameObject, bool>();
+            cd = 0.3f;
             StartCoroutine(Destroy());
+            ParticleSystem.ShapeModule shape = transform.GetChild(0).GetComponent<ParticleSystem>().shape;
+            shape.radius = PlayerStats.Instance.PoisonRadius / 2 - 1;
+            transform.GetChild(1).transform.localScale = new Vector3(PlayerStats.Instance.PoisonRadius,0.1f, PlayerStats.Instance.PoisonRadius);
         }
 
         private IEnumerator Destroy()
@@ -53,10 +58,15 @@ namespace Consumables
                 return;
             if (!_enemies.ContainsKey(other.gameObject))
             {
-                Debug.Log(other.GetInstanceID());
-                _enemies.Add(other.gameObject, true);
+                _enemies.Add(other.gameObject, false);
             }
-            _enemies[other.gameObject] = true;
+
+            if (!_enemies[other.gameObject])
+            {
+                _enemies[other.gameObject] = true;
+                StartCoroutine(TakeDamage(other.gameObject));
+            }
+
             if (!_renderers.ContainsKey(other.GetInstanceID()))
             {
                 _renderers.Add(other.GetInstanceID(), new List<Color>());
@@ -71,23 +81,13 @@ namespace Consumables
                 StartCoroutine(PaintColor(true, rend, rend.material.color, new Color(0, 0.5f, 0.1f, 1),
                     other.gameObject));
             }
-            
-
         }
 
         private void OnTriggerStay(Collider other)
         {
-            time += Time.deltaTime;
-            if(other.CompareTag("Enemy"))
-                _enemies[other.gameObject] = true;
-            if(time<cd)
+            if(!other.CompareTag("Enemy"))
                 return;
-            time = 0;
-            if (other.CompareTag("Enemy"))
-            {
-                other.GetComponent<Enemy>().TakeDamage
-                    .TakeDamage(PlayerStats.Instance.PoisonDamage, DamageType.Periodical);
-            }
+            _enemies[other.gameObject] = true;
         }
 
         private void OnTriggerExit(Collider other)
@@ -107,7 +107,6 @@ namespace Consumables
         private IEnumerator PaintColor(bool state, Renderer rend, Color start, Color end, GameObject gm)
         {
             yield return new WaitForSeconds(0.1f);
-            Debug.Log(gm.name);
             if(_enemies[gm]!=state)
                 yield break;
             float t = 0;
@@ -120,9 +119,20 @@ namespace Consumables
             }
             rend.material.color = end;
         }
-        
-        
-        
+
+        private IEnumerator TakeDamage(GameObject gm)
+        {
+            Enemy enemy = gm.GetComponent<Enemy>();
+            WaitForSeconds wait = new WaitForSeconds(PlayerStats.Instance.PoisonInterval);
+            while (true)
+            {
+                if(!_enemies[gm])
+                    yield break;
+                enemy.TakeDamage
+                    .TakeDamage(PlayerStats.Instance.PoisonDamage, DamageType.Periodical);
+                yield return wait;
+            }
+        }
         
     }
 }

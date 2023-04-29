@@ -22,6 +22,7 @@ namespace GameData
         public int BonusGold = 0;
         
         //Consumables
+        public float PoisonInterval = 0f;
         public int PoisonDamage = 0;
         public float PoisonRadius = 0;
 
@@ -40,7 +41,8 @@ namespace GameData
             RenderScale = 1f;
             BonusHealth = 0;
             BonusGold = 0;
-            PoisonDamage = 2;
+            PoisonDamage = 1;
+            PoisonInterval = 0.2f;
             PoisonRadius = 12;
         }
         
