@@ -21,11 +21,11 @@ namespace Levels
             ChangeMoney(225);
             yield return new WaitForSeconds(1f);
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Mobik));
-            StartCoroutine(Wave(Variables.EnemyType.Mobik, 50, 1.5f));
-            yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
+            StartCoroutine(Wave(Variables.EnemyType.Lighter, 50, 1.5f));
+            //yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Tractor));
             StartCoroutine(Wave(Variables.EnemyType.Tractor, 20, 3f));
-            yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
+            //yield return new WaitUntil(() => enemyContainer.transform.childCount == 0);
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Shielder));
             StartCoroutine(Wave(Variables.EnemyType.Shielder, 30, 2f));
             yield return StartCoroutine(WaveTextScript.Instance.TextMove(Variables.EnemyType.Parashoot));

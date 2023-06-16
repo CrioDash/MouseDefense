@@ -14,22 +14,24 @@ namespace Particles
         
         public void Get(Transform parent)
         {
-            if (_particles.Count != 0)
+            if (_particles.Count == 0)
+            {
+                Instantiate(BloodParticle_Prefab, parent);
+            }
+            else
             {
                 GameObject particle = _particles.Pop();
                 particle.SetActive(true);
                 particle.transform.parent = parent;
             }
-            else
-            {
-                Instantiate(BloodParticle_Prefab, parent);
-            }
         }
 
         public void Add(GameObject particle)
         {
+            particle.transform.parent = particle.transform.root;
             _particles.Push(particle);
             particle.SetActive(false);
+            Debug.Log(_particles.Count);
         }
     }
 }

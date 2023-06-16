@@ -22,6 +22,9 @@ namespace GameData
         public int BonusGold = 0;
         
         //Consumables
+        public Dictionary<Consumable.ConsumableType, int> Consumables =
+            new Dictionary<Consumable.ConsumableType, int>();
+        
         public float PoisonInterval = 0f;
         public int PoisonDamage = 0;
         public float PoisonRadius = 0;
@@ -29,12 +32,15 @@ namespace GameData
         //Towers
         public Dictionary<TowerType, int> Towers = new Dictionary<TowerType, int>();
 
-        public Dictionary<Consumable.ConsumableType, int> Consumables =
-            new Dictionary<Consumable.ConsumableType, int>();
+        //Corngun
+        
 
         public PlayerStats()
         {
             Towers.Add(TowerType.Gun, 3);
+            Towers.Add(TowerType.Artillery,3);
+            Towers.Add(TowerType.AntiAir, 3);
+            Towers.Add(TowerType.Corngun, 3);
             Consumables.Add(Consumable.ConsumableType.Bomb, 3);
             Consumables.Add(Consumable.ConsumableType.Poison, 3);
             IsShadows = true;

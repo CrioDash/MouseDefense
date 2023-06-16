@@ -27,9 +27,9 @@ namespace Tiles
         {
             Color = _tileRenderer.sharedMaterial.color;
         }
-
-
-        private void OnMouseEnter()
+        
+        
+        private void OnMouseOver()
         {
             if(PauseScript.IsPaused || EventSystem.current.IsPointerOverGameObject())
                 return;

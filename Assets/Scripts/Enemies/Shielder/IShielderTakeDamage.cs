@@ -21,7 +21,8 @@ namespace Enemies.Shielder
                 Vector3 dir = _shielder.Shield.transform.position - transform.position;
                 dir = -dir.normalized;
                 Vector3 waypoint = _shielder.Agent.destination;
-                _shielder.Agent.Warp(transform.position + dir/2);
+                if(type != DamageType.Periodical)
+                    _shielder.Agent.Warp(transform.position + dir/2);
                 _shielder.Agent.destination = waypoint;
                 _shielder.shieldHP -= type == DamageType.Splash ? 2 : 1;
                 _shielder.CreateDamageText(dmg, false);

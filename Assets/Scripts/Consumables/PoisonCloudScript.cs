@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Security.Cryptography;
 using System.Threading;
 using Enemies;
@@ -72,14 +73,20 @@ namespace Consumables
                 _renderers.Add(other.GetInstanceID(), new List<Color>());
                 foreach (Renderer rend in other.GetComponentsInChildren<Renderer>())
                 {
-                    Color clr = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, 1);
-                    _renderers[other.GetInstanceID()].Add(clr);
+                    if (rend.gameObject.CompareTag("Enemy"))
+                    {
+                        Color clr = new Color(rend.material.color.r, rend.material.color.g, rend.material.color.b, 1);
+                        _renderers[other.GetInstanceID()].Add(clr);
+                    }
                 }
             }
             foreach (Renderer rend in other.GetComponentsInChildren<Renderer>())
             {
-                StartCoroutine(PaintColor(true, rend, rend.material.color, new Color(0, 0.5f, 0.1f, 1),
-                    other.gameObject));
+                if (rend.gameObject.CompareTag("Enemy"))
+                {
+                    StartCoroutine(PaintColor(true, rend, rend.material.color, new Color(0, 0.5f, 0.1f, 1),
+                        other.gameObject));
+                }
             }
         }
 
@@ -96,10 +103,10 @@ namespace Consumables
                 return;
             Renderer[] rend = other.GetComponentsInChildren<Renderer>();
             _enemies[other.gameObject] = false;
-            for(int i = 0; i<rend.Length; i++)
+            foreach (Renderer ren in rend)
             {
-                StartCoroutine(PaintColor(false, rend[i], new Color(0, 0.50f, 0.100f,1),
-                    _renderers[other.GetInstanceID()][i], other.gameObject));
+                StartCoroutine(PaintColor(false, ren, new Color(0, 0.50f, 0.100f,1),
+                    _renderers[other.GetInstanceID()][rend.ToList().IndexOf(ren)], other.gameObject));
             }
             
         }

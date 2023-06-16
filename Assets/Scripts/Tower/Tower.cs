@@ -66,11 +66,10 @@ public abstract class Tower : MonoBehaviour
     {
         while (true)
         {
-            if (TowerShoot != null && GetTarget() != null)
+            if (TowerShoot != null && GetTarget() != null && GetTarget().gameObject.activeSelf && _target.transform.position.x >-100)
             {
                 TowerShoot.Shoot();
             }
-
             yield return new WaitForSeconds(bulletCooldown);
         }
     }
@@ -79,7 +78,7 @@ public abstract class Tower : MonoBehaviour
     {
         while (true)
         {
-            if(TowerAnimation!=null && GetTarget()!=null && GetTarget().gameObject.activeSelf)
+            if(TowerAnimation!=null && GetTarget()!=null && GetTarget().gameObject.activeSelf && _target.transform.position.x >-100) 
                 TowerAnimation.PlayAnimation();
             yield return null;
             yield return null;

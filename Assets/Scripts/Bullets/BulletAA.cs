@@ -12,7 +12,7 @@ namespace Bullets
         {
             while (true)
             {
-                if (_target == null)
+                if (!_target.activeSelf || _target.transform.position.x <-100)
                 {
                     ReturnToPool();
                     yield break;

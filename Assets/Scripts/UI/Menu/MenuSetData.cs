@@ -11,6 +11,7 @@ namespace UI.Menu
     {
         public static MenuSetData Instance;
 
+        //Обьекты которые находятся во вкладке настроек
         [Header("Settings", order = 0)]
         public UniversalRenderPipelineAsset URP;
         public Toggle shadowsToggle;
@@ -25,8 +26,12 @@ namespace UI.Menu
         {
             LoadingScreen.Instance.StartCoroutine("CloseAnimation");
             Instance = this;
+            
+            //Установка параметров в настройках
             renderScaleSlider.value = PlayerStats.Instance.RenderScale;
             shadowsToggle.isOn = PlayerStats.Instance.IsShadows;
+            
+            
         }
     }
 }

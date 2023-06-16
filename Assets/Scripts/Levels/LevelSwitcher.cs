@@ -24,10 +24,11 @@ namespace Levels
             if (Switcher != null)
                 Destroy(Switcher.gameObject);
             Switcher = this;
-            Application.targetFrameRate = 120;
+            Application.targetFrameRate = int.MaxValue;
             DontDestroyOnLoad(gameObject);
         }
 
+        //Удалить сохранения
         public void DeleteSave()
         {
             SaveSystem.DeleteSave();
@@ -36,12 +37,14 @@ namespace Levels
         }
         
 
+        
         public void Switch(int num)
         {
             SaveSystem.Save();
             Switcher.StartCoroutine(LoadLevel(num));
         }
 
+        //Переключить сцену
         public IEnumerator LoadLevel(int num)
         {
             LoadingScreen.Instance.Fade = true;
@@ -54,7 +57,6 @@ namespace Levels
                 yield return null;
             }
             
-            Resources.LoadAll("Prefab");
             sceneLoad.allowSceneActivation = true;
             yield return new WaitUntil(() => sceneLoad.isDone);
             yield return LoadingScreen.Instance.StartCoroutine("CloseAnimation");

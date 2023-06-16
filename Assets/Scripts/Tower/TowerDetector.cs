@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Timers;
 using Bullets;
 using Enemies;
 using Towers;
@@ -37,7 +38,6 @@ public class TowerDetector : MonoBehaviour
 
     public IEnumerator CheckTarget()
     {
-        WaitForSeconds wait = new WaitForSeconds(0.1f);
         while (true)
         {
             if (_parent.GetTarget() != null)
@@ -81,7 +81,7 @@ public class TowerDetector : MonoBehaviour
                                                          _parent.shootType == ShootType.Both))
                 _parent.SetTarget(other.GetComponent<Enemy>());
         }
-        else if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
+        if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
         {
             Enemy enemy = other.GetComponent<Enemy>();
             if (enemy.moveType != EnemyMoveType.None && ((int) _parent.shootType == (int) enemy.moveType ||
@@ -100,7 +100,7 @@ public class TowerDetector : MonoBehaviour
             if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))
                 _parent.SetTarget(other.GetComponent<Enemy>());
         }
-        else if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
+        if (_parent.GetTarget() != null && !_parent.GetTarget().gameObject.activeSelf)
         {
             Enemy enemy = other.GetComponent<Enemy>();
             if(enemy.moveType!=EnemyMoveType.None && ((int)_parent.shootType == (int)enemy.moveType || _parent.shootType==ShootType.Both))

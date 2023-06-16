@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Enemies;
+using GameData;
 using UI.Pause;
 using UnityEngine;
 using UnityEngine.ProBuilder.Shapes;
@@ -43,10 +44,12 @@ namespace Bullets
 
             if (other.CompareTag("Road"))
             {
-                Collider[] targets = Physics.OverlapSphere(transform.position, 5, 1<<7);
+                Collider[] targets = Physics.OverlapSphere(transform.position, 10, 1<<2);
                 foreach (Collider col in targets)
                 {
-                    col.GetComponent<Enemy>().TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
+                    Enemy enemy = col.GetComponent<Enemy>();
+                    if(enemy != null)
+                        enemy.TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
                 }
                 ReturnToPool();
             }

@@ -76,7 +76,7 @@ namespace Enemies
             Vector3 pos = text.transform.localPosition;
             pos.x += 50;
             text.transform.localPosition = pos;
-            text.text = Mathf.Ceil(dmg).ToString();
+            text.text = (Mathf.Ceil(dmg)*10).ToString();
         }
         
         
