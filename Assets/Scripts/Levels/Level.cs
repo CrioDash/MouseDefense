@@ -28,6 +28,7 @@ public abstract class Level : MonoBehaviour
     public GameObject textContainer;
     public List<Transform> Waypoints;
     public List<GameObject> EnemyPrefabs;
+    public List<GameObject> ParticlePrefabs;
     public List<Transform> DammerPositions;
     public List<Transform> DamPositions;
 
@@ -38,8 +39,7 @@ public abstract class Level : MonoBehaviour
     [HideInInspector]
     public DamageTextPool TextPool;
     [HideInInspector]
-    public ParticlePool ParticlePool;
-    
+
     public UniversalRenderPipelineAsset URP;
     public Light Light;
     public Canvas CanvasText;
@@ -48,6 +48,7 @@ public abstract class Level : MonoBehaviour
     public static Level Instance;
 
     public Dictionary<Variables.EnemyType, GameObject> EnemyDict = new Dictionary<Variables.EnemyType, GameObject>();
+    public Dictionary<Variables.ParticleType, GameObject> ParticleDict = new Dictionary<Variables.ParticleType, GameObject>();
     public float MaxHealth { set; get; }
     
     public int WaveCount { set; get; }
@@ -65,7 +66,6 @@ public abstract class Level : MonoBehaviour
         BulletPool = GetComponent<BulletObjectPool>();
         EnemyPool = GetComponent<EnemyObjectPool>();
         TextPool = GetComponent<DamageTextPool>();
-        ParticlePool = GetComponent<ParticlePool>();
     }
 
     private void Start()
@@ -74,6 +74,10 @@ public abstract class Level : MonoBehaviour
         foreach (GameObject gm in EnemyPrefabs)
         {
             EnemyDict.Add(gm.GetComponent<Enemy>().EnemyType, gm);
+        }
+        foreach (GameObject gm in ParticlePrefabs)
+        {
+            ParticleDict.Add(gm.GetComponent<Particle>().Type, gm);
         }
         Camera.main.clearFlags = CameraClearFlags.Nothing;
         Camera.main.orthographicSize = 18 * (20.0f / 9.0f / Camera.main.aspect);

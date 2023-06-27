@@ -5,7 +5,11 @@
         //Base Stats
             public static int Health = 10;
 
-
+            public enum ParticleType
+            {
+                blood
+            }
+            
             public enum EnemyType
             {
                 Mobik, Tractor, Parashoot, Dammer, Plane, Shielder, Lighter

@@ -36,24 +36,15 @@ namespace Bullets
                 time += Time.deltaTime;
                 yield return null;
             }
+            Collider[] targets = Physics.OverlapSphere(transform.position, 10, 1<<2);
+            foreach (Collider col in targets)
+            {
+                Enemy enemy = col.GetComponent<Enemy>();
+                if(enemy != null)
+                    enemy.TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
+            }
             ReturnToPool();
         }
 
-        private void OnTriggerEnter(Collider other)
-        {
-
-            if (other.CompareTag("Road"))
-            {
-                Collider[] targets = Physics.OverlapSphere(transform.position, 10, 1<<2);
-                foreach (Collider col in targets)
-                {
-                    Enemy enemy = col.GetComponent<Enemy>();
-                    if(enemy != null)
-                        enemy.TakeDamage.TakeDamage(GetDmg(), DamageType.Splash);
-                }
-                ReturnToPool();
-            }
-        }
-        
     }
 }

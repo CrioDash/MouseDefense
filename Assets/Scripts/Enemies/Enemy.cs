@@ -68,8 +68,8 @@ namespace Enemies
         {
 
             TextMeshProUGUI text = Level.Instance.TextPool.Get();
-            if(blood) 
-                Level.Instance.ParticlePool.Get(transform);
+            if (blood)
+                Instantiate(Level.Instance.ParticleDict[Variables.ParticleType.blood], transform);
             text.transform.position = transform.position;
             text.transform.Translate(Vector3.back * 30f);
             text.color = Color.Lerp(Color.green, Color.red, 1 - CurrentHealth / MaxHealth);
